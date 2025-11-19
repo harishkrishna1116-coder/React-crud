@@ -1,0 +1,212 @@
+
+  <html>
+    <head>
+      <title>TS/TSX Complexity Report</title>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <style>
+        body { font-family: Arial; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background: #eee; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .high { color: red; font-weight: bold; }
+        .chart-container { width: 100%; margin-top: 40px; }
+      </style>
+    </head>
+
+    <body>
+      <h1>TS/TSX Complexity Report</h1>
+      <p>Generated: 11/14/2025, 3:21:14 PM</p>
+
+      <div class="chart-container">
+        <h2>Cyclomatic Complexity per File</h2>
+        <canvas id="cycChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <h2>Halstead Difficulty per File</h2>
+        <canvas id="difficultyChart"></canvas>
+      </div>
+
+      <h2>Detailed Metrics</h2>
+      <table>
+        <tr>
+          <th>File</th>
+          <th>Cyclomatic Complexity</th>
+          <th>Halstead Difficulty</th>
+          <th>Dependencies</th>
+        </tr>
+        
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud-e2e\playwright.config.ts</td>
+        <td class="">2</td>
+        <td>6.67</td>
+        <td>3</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud-e2e\src\example.spec.ts</td>
+        <td class="">2</td>
+        <td>2.36</td>
+        <td>1</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\main.tsx</td>
+        <td class="">1</td>
+        <td>2.22</td>
+        <td>8</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\hello-world.spec.ts</td>
+        <td class="">2</td>
+        <td>1.8</td>
+        <td>0</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\store.tsx</td>
+        <td class="">2</td>
+        <td>6.5</td>
+        <td>3</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\slice.tsx</td>
+        <td class="high">13</td>
+        <td>15.61</td>
+        <td>1</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\nx-welcome.tsx</td>
+        <td class="">2</td>
+        <td>7.46</td>
+        <td>0</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\gridSlice.tsx</td>
+        <td class="high">15</td>
+        <td>18.07</td>
+        <td>1</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\app.tsx</td>
+        <td class="high">13</td>
+        <td>11.75</td>
+        <td>8</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\app.spec.tsx</td>
+        <td class="">3</td>
+        <td>3.75</td>
+        <td>3</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Modules\Users.tsx</td>
+        <td class="high">30</td>
+        <td>22.05</td>
+        <td>11</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Modules\ToggleSwitch.tsx</td>
+        <td class="">5</td>
+        <td>7.5</td>
+        <td>5</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Modules\Posts.tsx</td>
+        <td class="high">141</td>
+        <td>54.45</td>
+        <td>18</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Modules\GridSelection.tsx</td>
+        <td class="high">150</td>
+        <td>57.66</td>
+        <td>20</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Modules\Comments.tsx</td>
+        <td class="">9</td>
+        <td>9.45</td>
+        <td>8</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Modules\Utils\AgGridStyle.ts</td>
+        <td class="high">12</td>
+        <td>16.42</td>
+        <td>4</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Modules\Components\Toast.tsx</td>
+        <td class="">2</td>
+        <td>3.82</td>
+        <td>3</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Modules\Components\DialogBox.tsx</td>
+        <td class="">3</td>
+        <td>8</td>
+        <td>2</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Config\gridColumnConfig.ts</td>
+        <td class="">1</td>
+        <td>7.74</td>
+        <td>1</td>
+      </tr>
+    
+      <tr>
+        <td>C:\Users\harish_k1\React-AG-Grid\react-crud\apps\react-crud\src\app\Config\formDataConfig.ts</td>
+        <td class="">1</td>
+        <td>9</td>
+        <td>1</td>
+      </tr>
+    
+      </table>
+
+      <script>
+        const labels = ["apps\\react-crud-e2e\\playwright.config.ts","apps\\react-crud-e2e\\src\\example.spec.ts","src\\main.tsx","src\\hello-world.spec.ts","src\\app\\store.tsx","src\\app\\slice.tsx","src\\app\\nx-welcome.tsx","src\\app\\gridSlice.tsx","src\\app\\app.tsx","src\\app\\app.spec.tsx","src\\app\\Modules\\Users.tsx","src\\app\\Modules\\ToggleSwitch.tsx","src\\app\\Modules\\Posts.tsx","src\\app\\Modules\\GridSelection.tsx","src\\app\\Modules\\Comments.tsx","src\\app\\Modules\\Utils\\AgGridStyle.ts","src\\app\\Modules\\Components\\Toast.tsx","src\\app\\Modules\\Components\\DialogBox.tsx","src\\app\\Config\\gridColumnConfig.ts","src\\app\\Config\\formDataConfig.ts"];
+        const cyclomatic = [2,2,1,2,2,13,2,15,13,3,30,5,141,150,9,12,2,3,1,1];
+        const difficulty = [6.67,2.36,2.22,1.8,6.5,15.61,7.46,18.07,11.75,3.75,22.05,7.5,54.45,57.66,9.45,16.42,3.82,8,7.74,9];
+
+        new Chart(document.getElementById('cycChart'), {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: 'Cyclomatic Complexity',
+              data: cyclomatic
+            }]
+          }
+        });
+
+        new Chart(document.getElementById('difficultyChart'), {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: 'Halstead Difficulty',
+              data: difficulty
+            }]
+          }
+        });
+      </script>
+
+    </body>
+  </html>
+  

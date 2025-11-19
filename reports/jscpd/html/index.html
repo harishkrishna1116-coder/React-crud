@@ -1,0 +1,1047 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Copy/Paste Detector Report</title><link href="styles/tailwind.css" rel="stylesheet"><link href="styles/prism.css" rel="stylesheet"></head><body class="bg-gray-100"><header class="bg-white shadow py-4"><div class="container mx-auto px-4"><h1 class="text-3xl font-semibold text-gray-800">jscpd - copy/paste report</h1></div></header><main class="container mx-auto my-8 p-4 bg-white shadow rounded"><section class="mb-8" id="dashboard"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Dashboard</h2><div class="grid grid-cols-4 gap-4"><div class="bg-blue-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-blue-800 mb-2">Total Files</h3><span class="text-4xl font-bold text-blue-800">38</span></div><div class="bg-green-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-green-800 mb-2">Total Lines of Code</h3><span class="text-4xl font-bold text-green-800">4589</span></div><div class="bg-yellow-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-yellow-800 mb-2">Number of Clones</h3><span class="text-4xl font-bold text-yellow-800">35</span></div><div class="bg-red-200 p-4 rounded text-center"><h3 class="text-lg font-semibold text-red-800 mb-2">Duplicated Lines</h3><span class="text-4xl font-bold text-red-800">1038 (22.62%)</span></div></div></section><section class="mb-8" id="formats"><h2 class="text-2xl font-semibold text-gray-700 mb-4">Formats with Duplications</h2><table class="w-full table-auto"><thead><tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"><th class="py-3 px-6 text-left">Format</th><th class="py-3 px-6 text-left">Files</th><th class="py-3 px-6 text-left">Lines</th><th class="py-3 px-6 text-left">Clones</th><th class="py-3 px-6 text-left">Duplicated Lines</th><th class="py-3 px-6 text-left">Duplicated Tokens</th></tr></thead><tbody><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#typescript-clones">typescript</a></td><td class="py-3 px-6">6</td><td class="py-3 px-6">205</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#javascript-clones">javascript</a></td><td class="py-3 px-6">11</td><td class="py-3 px-6">1248</td><td class="py-3 px-6">2</td><td class="py-3 px-6">332</td><td class="py-3 px-6">2687</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#tsx-clones">tsx</a></td><td class="py-3 px-6">13</td><td class="py-3 px-6">3020</td><td class="py-3 px-6">33</td><td class="py-3 px-6">706</td><td class="py-3 px-6">5846</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#css-clones">css</a></td><td class="py-3 px-6">1</td><td class="py-3 px-6">3</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#markup-clones">markup</a></td><td class="py-3 px-6">1</td><td class="py-3 px-6">11</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr><tr class="bg-white border-b border-gray-200 text-gray-800 text-sm"><td class="py-3 px-6"><a class="text-blue-600 hover:underline" href="#json-clones">json</a></td><td class="py-3 px-6">6</td><td class="py-3 px-6">102</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td><td class="py-3 px-6">0</td></tr></tbody></table></section><section class="mb-8" id="txt-clones"><a name="typescript-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">typescript</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="javascript-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">javascript</h2><div class="divide-y divide-gray-200 border-b-2"><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 447:23 - Line 656:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 357:23 - Line 554:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn2" onclick="toggleCodeBlock('cloneGroup2', 'expandBtn2', 'collapseBtn2')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup2"><code class="language-javascript text-sm text-gray-800">Updated` : isDelete ? `Deleted` : `Added`
+          } Successfully`}
+          icon={&lt;SuccessCircleIcon aria-label=&quot;success&quot; /&gt;}
+          handleClose={() =&gt; setToast(null)}
+        /&gt;
+      );
+      setSelectedRows(0);
+      refetch();
+    } catch (err) {
+      console.log(err);
+      setToast(
+        &lt;ToastMessage
+          status=&quot;error&quot;
+          headText=&quot;Failed&quot;
+          content=&quot;Failed to Update&quot;
+          icon={&lt;ErrorIcon aria-label=&quot;error&quot; /&gt;}
+          handleClose={() =&gt; setToast(null)}
+        /&gt;
+      );
+      refetch();
+    }
+  };
+
+  const allRowsChanged = editableData.every((row, i) =&gt; {
+    const orginalRow = originalData[i];
+    const oriObj = Object.fromEntries(
+      orginalRow.map(({ key, value }) =&gt; [key, String(value ?? '').trim()])
+    );
+    const editObj = Object.fromEntries(
+      row.map(({ key, value }) =&gt; [key, String(value ?? '').trim()])
+    );
+    return Object.keys(oriObj).some((k) =&gt; oriObj[k] !== editObj[k]);
+  });
+
+  // const forAdd = forAddbuttonDisable.some(
+  //   (obj) =&gt; !obj.title.trim() || !obj.body.trim()
+  // );
+
+  const forAdd = forAddbuttonDisable.some((obj) =&gt;
+    Object.values(obj).some((val) =&gt; (val ?? '').trim() === '')
+  );
+
+  const handleClose = () =&gt; {
+    if ((confirmationDialog &amp;&amp; isEdit) || (isAdd &amp;&amp; !forAdd)) {
+      setConfirmDialogOpen(true);
+      setDialogCancellation(true);
+    } else {
+      setDialogOpen(false);
+      setIsAdd(false);
+      setIsEdit(false);
+      setIsDelete(false);
+      setSelectedData(undefined);
+      setEmptyField(false);
+    }
+  };
+
+  const confirmDialogHandleClose = () =&gt; {
+    setConfirmDialogOpen(false);
+    setDialogCancellation(false);
+    setConfirmationDialogForEditDelete(false);
+  };
+
+  const confirmationDialogSubmit = () =&gt; {
+    if (isEdit || isDelete) {
+      !dialogCancellation ? handleSubmit() : null;
+      setConfirmationDialogForEditDelete(false);
+      setConfirmDialogOpen(false);
+      setDialogOpen(false);
+      setIsAdd(false);
+      setIsEdit(false);
+      setIsDelete(false);
+      setSelectedData(undefined);
+      setEmptyField(false);
+      setDialogCancellation(false);
+      navigate('/gridselection');
+    }
+    setConfirmationDialogForEditDelete(false);
+    setConfirmDialogOpen(false);
+    setDialogOpen(false);
+    setIsAdd(false);
+    setIsEdit(false);
+    setIsDelete(false);
+    setSelectedData(undefined);
+    setEmptyField(false);
+    setDialogCancellation(false);
+    navigate('/gridselection');
+  };
+
+  const validationStatus = (value: string) =&gt; {
+    if (isEdit) {
+      const isValid = !value;
+      return !isValid ? undefined : 'error';
+    }
+  };
+
+  let isDisabled = false;
+
+  if (isEdit) {
+    console.log('edit called');
+    isDisabled =
+      JSON.stringify(origin) === JSON.stringify(editable) ||
+      !allRowsChanged ||
+      emptyField ||
+      confirmDialogOpen;
+  } else if (isAdd) {
+    console.log('Add called');
+    // Add mode
+    isDisabled = forAdd;
+  }
+
+  const closeButton = (
+    &lt;Button
+      aria-label=&quot;closing-dialog&quot;
+      appearance=&quot;transparent&quot;
+      onClick={handleClose}
+    &gt;
+      &lt;CloseIcon aria-hidden /&gt;
+    &lt;/Button&gt;
+  );
+
+  const direction: StackLayoutProps&lt;ElementType&gt;['direction'] =
+    useResponsiveProp(
+      {
+        xs: 'column',
+        sm: 'row',
+        lg: 'row',
+        xl: 'row',
+      },
+      'row'
+    );
+
+  const cancel = (
+    &lt;Button sentiment=&quot;accented&quot; appearance=&quot;bordered&quot; onClick={handleClose}&gt;
+      Cancel
+    &lt;/Button&gt;
+  );
+
+  const accept = (
+    &lt;Button
+      sentiment={isDelete ? 'negative' : 'accented'}
+      onClick={handleEditDelete}
+      disabled={isDisabled}
+    &gt;
+      {isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'}
+    &lt;/Button&gt;
+  );
+
+  const endItem = (
+    &lt;StackLayout direction={{ xs: 'column', sm: 'row' }} gap={1}&gt;
+      {cancel}
+      {accept}
+    &lt;/StackLayout&gt;
+  );
+
+  const confirmationDialogCloseButton = (
+    &lt;Button
+      aria-label=&quot;closing-dialog&quot;
+      appearance=&quot;transparent&quot;
+      onClick={confirmDialogHandleClose}
+    &gt;
+      &lt;CloseIcon aria-hidden /&gt;
+    &lt;/Button&gt;
+  );
+
+  const confirmationCancel = (
+    &lt;Button
+      sentiment=&quot;accented&quot;
+      appearance=&quot;bordered&quot;
+      onClick={confirmDialogHandleClose}
+    &gt;
+      Cancel
+    &lt;/Button&gt;
+  );
+
+  const confirm = (
+    &lt;Button
+      sentiment={isDelete ? 'negative' : 'accented'}
+      onClick={confirmationDialogSubmit}
+    &gt;
+      {(isAdd || isEdit) &amp;&amp; dialogCancellation
+        ? 'Accept'
+        : isDelete
+        ? 'Delete'
+        : 'Update'}
+    &lt;/Button&gt;
+  );
+
+  if (isLoading || isUpdating)
+    return (
+      &lt;Scrim open={isLoading || isUpdating}&gt;
+        &lt;Spinner size=&quot;medium&quot;&gt;&lt;/Spinner&gt;
+      &lt;/Scrim&gt;
+    );
+  if (error || fetchError)
+    return (
+      &lt;p className=&quot;text-center mt-10 text-red-500&quot;&gt;Error fetching users&lt;/p&gt;
+    );
+
+  const handleSelectionChange: DropdownProps['onSelectionChange'] = (
+    _event,
+    newSelect
+  ) =&gt; {
+    setSelectedValue(newSelect as ApiEndPoint[]);
+  };
+
+  return (
+    &lt;div {...containerProps}&gt;
+      &lt;h1 className=&quot;text-2xl font-bold mb-6&quot;&gt;{pathName}&lt;/h1&gt;
+      &lt;br&gt;&lt;/br&gt;
+      &lt;FormField style={{</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 714:7 - Line 837:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 594:4 - Line 713:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn3" onclick="toggleCodeBlock('cloneGroup3', 'expandBtn3', 'collapseBtn3')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup3"><code class="language-javascript text-sm text-gray-800"> }}
+          &gt;
+            &lt;AgGridReact&lt;Row&gt;
+              {...agGridProps}
+              {...props}
+              theme=&quot;legacy&quot;
+              rowData={getGridData ?? []}
+              columnDefs={columnDefs}
+              defaultColDef={defaultColDef}
+              // animateRows={true}
+              // domLayout=&quot;autoHeight&quot;
+              pagination={true}
+              rowSelection={rowSelection}
+              ref={gridRef}
+              onSelectionChanged={(e) =&gt;
+                setSelectedRows(e.api.getSelectedRows().length)
+              }
+              // onRowSelected={(e) =&gt; selectedRowNodes(e)}
+              paginationPageSizeSelector={[5, 10, 25, 50, 100]}
+            /&gt;
+          &lt;/div&gt;
+        &lt;/&gt;
+      )}
+      {dialogOpen &amp;&amp; (
+        &lt;Dialog open={dialogOpen} size=&quot;large&quot;&gt;
+          &lt;DialogHeader
+            header={`${isEdit ? 'Edit' : isDelete ? 'Delete' : 'Add'} Item`}
+            actions={closeButton}
+          /&gt;
+          &lt;DialogContent&gt;
+            &lt;FlowLayout&gt;
+              &lt;StackLayout gap={2} direction={'column'}&gt;
+                {formData.map((row, rowIndex) =&gt; (
+                  &lt;StackLayout gap={2} direction={'row'} key={rowIndex}&gt;
+                    {row.map(({ key, value }, index) =&gt; {
+                      const label = key.charAt(0).toUpperCase() + key.slice(1);
+                      const disableId =
+                        key === 'userId' || key === 'id' || key === 'postId';
+                      // if (isAdd &amp;&amp; disableId) return null;
+                      const multiLineInput = key === 'body';
+                      return (
+                        &lt;FormField key={index}&gt;
+                          &lt;FormFieldLabel&gt;{label}&lt;/FormFieldLabel&gt;
+                          {!multiLineInput ? (
+                            &lt;&gt;
+                              &lt;Input
+                                value={value}
+                                validationStatus={validationStatus(value)}
+                                onChange={(
+                                  e: React.ChangeEvent&lt;HTMLInputElement&gt;
+                                ) =&gt;
+                                  handleInputChange(
+                                    rowIndex,
+                                    key,
+                                    e.target.value
+                                  )
+                                }
+                                disabled={disableId || isDelete}
+                              /&gt;
+                              {isEdit &amp;&amp; !value ? &lt;p&gt;Field is Empty&lt;/p&gt; : ''}
+                            &lt;/&gt;
+                          ) : (
+                            &lt;&gt;
+                              &lt;MultilineInput
+                                value={value}
+                                validationStatus={validationStatus(value)}
+                                onChange={(
+                                  e: React.ChangeEvent&lt;HTMLInputElement&gt;
+                                ) =&gt;
+                                  handleInputChange(
+                                    rowIndex,
+                                    key,
+                                    e.target.value
+                                  )
+                                }
+                                disabled={isDelete}
+                              /&gt;
+                              {isEdit &amp;&amp; !value ? &lt;p&gt;Field is Empty&lt;/p&gt; : ''}
+                            &lt;/&gt;
+                          )}
+                        &lt;/FormField&gt;
+                      );
+                    })}
+                  &lt;/StackLayout&gt;
+                ))}
+              &lt;/StackLayout&gt;
+            &lt;/FlowLayout&gt;
+            &lt;DialogActions&gt;
+              {direction === 'column' ? (
+                &lt;StackLayout
+                  gap={1}
+                  style={{
+                    width: '100%',
+                  }}
+                &gt;
+                  {accept}
+                  {cancel}
+                  {''}
+                &lt;/StackLayout&gt;
+              ) : (
+                &lt;SplitLayout
+                  direction={'row'}
+                  startItem={''}
+                  endItem={endItem}
+                  style={{
+                    width: '100%',
+                  }}
+                /&gt;
+              )}
+            &lt;/DialogActions&gt;
+          &lt;/DialogContent&gt;
+        &lt;/Dialog&gt;
+      )}
+      {toast &amp;&amp; &lt;ToastGroup placement=&quot;top-right&quot;&gt;{toast}&lt;/ToastGroup&gt;}
+      {(confirmDialogOpen || confirmationDialogForEditDelete) &amp;&amp; (
+        &lt;DialogBox
+          open={confirmDialogOpen || confirmationDialogForEditDelete}
+          size=&quot;small&quot;
+          status={isDelete ? 'error' : 'warning'}
+          content={confirmDialogContent}
+          direction={direction}
+          confirm={confirm}
+          cancel={confirmationCancel}
+          closeButton={confirmationDialogCloseButton}</code></pre></div><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="tsx-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">tsx</h2><div class="divide-y divide-gray-200 border-b-2"><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\Posts.tsx (Line 270:9 - Line 278:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 255:9 - Line 262:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn0" onclick="toggleCodeBlock('cloneGroup0', 'expandBtn0', 'collapseBtn0')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup0"><code class="language-tsx text-sm text-gray-800">);
+        const hasEmpty = updated.some((row) =&gt;
+          row.some((item) =&gt; !item.value || String(item.value).trim() === '')
+        );
+        setEmptyField(hasEmpty);
+        return updated;
+      });
+    }
+  }</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\Posts.tsx (Line 427:5 - Line 437:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 416:7 - Line 427:35)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn1" onclick="toggleCodeBlock('cloneGroup1', 'expandBtn1', 'collapseBtn1')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup1"><code class="language-tsx text-sm text-gray-800">setConfirmationDialogForEditDelete(false);
+    setConfirmDialogOpen(false);
+    setDialogOpen(false);
+    setIsAdd(false);
+    setIsEdit(false);
+    setIsDelete(false);
+    setSelectedData(undefined);
+    setEmptyField(false);
+    setDialogCancellation(false);
+    navigate('/posts');
+  };</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 113:4 - Line 118:7), apps\react-crud\src\app\Modules\Posts.tsx (Line 88:5 - Line 92:4)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn4" onclick="toggleCodeBlock('cloneGroup4', 'expandBtn4', 'collapseBtn4')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup4"><code class="language-tsx text-sm text-gray-800">[]&gt;([]);
+  const [editableData, setEditableData] = useState&lt;
+    { key: string; value: any }[][]
+  &gt;([]);
+  const [addNewData, setAddNewData] = useState&lt;
+    { key: string; value: string</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 123:15 - Line 145:4), apps\react-crud\src\app\Modules\Posts.tsx (Line 95:16 - Line 117:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn5" onclick="toggleCodeBlock('cloneGroup5', 'expandBtn5', 'collapseBtn5')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup5"><code class="language-tsx text-sm text-gray-800">] = useState&lt;
+    { key: string; value: any }[][]
+  &gt;([]);
+  const [selectedRows, setSelectedRows] = useState(0);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [isEdit, setIsEdit] = useState(false);
+  const [isDelete, setIsDelete] = useState(false);
+  const [confirmationDialogForEditDelete, setConfirmationDialogForEditDelete] =
+    useState(false);
+  // const data = selectedData
+  //   ? Object.entries(selectedData).map(([key, value]) =&gt; ({ key, value }))
+  //   : multipleData
+  //   ? multipleData.flatMap((row) =&gt;
+  //       Object.entries(row).map(([key, value]) =&gt; ({ key, value }))
+  //     )
+  //   : [];
+  const params = window.location.pathname.split('/');
+  const pathName = params[1]
+    .split(' ')
+    .map((val) =&gt; val.charAt(0).toUpperCase() + val.slice(1))
+    .join(' ');
+  const [toast, setToast] = useState&lt;JSX.Element | null&gt;(null);
+  const gridRef = useRef&lt;AgGridReactType&lt;Row</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 145:4 - Line 154:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 117:5 - Line 125:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn6" onclick="toggleCodeBlock('cloneGroup6', 'expandBtn6', 'collapseBtn6')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup6"><code class="language-tsx text-sm text-gray-800">&gt;&gt;(null);
+  const origin = originalData.map((row) =&gt;
+    Object.fromEntries(row.map(({ key, value }) =&gt; [key, String(value).trim()]))
+  );
+  const editable = editableData.map((row) =&gt;
+    Object.fromEntries(row.map(({ key, value }) =&gt; [key, String(value).trim()]))
+  );
+  const forAddbuttonDisable = addNewData.map((row) =&gt;
+    Object.fromEntries(
+      row.map(({ key, value }) =&gt; [key, String(value ?</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 154:3 - Line 169:86), apps\react-crud\src\app\Modules\Posts.tsx (Line 125:6 - Line 139:87)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn7" onclick="toggleCodeBlock('cloneGroup7', 'expandBtn7', 'collapseBtn7')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn7" onclick="toggleCodeBlock('cloneGroup7', 'expandBtn7', 'collapseBtn7')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup7"><code class="language-tsx text-sm text-gray-800">).trim()])
+    )
+  );
+  const { agGridProps, containerProps } = useAgGridHelpers();
+  const [emptyField, setEmptyField] = useState&lt;boolean&gt;(false);
+  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
+  const [dialogCancellation, setDialogCancellation] = useState(false);
+  const [isAdd, setIsAdd] = useState(false);
+  const formData = isEdit || isDelete ? editableData : addNewData;
+
+  const confirmationDialog =
+    JSON.stringify(origin) !== JSON.stringify(editable);
+
+  const confirmDialogContent =
+    (isAdd || isEdit) &amp;&amp; dialogCancellation
+      ? 'Are you sure you want to cancel the changes? Any previous changes will not be saved'</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 196:15 - Line 204:6), apps\react-crud\src\app\Modules\Posts.tsx (Line 158:16 - Line 166:16)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn8" onclick="toggleCodeBlock('cloneGroup8', 'expandBtn8', 'collapseBtn8')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn8" onclick="toggleCodeBlock('cloneGroup8', 'expandBtn8', 'collapseBtn8')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup8"><code class="language-tsx text-sm text-gray-800">([
+        Object.entries(selectedData).map(([key, value]) =&gt; ({ key, value })),
+      ]);
+    }
+  }, [selectedData]);
+
+  useEffect(() =&gt; {
+    if (multipleData.length &gt; 0) {
+      const</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 214:15 - Line 222:4), apps\react-crud\src\app\Modules\Posts.tsx (Line 171:16 - Line 179:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn9" onclick="toggleCodeBlock('cloneGroup9', 'expandBtn9', 'collapseBtn9')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn9" onclick="toggleCodeBlock('cloneGroup9', 'expandBtn9', 'collapseBtn9')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup9"><code class="language-tsx text-sm text-gray-800">(
+        multipleData.map((row) =&gt;
+          Object.entries(row).map(([key, value]) =&gt; ({ key, value }))
+        )
+      );
+    }
+  }, [multipleData]);
+
+  const ActionButtonRenderer = (e: ICellRendererParams&lt;Row</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 222:4 - Line 263:12), apps\react-crud\src\app\Modules\Posts.tsx (Line 179:5 - Line 220:11)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn10" onclick="toggleCodeBlock('cloneGroup10', 'expandBtn10', 'collapseBtn10')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn10" onclick="toggleCodeBlock('cloneGroup10', 'expandBtn10', 'collapseBtn10')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup10"><code class="language-tsx text-sm text-gray-800">&gt;) =&gt; {
+    const handleClickAction = (actionType: string) =&gt; {
+      setDialogOpen(true);
+      setSelectedData(e.data);
+      actionType === 'edit' ? setIsEdit(true) : setIsDelete(true);
+    };
+
+    return (
+      &lt;&gt;
+        &lt;Button
+          sentiment=&quot;accented&quot;
+          appearance=&quot;transparent&quot;
+          disabled={selectedRows &gt;= 1}
+          onClick={() =&gt; handleClickAction('edit')}
+        &gt;
+          &lt;EditIcon /&gt;
+        &lt;/Button&gt;
+        &amp;nbsp;
+        &lt;Button
+          sentiment=&quot;accented&quot;
+          appearance=&quot;transparent&quot;
+          disabled={selectedRows &gt;= 1}
+          onClick={() =&gt; handleClickAction('delete')}
+        &gt;
+          &lt;DeleteIcon /&gt;
+        &lt;/Button&gt;
+      &lt;/&gt;
+    );
+  };
+
+  const getMultiRowData = (action: string) =&gt; {
+    if (!gridRef.current) return false;
+    const selected = gridRef.current.api.getSelectedRows();
+    const order = selected.sort((a, b) =&gt; Number(a.id) - Number(b.id));
+    if (order.length &gt; 0) {
+      setDialogOpen(true);
+      action === 'edit' ? setIsEdit(true) : setIsDelete(true);
+      setMultipleData(order);
+    }
+  };
+
+  const baseColumns</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 274:13 - Line 333:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 230:3 - Line 289:8)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn11" onclick="toggleCodeBlock('cloneGroup11', 'expandBtn11', 'collapseBtn11')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn11" onclick="toggleCodeBlock('cloneGroup11', 'expandBtn11', 'collapseBtn11')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup11"><code class="language-tsx text-sm text-gray-800">];
+
+  const rowSelection: RowSelectionOptions = {
+    mode: 'multiRow',
+    headerCheckbox: true,
+  };
+
+  const defaultColDef = useMemo(() =&gt; {
+    return {
+      filter: 'agTextColumnFilter',
+      floatingFilter: true,
+    };
+  }, []);
+
+  const handleInputChange = (
+    rowIndex: number,
+    key: string,
+    newValue: string
+  ) =&gt; {
+    if (!isEdit) {
+      setAddNewData((prev) =&gt; {
+        const updated = prev.map((row) =&gt;
+          row.map((item) =&gt;
+            item.key === key ? { ...item, value: newValue } : item
+          )
+        );
+        const hasEmpty = updated.some((row) =&gt;
+          row.some((item) =&gt; !item.value || String(item.value).trim() === '')
+        );
+        setEmptyField(hasEmpty);
+        return updated;
+      });
+    } else {
+      setEditableData((prev) =&gt; {
+        const updated = prev.map((row, i) =&gt;
+          i === rowIndex
+            ? row.map((item) =&gt;
+                item.key === key ? { ...item, value: newValue } : item
+              )
+            : row
+        );
+        const hasEmpty = updated.some((row) =&gt;
+          row.some((item) =&gt; !item.value || String(item.value).trim() === '')
+        );
+        setEmptyField(hasEmpty);
+        return updated;
+      });
+    }
+  };
+  useEffect(() =&gt; {
+    console.log('addNewData', addNewData);
+    console.log('forAddbuttonDisable', forAddbuttonDisable);
+    console.log('isAdd', isAdd);
+  }, [addNewData]);
+
+  const createRecord = () =&gt; {
+    setIsAdd(true);
+    setIsEdit(false);
+    setIsDelete(false);
+    setAddNewData([</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 395:4 - Line 404:5), apps\react-crud\src\app\Modules\Posts.tsx (Line 313:5 - Line 321:5)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn12" onclick="toggleCodeBlock('cloneGroup12', 'expandBtn12', 'collapseBtn12')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn12" onclick="toggleCodeBlock('cloneGroup12', 'expandBtn12', 'collapseBtn12')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup12"><code class="language-tsx text-sm text-gray-800">[];
+
+    const deleteDataFromStore = formData.map((record) =&gt;
+      parseInt(record.find((f) =&gt; f.key === 'id')?.value ?? '0', 10)
+    );
+
+    try {
+      if (isEdit) {
+        await Promise.all(
+          updateDataToStore.map((data</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 453:2 - Line 481:44), apps\react-crud\src\app\Modules\Posts.tsx (Line 362:7 - Line 390:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn13" onclick="toggleCodeBlock('cloneGroup13', 'expandBtn13', 'collapseBtn13')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn13" onclick="toggleCodeBlock('cloneGroup13', 'expandBtn13', 'collapseBtn13')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup13"><code class="language-tsx text-sm text-gray-800">);
+      refetch();
+    } catch (err) {
+      console.log(err);
+      setToast(
+        &lt;ToastMessage
+          status=&quot;error&quot;
+          headText=&quot;Failed&quot;
+          content=&quot;Failed to Update&quot;
+          icon={&lt;ErrorIcon aria-label=&quot;error&quot; /&gt;}
+          handleClose={() =&gt; setToast(null)}
+        /&gt;
+      );
+      refetch();
+    }
+  };
+
+  const allRowsChanged = editableData.every((row, i) =&gt; {
+    const orginalRow = originalData[i];
+    const oriObj = Object.fromEntries(
+      orginalRow.map(({ key, value }) =&gt; [key, String(value ?? '').trim()])
+    );
+    const editObj = Object.fromEntries(
+      row.map(({ key, value }) =&gt; [key, String(value ?? '').trim()])
+    );
+    return Object.keys(oriObj).some((k) =&gt; oriObj[k] !== editObj[k]);
+  });
+
+  // const forAdd = forAddbuttonDisable.some(</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 486:3 - Line 521:17), apps\react-crud\src\app\Modules\Posts.tsx (Line 391:2 - Line 425:9)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn14" onclick="toggleCodeBlock('cloneGroup14', 'expandBtn14', 'collapseBtn14')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn14" onclick="toggleCodeBlock('cloneGroup14', 'expandBtn14', 'collapseBtn14')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup14"><code class="language-tsx text-sm text-gray-800">)
+  );
+
+  const handleClose = () =&gt; {
+    if ((confirmationDialog &amp;&amp; isEdit) || (isAdd &amp;&amp; !forAdd)) {
+      setConfirmDialogOpen(true);
+      setDialogCancellation(true);
+    } else {
+      setDialogOpen(false);
+      setIsAdd(false);
+      setIsEdit(false);
+      setIsDelete(false);
+      setSelectedData(undefined);
+      setEmptyField(false);
+    }
+  };
+
+  const confirmDialogHandleClose = () =&gt; {
+    setConfirmDialogOpen(false);
+    setDialogCancellation(false);
+    setConfirmationDialogForEditDelete(false);
+  };
+
+  const confirmationDialogSubmit = () =&gt; {
+    if (isEdit || isDelete) {
+      !dialogCancellation ? handleSubmit() : null;
+      setConfirmationDialogForEditDelete(false);
+      setConfirmDialogOpen(false);
+      setDialogOpen(false);
+      setIsAdd(false);
+      setIsEdit(false);
+      setIsDelete(false);
+      setSelectedData(undefined);
+      setEmptyField(false);
+      setDialogCancellation(false);
+      navigate('/gridselection'</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 521:17 - Line 532:17), apps\react-crud\src\app\Modules\Posts.tsx (Line 425:9 - Line 436:9)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn15" onclick="toggleCodeBlock('cloneGroup15', 'expandBtn15', 'collapseBtn15')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn15" onclick="toggleCodeBlock('cloneGroup15', 'expandBtn15', 'collapseBtn15')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup15"><code class="language-tsx text-sm text-gray-800">);
+    }
+    setConfirmationDialogForEditDelete(false);
+    setConfirmDialogOpen(false);
+    setDialogOpen(false);
+    setIsAdd(false);
+    setIsEdit(false);
+    setIsDelete(false);
+    setSelectedData(undefined);
+    setEmptyField(false);
+    setDialogCancellation(false);
+    navigate('/gridselection'</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 523:5 - Line 533:2), apps\react-crud\src\app\Modules\GridSelection.tsx (Line 512:7 - Line 523:35)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn16" onclick="toggleCodeBlock('cloneGroup16', 'expandBtn16', 'collapseBtn16')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn16" onclick="toggleCodeBlock('cloneGroup16', 'expandBtn16', 'collapseBtn16')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup16"><code class="language-tsx text-sm text-gray-800">setConfirmationDialogForEditDelete(false);
+    setConfirmDialogOpen(false);
+    setDialogOpen(false);
+    setIsAdd(false);
+    setIsEdit(false);
+    setIsDelete(false);
+    setSelectedData(undefined);
+    setEmptyField(false);
+    setDialogCancellation(false);
+    navigate('/gridselection');
+  };</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 532:17 - Line 554:7), apps\react-crud\src\app\Modules\Posts.tsx (Line 436:9 - Line 458:20)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn17" onclick="toggleCodeBlock('cloneGroup17', 'expandBtn17', 'collapseBtn17')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn17" onclick="toggleCodeBlock('cloneGroup17', 'expandBtn17', 'collapseBtn17')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup17"><code class="language-tsx text-sm text-gray-800">);
+  };
+
+  const validationStatus = (value: string) =&gt; {
+    if (isEdit) {
+      const isValid = !value;
+      return !isValid ? undefined : 'error';
+    }
+  };
+
+  let isDisabled = false;
+
+  if (isEdit) {
+    console.log('edit called');
+    isDisabled =
+      JSON.stringify(origin) === JSON.stringify(editable) ||
+      !allRowsChanged ||
+      emptyField ||
+      confirmDialogOpen;
+  } else if (isAdd) {
+    console.log('Add called');
+    // Add mode
+    isDisabled = forAdd</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 554:7 - Line 643:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 460:2 - Line 551:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn18" onclick="toggleCodeBlock('cloneGroup18', 'expandBtn18', 'collapseBtn18')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn18" onclick="toggleCodeBlock('cloneGroup18', 'expandBtn18', 'collapseBtn18')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup18"><code class="language-tsx text-sm text-gray-800">;
+  }
+
+  const closeButton = (
+    &lt;Button
+      aria-label=&quot;closing-dialog&quot;
+      appearance=&quot;transparent&quot;
+      onClick={handleClose}
+    &gt;
+      &lt;CloseIcon aria-hidden /&gt;
+    &lt;/Button&gt;
+  );
+
+  const direction: StackLayoutProps&lt;ElementType&gt;['direction'] =
+    useResponsiveProp(
+      {
+        xs: 'column',
+        sm: 'row',
+        lg: 'row',
+        xl: 'row',
+      },
+      'row'
+    );
+
+  const cancel = (
+    &lt;Button sentiment=&quot;accented&quot; appearance=&quot;bordered&quot; onClick={handleClose}&gt;
+      Cancel
+    &lt;/Button&gt;
+  );
+
+  const accept = (
+    &lt;Button
+      sentiment={isDelete ? 'negative' : 'accented'}
+      onClick={handleEditDelete}
+      disabled={isDisabled}
+    &gt;
+      {isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'}
+    &lt;/Button&gt;
+  );
+
+  const endItem = (
+    &lt;StackLayout direction={{ xs: 'column', sm: 'row' }} gap={1}&gt;
+      {cancel}
+      {accept}
+    &lt;/StackLayout&gt;
+  );
+
+  const confirmationDialogCloseButton = (
+    &lt;Button
+      aria-label=&quot;closing-dialog&quot;
+      appearance=&quot;transparent&quot;
+      onClick={confirmDialogHandleClose}
+    &gt;
+      &lt;CloseIcon aria-hidden /&gt;
+    &lt;/Button&gt;
+  );
+
+  const confirmationCancel = (
+    &lt;Button
+      sentiment=&quot;accented&quot;
+      appearance=&quot;bordered&quot;
+      onClick={confirmDialogHandleClose}
+    &gt;
+      Cancel
+    &lt;/Button&gt;
+  );
+
+  const confirm = (
+    &lt;Button
+      sentiment={isDelete ? 'negative' : 'accented'}
+      onClick={confirmationDialogSubmit}
+    &gt;
+      {(isAdd || isEdit) &amp;&amp; dialogCancellation
+        ? 'Accept'
+        : isDelete
+        ? 'Delete'
+        : 'Update'}
+    &lt;/Button&gt;
+  );
+
+  if (isLoading || isUpdating)
+    return (
+      &lt;Scrim open={isLoading || isUpdating}&gt;
+        &lt;Spinner size=&quot;medium&quot;&gt;&lt;/Spinner&gt;
+      &lt;/Scrim&gt;
+    );
+  if (error || fetchError)
+    return (
+      &lt;p className=&quot;text-center mt-10 text-red-500&quot;&gt;Error fetching users&lt;/p&gt;
+    );</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 677:11 - Line 713:13), apps\react-crud\src\app\Modules\Posts.tsx (Line 560:2 - Line 594:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn19" onclick="toggleCodeBlock('cloneGroup19', 'expandBtn19', 'collapseBtn19')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn19" onclick="toggleCodeBlock('cloneGroup19', 'expandBtn19', 'collapseBtn19')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup19"><code class="language-tsx text-sm text-gray-800">&gt;
+            &lt;Button
+              // style={{ marginLeft: '1107px' }}
+              sentiment=&quot;accented&quot;
+              appearance=&quot;bordered&quot;
+              onClick={createRecord}
+              disabled={selectedRows &gt; 0}
+            &gt;
+              &lt;AddIcon /&gt;
+              Add Record
+            &lt;/Button&gt;
+            &amp;nbsp;
+            &lt;Button
+              // style={{ marginLeft: '1107px' }}
+              sentiment=&quot;accented&quot;
+              appearance=&quot;bordered&quot;
+              onClick={() =&gt; getMultiRowData('edit')}
+              disabled={selectedRows &lt;= 1}
+            &gt;
+              &lt;EditIcon /&gt;
+              Edit Records
+            &lt;/Button&gt;
+            &amp;nbsp;
+            &lt;Button
+              // style={{ marginLeft: '1107px' }}
+              sentiment=&quot;accented&quot;
+              appearance=&quot;bordered&quot;
+              onClick={() =&gt; getMultiRowData('delete')}
+              disabled={selectedRows &lt;= 1}
+            &gt;
+              &lt;DeleteIcon /&gt;
+              Delete Records
+            &lt;/Button&gt;
+          &lt;/div&gt;
+
+          &lt;div
+            </code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 720:2 - Line 735:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 599:2 - Line 614:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn20" onclick="toggleCodeBlock('cloneGroup20', 'expandBtn20', 'collapseBtn20')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn20" onclick="toggleCodeBlock('cloneGroup20', 'expandBtn20', 'collapseBtn20')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup20"><code class="language-tsx text-sm text-gray-800">?? []}
+              columnDefs={columnDefs}
+              defaultColDef={defaultColDef}
+              // animateRows={true}
+              // domLayout=&quot;autoHeight&quot;
+              pagination={true}
+              rowSelection={rowSelection}
+              ref={gridRef}
+              onSelectionChanged={(e) =&gt;
+                setSelectedRows(e.api.getSelectedRows().length)
+              }
+              // onRowSelected={(e) =&gt; selectedRowNodes(e)}
+              paginationPageSizeSelector={[5, 10, 25, 50, 100]}
+            /&gt;
+          &lt;/div&gt;
+        &lt;</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 737:7 - Line 751:3), apps\react-crud\src\app\Modules\Posts.tsx (Line 614:7 - Line 627:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn21" onclick="toggleCodeBlock('cloneGroup21', 'expandBtn21', 'collapseBtn21')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn21" onclick="toggleCodeBlock('cloneGroup21', 'expandBtn21', 'collapseBtn21')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup21"><code class="language-tsx text-sm text-gray-800">{dialogOpen &amp;&amp; (
+        &lt;Dialog open={dialogOpen} size=&quot;large&quot;&gt;
+          &lt;DialogHeader
+            header={`${isEdit ? 'Edit' : isDelete ? 'Delete' : 'Add'} Item`}
+            actions={closeButton}
+          /&gt;
+          &lt;DialogContent&gt;
+            &lt;FlowLayout&gt;
+              &lt;StackLayout gap={2} direction={'column'}&gt;
+                {formData.map((row, rowIndex) =&gt; (
+                  &lt;StackLayout gap={2} direction={'row'} key={rowIndex}&gt;
+                    {row.map(({ key, value }, index) =&gt; {
+                      const label = key.charAt(0).toUpperCase() + key.slice(1);
+                      const disableId =
+                        key === 'userId' || key === 'id' ||</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\GridSelection.tsx (Line 753:23 - Line 842:2), apps\react-crud\src\app\Modules\Posts.tsx (Line 629:23 - Line 719:7)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn22" onclick="toggleCodeBlock('cloneGroup22', 'expandBtn22', 'collapseBtn22')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn22" onclick="toggleCodeBlock('cloneGroup22', 'expandBtn22', 'collapseBtn22')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup22"><code class="language-tsx text-sm text-gray-800">const multiLineInput = key === 'body';
+                      return (
+                        &lt;FormField key={index}&gt;
+                          &lt;FormFieldLabel&gt;{label}&lt;/FormFieldLabel&gt;
+                          {!multiLineInput ? (
+                            &lt;&gt;
+                              &lt;Input
+                                value={value}
+                                validationStatus={validationStatus(value)}
+                                onChange={(
+                                  e: React.ChangeEvent&lt;HTMLInputElement&gt;
+                                ) =&gt;
+                                  handleInputChange(
+                                    rowIndex,
+                                    key,
+                                    e.target.value
+                                  )
+                                }
+                                disabled={disableId || isDelete}
+                              /&gt;
+                              {isEdit &amp;&amp; !value ? &lt;p&gt;Field is Empty&lt;/p&gt; : ''}
+                            &lt;/&gt;
+                          ) : (
+                            &lt;&gt;
+                              &lt;MultilineInput
+                                value={value}
+                                validationStatus={validationStatus(value)}
+                                onChange={(
+                                  e: React.ChangeEvent&lt;HTMLInputElement&gt;
+                                ) =&gt;
+                                  handleInputChange(
+                                    rowIndex,
+                                    key,
+                                    e.target.value
+                                  )
+                                }
+                                disabled={isDelete}
+                              /&gt;
+                              {isEdit &amp;&amp; !value ? &lt;p&gt;Field is Empty&lt;/p&gt; : ''}
+                            &lt;/&gt;
+                          )}
+                        &lt;/FormField&gt;
+                      );
+                    })}
+                  &lt;/StackLayout&gt;
+                ))}
+              &lt;/StackLayout&gt;
+            &lt;/FlowLayout&gt;
+            &lt;DialogActions&gt;
+              {direction === 'column' ? (
+                &lt;StackLayout
+                  gap={1}
+                  style={{
+                    width: '100%',
+                  }}
+                &gt;
+                  {accept}
+                  {cancel}
+                  {''}
+                &lt;/StackLayout&gt;
+              ) : (
+                &lt;SplitLayout
+                  direction={'row'}
+                  startItem={''}
+                  endItem={endItem}
+                  style={{
+                    width: '100%',
+                  }}
+                /&gt;
+              )}
+            &lt;/DialogActions&gt;
+          &lt;/DialogContent&gt;
+        &lt;/Dialog&gt;
+      )}
+      {toast &amp;&amp; &lt;ToastGroup placement=&quot;top-right&quot;&gt;{toast}&lt;/ToastGroup&gt;}
+      {(confirmDialogOpen || confirmationDialogForEditDelete) &amp;&amp; (
+        &lt;DialogBox
+          open={confirmDialogOpen || confirmationDialogForEditDelete}
+          size=&quot;small&quot;
+          status={isDelete ? 'error' : 'warning'}
+          content={confirmDialogContent}
+          direction={direction}
+          confirm={confirm}
+          cancel={confirmationCancel}
+          closeButton={confirmationDialogCloseButton}
+        /&gt;
+      )}
+    &lt;/div&gt;
+  );
+};</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\Modules\Comments.tsx (Line 20:3 - Line 25:9), apps\react-crud\src\app\Modules\Posts.tsx (Line 111:3 - Line 116:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn23" onclick="toggleCodeBlock('cloneGroup23', 'expandBtn23', 'collapseBtn23')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn23" onclick="toggleCodeBlock('cloneGroup23', 'expandBtn23', 'collapseBtn23')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup23"><code class="language-tsx text-sm text-gray-800">const params = window.location.pathname.split('/');
+  const pathName = params[1]
+    .split(' ')
+    .map((val) =&gt; val.charAt(0).toUpperCase() + val.slice(1))
+    .join(' ');
+  const navigate</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 497:5 - Line 508:13), apps\react-crud\src\app\nx-welcome.tsx (Line 480:17 - Line 491:243)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn24" onclick="toggleCodeBlock('cloneGroup24', 'expandBtn24', 'collapseBtn24')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn24" onclick="toggleCodeBlock('cloneGroup24', 'expandBtn24', 'collapseBtn24')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup24"><code class="language-tsx text-sm text-gray-800">&gt;
+                  &lt;svg
+                    fill=&quot;none&quot;
+                    stroke=&quot;currentColor&quot;
+                    viewBox=&quot;0 0 24 24&quot;
+                    xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                  &gt;
+                    &lt;path
+                      strokeLinecap=&quot;round&quot;
+                      strokeLinejoin=&quot;round&quot;
+                      strokeWidth=&quot;2&quot;
+                      d=&quot;M9 5l7 7-7 7</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 513:43 - Line 528:135), apps\react-crud\src\app\nx-welcome.tsx (Line 476:59 - Line 491:243)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn25" onclick="toggleCodeBlock('cloneGroup25', 'expandBtn25', 'collapseBtn25')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn25" onclick="toggleCodeBlock('cloneGroup25', 'expandBtn25', 'collapseBtn25')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup25"><code class="language-tsx text-sm text-gray-800">&quot;
+                  target=&quot;_blank&quot;
+                  rel=&quot;noreferrer&quot;
+                  className=&quot;list-item-link&quot;
+                &gt;
+                  &lt;svg
+                    fill=&quot;none&quot;
+                    stroke=&quot;currentColor&quot;
+                    viewBox=&quot;0 0 24 24&quot;
+                    xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                  &gt;
+                    &lt;path
+                      strokeLinecap=&quot;round&quot;
+                      strokeLinejoin=&quot;round&quot;
+                      strokeWidth=&quot;2&quot;
+                      d=&quot;M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 533:2 - Line 550:84), apps\react-crud\src\app\nx-welcome.tsx (Line 496:2 - Line 513:43)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn26" onclick="toggleCodeBlock('cloneGroup26', 'expandBtn26', 'collapseBtn26')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn26" onclick="toggleCodeBlock('cloneGroup26', 'expandBtn26', 'collapseBtn26')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup26"><code class="language-tsx text-sm text-gray-800">&lt;/span&gt;
+                  &lt;/span&gt;
+                  &lt;svg
+                    fill=&quot;none&quot;
+                    stroke=&quot;currentColor&quot;
+                    viewBox=&quot;0 0 24 24&quot;
+                    xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                  &gt;
+                    &lt;path
+                      strokeLinecap=&quot;round&quot;
+                      strokeLinejoin=&quot;round&quot;
+                      strokeWidth=&quot;2&quot;
+                      d=&quot;M9 5l7 7-7 7&quot;
+                    /&gt;
+                  &lt;/svg&gt;
+                &lt;/a&gt;
+                &lt;a
+                  href=&quot;https://www.youtube.com/@NxDevtools/videos?utm_source=nx-project&amp;sub_confirmation=1</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 566:2 - Line 583:70), apps\react-crud\src\app\nx-welcome.tsx (Line 496:2 - Line 513:43)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn27" onclick="toggleCodeBlock('cloneGroup27', 'expandBtn27', 'collapseBtn27')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn27" onclick="toggleCodeBlock('cloneGroup27', 'expandBtn27', 'collapseBtn27')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup27"><code class="language-tsx text-sm text-gray-800">&lt;/span&gt;
+                  &lt;/span&gt;
+                  &lt;svg
+                    fill=&quot;none&quot;
+                    stroke=&quot;currentColor&quot;
+                    viewBox=&quot;0 0 24 24&quot;
+                    xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                  &gt;
+                    &lt;path
+                      strokeLinecap=&quot;round&quot;
+                      strokeLinejoin=&quot;round&quot;
+                      strokeWidth=&quot;2&quot;
+                      d=&quot;M9 5l7 7-7 7&quot;
+                    /&gt;
+                  &lt;/svg&gt;
+                &lt;/a&gt;
+                &lt;a
+                  href=&quot;https://nx.dev/react-tutorial/1-code-generation?utm_source=nx-project</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 583:70 - Line 598:130), apps\react-crud\src\app\nx-welcome.tsx (Line 476:59 - Line 491:243)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn28" onclick="toggleCodeBlock('cloneGroup28', 'expandBtn28', 'collapseBtn28')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn28" onclick="toggleCodeBlock('cloneGroup28', 'expandBtn28', 'collapseBtn28')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup28"><code class="language-tsx text-sm text-gray-800">&quot;
+                  target=&quot;_blank&quot;
+                  rel=&quot;noreferrer&quot;
+                  className=&quot;list-item-link&quot;
+                &gt;
+                  &lt;svg
+                    fill=&quot;none&quot;
+                    stroke=&quot;currentColor&quot;
+                    viewBox=&quot;0 0 24 24&quot;
+                    xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                  &gt;
+                    &lt;path
+                      strokeLinecap=&quot;round&quot;
+                      strokeLinejoin=&quot;round&quot;
+                      strokeWidth=&quot;2&quot;
+                      d=&quot;M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 603:2 - Line 619:3), apps\react-crud\src\app\nx-welcome.tsx (Line 496:2 - Line 512:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn29" onclick="toggleCodeBlock('cloneGroup29', 'expandBtn29', 'collapseBtn29')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn29" onclick="toggleCodeBlock('cloneGroup29', 'expandBtn29', 'collapseBtn29')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup29"><code class="language-tsx text-sm text-gray-800">&lt;/span&gt;
+                  &lt;/span&gt;
+                  &lt;svg
+                    fill=&quot;none&quot;
+                    stroke=&quot;currentColor&quot;
+                    viewBox=&quot;0 0 24 24&quot;
+                    xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                  &gt;
+                    &lt;path
+                      strokeLinecap=&quot;round&quot;
+                      strokeLinejoin=&quot;round&quot;
+                      strokeWidth=&quot;2&quot;
+                      d=&quot;M9 5l7 7-7 7&quot;
+                    /&gt;
+                  &lt;/svg&gt;
+                &lt;/a&gt;
+              &lt;/</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 742:8 - Line 753:85), apps\react-crud\src\app\nx-welcome.tsx (Line 441:3 - Line 452:424)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn30" onclick="toggleCodeBlock('cloneGroup30', 'expandBtn30', 'collapseBtn30')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn30" onclick="toggleCodeBlock('cloneGroup30', 'expandBtn30', 'collapseBtn30')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup30"><code class="language-tsx text-sm text-gray-800">&gt;
+                &lt;svg
+                  fill=&quot;none&quot;
+                  stroke=&quot;currentColor&quot;
+                  viewBox=&quot;0 0 24 24&quot;
+                  xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                &gt;
+                  &lt;path
+                    strokeLinecap=&quot;round&quot;
+                    strokeLinejoin=&quot;round&quot;
+                    strokeWidth=&quot;2&quot;
+                    d=&quot;M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 768:8 - Line 785:5), apps\react-crud\src\app\nx-welcome.tsx (Line 740:2 - Line 756:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn31" onclick="toggleCodeBlock('cloneGroup31', 'expandBtn31', 'collapseBtn31')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn31" onclick="toggleCodeBlock('cloneGroup31', 'expandBtn31', 'collapseBtn31')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup31"><code class="language-tsx text-sm text-gray-800">&gt;
+
+            &lt;details&gt;
+              &lt;summary&gt;
+                &lt;svg
+                  fill=&quot;none&quot;
+                  stroke=&quot;currentColor&quot;
+                  viewBox=&quot;0 0 24 24&quot;
+                  xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                &gt;
+                  &lt;path
+                    strokeLinecap=&quot;round&quot;
+                    strokeLinejoin=&quot;round&quot;
+                    strokeWidth=&quot;2&quot;
+                    d=&quot;M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z&quot;
+                  /&gt;
+                &lt;/svg&gt;
+                View</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 787:2 - Line 804:12), apps\react-crud\src\app\nx-welcome.tsx (Line 767:15 - Line 785:8)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn32" onclick="toggleCodeBlock('cloneGroup32', 'expandBtn32', 'collapseBtn32')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn32" onclick="toggleCodeBlock('cloneGroup32', 'expandBtn32', 'collapseBtn32')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup32"><code class="language-tsx text-sm text-gray-800">&lt;/pre&gt;
+            &lt;/details&gt;
+            &lt;details&gt;
+              &lt;summary&gt;
+                &lt;svg
+                  fill=&quot;none&quot;
+                  stroke=&quot;currentColor&quot;
+                  viewBox=&quot;0 0 24 24&quot;
+                  xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                &gt;
+                  &lt;path
+                    strokeLinecap=&quot;round&quot;
+                    strokeLinejoin=&quot;round&quot;
+                    strokeWidth=&quot;2&quot;
+                    d=&quot;M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z&quot;
+                  /&gt;
+                &lt;/svg&gt;
+                View interactive</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\nx-welcome.tsx (Line 806:6 - Line 823:4), apps\react-crud\src\app\nx-welcome.tsx (Line 767:15 - Line 756:6)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn33" onclick="toggleCodeBlock('cloneGroup33', 'expandBtn33', 'collapseBtn33')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn33" onclick="toggleCodeBlock('cloneGroup33', 'expandBtn33', 'collapseBtn33')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup33"><code class="language-tsx text-sm text-gray-800">&lt;/pre&gt;
+            &lt;/details&gt;
+            &lt;details&gt;
+              &lt;summary&gt;
+                &lt;svg
+                  fill=&quot;none&quot;
+                  stroke=&quot;currentColor&quot;
+                  viewBox=&quot;0 0 24 24&quot;
+                  xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                &gt;
+                  &lt;path
+                    strokeLinecap=&quot;round&quot;
+                    strokeLinejoin=&quot;round&quot;
+                    strokeWidth=&quot;2&quot;
+                    d=&quot;M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z&quot;
+                  /&gt;
+                &lt;/svg&gt;
+                Add</code></pre></div><div class="py-4"><p class="text-gray-600">apps\react-crud\src\app\gridSlice.tsx (Line 73:11 - Line 78:2), apps\react-crud\src\app\gridSlice.tsx (Line 63:8 - Line 68:2)</p><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2" id="expandBtn34" onclick="toggleCodeBlock('cloneGroup34', 'expandBtn34', 'collapseBtn34')">Show code</button><button class="bg-gray-500 text-white px-1 py-0.5 text-xs rounded focus:outline-none ml-2 hidden" id="collapseBtn34" onclick="toggleCodeBlock('cloneGroup34', 'expandBtn34', 'collapseBtn34')">Hide code</button><pre class="bg-gray-100 border border-gray-200 p-4 rounded mt-2 hidden" id="cloneGroup34"><code class="language-tsx text-sm text-gray-800">: builder.mutation&lt;
+      User[] | Comment[] | Post[],
+      { endpoint: ApiEndPoint; body: BodyMap[ApiEndPoint] }
+    &gt;({
+      query: ({ endpoint, body }) =&gt; ({
+        url: `/${endpoint}/</code></pre></div><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="css-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">css</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="markup-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">markup</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div><a name="json-clones"></a><h2 class="text-2xl font-semibold text-gray-700 mb-4">json</h2><div class="divide-y divide-gray-200 border-b-2"><!-- Add more clone groups for .txt format as needed         // Add more clone groups for .txt format as needed--></div></section><!-- Add more sections for other formats and clone groups as needed--></main><footer class="bg-white shadow mt-8 py-4"><div class="container mx-auto px-4 text-center"><p class="text-sm text-gray-600">This report is generated by jscpd, an open-source copy/paste detector.</p><p class="text-sm text-gray-600">jscpd is licensed under the MIT License.</p><a class="text-blue-500 text-sm" href="https://github.com/kucherenko/jscpd" target="_blank" rel="noopener noreferrer">View jscpd on GitHub</a></div></footer><script src="js/prism.js"></script><script>function toggleCodeBlock(codeBlockId, expandBtnId, collapseBtnId) {
+  const codeBlock = document.getElementById(codeBlockId);
+  const expandBtn = document.getElementById(expandBtnId);
+  const collapseBtn = document.getElementById(collapseBtnId);
+
+  codeBlock.classList.toggle('hidden');
+  expandBtn.classList.toggle('hidden');
+  collapseBtn.classList.toggle('hidden');
+}</script></body></html>

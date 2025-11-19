@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@typescript-eslint", "sonarjs"],
+  "extends": [
+    "plugin:@nx/typescript",
+    "plugin:@nx/react",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": ["tsconfig.base.json"]
+  },
+  "rules": {
+    "sonarjs/cognitive-complexity": ["warn", 15],
+    "sonarjs/no-duplicate-string": "warn",
+    "sonarjs/no-identical-functions": "warn"
+  }
+}

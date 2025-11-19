@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quality Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 900px; margin: auto; }
+        .section { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .toggle { cursor: pointer; color: blue; text-decoration: underline; }
+        .hidden { display: none; }
+        .search { margin-bottom: 10px; padding: 5px; width: 98%; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .help { font-size: 14px; color: gray; margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Code Quality Report</h1>
+        <div class="section">
+            <h2>Summary</h2>
+            <p><strong>Average Physical SLOC:</strong> <span id="avg-psloc"></span></p>
+            <p><strong>Average Logical SLOC:</strong> <span id="avg-lsloc"></span></p>
+            <p><strong>Average Maintainability:</strong> <span id="avg-maintainability"></span></p>
+            
+            <hr>
+            <span class="help">- Physical SLOC: Number of lines in source code (including comment lines and sometimes blank lines).<br></span>
+            <span class="help">- Logical SLOC: Number of lines that will be executed (executable statements).<br></span>
+            <span class="help">- Maintainability: A measure designed to track maintainability and indicate when it becomes less costly or less risky to rewrite the code instead of modifying it.<br></span>
+        </div>
+        
+        <input type="text" class="search" placeholder="Search files..." id="search">
+        
+        <div class="section">
+            <h2>File Reports</h2>
+            <div id="reports"></div>
+        </div>
+    </div>
+    
+    <script>
+        const codeComplexityReport = {
+  "summary": {
+    "total": {
+      "psloc": 3263,
+      "lsloc": 1637,
+      "maintainability": 1076.999
+    },
+    "average": {
+      "psloc": 204,
+      "lsloc": 102,
+      "maintainability": "67.31"
+    },
+    "goodMaintainabilityTotal": 0,
+    "goodMaintainabilityFiles": "",
+    "moderateMaintainabilityTotal": 8,
+    "moderateMaintainabilityFiles": "apps/react-crud/src/app/slice.tsx (64.648)\napps/react-crud/src/app/gridSlice.tsx (66.984)\napps/react-crud/src/app/app.tsx (68.584)\napps/react-crud/src/app/store.tsx (71.822)\napps/react-crud/src/app/Modules/ToggleSwitch.tsx (78.476)\napps/react-crud/src/app/Modules/Components/DialogBox.tsx (79.032)\napps/react-crud/src/app/nx-welcome.tsx (79.058)\napps/react-crud/src/app/Modules/Components/Toast.tsx (81.985)",
+    "badMaintainabilityTotal": 7,
+    "badMaintainabilityFiles": "apps/react-crud/src/app/Config/gridColumnConfig.ts (45.901)\napps/react-crud/src/app/Config/formDataConfig.ts (53.421)\napps/react-crud/src/app/Modules/Utils/AgGridStyle.ts (58.031)\napps/react-crud/src/app/Modules/GridSelection.tsx (60.927)\napps/react-crud/src/app/Modules/Posts.tsx (61.246)\napps/react-crud/src/app/Modules/Comments.tsx (63.131)\napps/react-crud/src/app/Modules/Users.tsx (63.37)",
+    "goodCyclomaticTotal": 8,
+    "goodCyclomaticFiles": "apps/react-crud/src/app/Config/gridColumnConfig.ts (1)\napps/react-crud/src/app/Config/formDataConfig.ts (1)\napps/react-crud/src/app/Modules/Comments.tsx (9)\napps/react-crud/src/app/store.tsx (2)\napps/react-crud/src/app/Modules/ToggleSwitch.tsx (5)\napps/react-crud/src/app/Modules/Components/DialogBox.tsx (3)\napps/react-crud/src/app/nx-welcome.tsx (2)\napps/react-crud/src/app/Modules/Components/Toast.tsx (2)",
+    "moderateCyclomaticTotal": 4,
+    "moderateCyclomaticFiles": "apps/react-crud/src/app/Modules/Utils/AgGridStyle.ts (12)\napps/react-crud/src/app/slice.tsx (13)\napps/react-crud/src/app/gridSlice.tsx (15)\napps/react-crud/src/app/app.tsx (13)",
+    "badCyclomaticTotal": 1,
+    "badCyclomaticFiles": "apps/react-crud/src/app/Modules/Users.tsx (30)",
+    "veryBadCyclomaticTotal": 2,
+    "veryBadCyclomaticFiles": "apps/react-crud/src/app/Modules/GridSelection.tsx (150)\napps/react-crud/src/app/Modules/Posts.tsx (141)"
+  },
+  "reports": {
+    "apps/react-crud/src/app/Config/gridColumnConfig.ts": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "45.9 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "33 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "46 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "1 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "176 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "960.86 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "7.74 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "7434.02 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.32 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "413 s"
+      }
+    ],
+    "apps/react-crud/src/app/Config/formDataConfig.ts": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "53.42 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "19 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "24 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "1 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "94 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "419.19 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "9 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "3772.68 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.14 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "209.59 s"
+      }
+    ],
+    "apps/react-crud/src/app/Modules/Utils/AgGridStyle.ts": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "58.03 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "66 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "52 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "12 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "193 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "1213.08 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "16.42 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "19923.34 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.4 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "1106.85 s"
+      }
+    ],
+    "apps/react-crud/src/app/Modules/GridSelection.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "60.93 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "797 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "542 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "150 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "2160 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "18254.62 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "57.66 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "1052568.05 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "6.08 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "58476 s"
+      }
+    ],
+    "apps/react-crud/src/app/Modules/Posts.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "61.25 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "682 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "500 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "141 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "1883 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "15728.98 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "54.45 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "856509.36 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "5.24 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "47583.85 s"
+      }
+    ],
+    "apps/react-crud/src/app/Modules/Comments.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "63.13 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "78 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "57 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "9 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "207 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "1337.1 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "9.45 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "12631.16 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.45 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "701.73 s"
+      }
+    ],
+    "apps/react-crud/src/app/Modules/Users.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "63.37 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "259 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "156 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "30 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "581 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "4309.77 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "22.05 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "95030.48 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "1.44 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "5279.47 s"
+      }
+    ],
+    "apps/react-crud/src/app/slice.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "64.65 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "116 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "104 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "13 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "331 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "2086.55 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "15.61 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "32571.68 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.7 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "1809.54 s"
+      }
+    ],
+    "apps/react-crud/src/app/gridSlice.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "66.98 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "107 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "52 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "15 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "253 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "1560.99 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "18.07 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "28203.67 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.52 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "1566.87 s"
+      }
+    ],
+    "apps/react-crud/src/app/app.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "68.58 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "119 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "66 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "13 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "199 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "1219.73 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "11.75 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "14326.45 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.41 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "795.91 s"
+      }
+    ],
+    "apps/react-crud/src/app/store.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "71.82 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "12 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "10 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "2 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "45 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "197.65 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "6.5 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "1284.75 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.07 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "71.38 s"
+      }
+    ],
+    "apps/react-crud/src/app/Modules/ToggleSwitch.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "78.48 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "35 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "8 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "5 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "35 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "156.08 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "7.5 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "1170.6 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.05 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "65.03 s"
+      }
+    ],
+    "apps/react-crud/src/app/Modules/Components/DialogBox.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "79.03 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "41 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "4 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "3 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "59 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "297.62 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "8 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "2380.95 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.1 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "132.28 s"
+      }
+    ],
+    "apps/react-crud/src/app/nx-welcome.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "79.06 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "849 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "3 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "2 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "221 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "1384.96 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "7.46 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "10339.11 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.46 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "574.39 s"
+      }
+    ],
+    "apps/react-crud/src/app/Modules/Components/Toast.tsx": [
+      {
+        "title": "Maintainability Index IM (%)",
+        "score": "81.98 %"
+      },
+      {
+        "title": "Number of lines in source code (physical SLOC)",
+        "score": "25 "
+      },
+      {
+        "title": "Number of lines that will be executed (logical SLOC)",
+        "score": "4 "
+      },
+      {
+        "title": "Cyclomatic Complexity",
+        "score": "2 "
+      },
+      {
+        "title": "Program Length (N)",
+        "score": "35 "
+      },
+      {
+        "title": "Program Volume (V)",
+        "score": "160.47 bit"
+      },
+      {
+        "title": "Difficulty Level (D)",
+        "score": "3.82 "
+      },
+      {
+        "title": "Implementation Effort (E) or Understanding",
+        "score": "612.33 bit"
+      },
+      {
+        "title": "Number of estimated bugs in a module or function (B)",
+        "score": "0.05 "
+      },
+      {
+        "title": "Time (T) to implement or understand the program",
+        "score": "34.02 s"
+      }
+    ]
+  }
+};
+
+        // Fill summary data
+        if (codeComplexityReport?.summary?.average) {
+            document.getElementById("avg-psloc").textContent = codeComplexityReport.summary.average.psloc;
+            document.getElementById("avg-psloc").textContent += ' physical statements';
+            
+            document.getElementById("avg-lsloc").textContent = codeComplexityReport.summary.average.lsloc;
+            document.getElementById("avg-lsloc").textContent += ' logical statements';
+            
+            document.getElementById("avg-maintainability").textContent = codeComplexityReport.summary.average.maintainability;
+            document.getElementById("avg-maintainability").textContent += ' %';
+        }
+
+        // Populate File Reports
+        if (codeComplexityReport?.reports && Object.keys(codeComplexityReport.reports).length !== 0) {
+            const reportsDiv = document.getElementById("reports");
+
+            Object.entries(codeComplexityReport.reports).forEach(([file, metrics]) => {
+                const fileDiv = document.createElement("div");
+                fileDiv.classList.add("section");
+
+                // Create file header with toggle button
+                const fileHeader = document.createElement("h3");
+                fileHeader.textContent = file;
+                const toggleSpan = document.createElement("span");
+                toggleSpan.className = "toggle";
+                toggleSpan.textContent = "▶ ";
+                fileHeader.prepend(toggleSpan);
+                fileHeader.onclick = function () {
+                    const details = fileDiv.querySelector(".details");
+                    details.classList.toggle("hidden");
+                    this.querySelector(".toggle").textContent = details.classList.contains("hidden") ? "▶" : "▼";
+                };
+                fileDiv.appendChild(fileHeader);
+
+                // Create details section with metrics table
+                const detailsDiv = document.createElement("div");
+                detailsDiv.classList.add("details", "hidden");
+
+                const table = document.createElement("table");
+                table.innerHTML = `<tr><th>Metric</th><th>Score</th></tr>`;
+                metrics.forEach(metric => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `<td>${metric.title}</td><td>${metric.score}</td>`;
+                    table.appendChild(row);
+                });
+                detailsDiv.appendChild(table);
+                fileDiv.appendChild(detailsDiv);
+
+                reportsDiv.appendChild(fileDiv);
+            });
+
+            // Implement Search Feature
+            document.getElementById("search").addEventListener("input", function () {
+                const searchText = this.value.toLowerCase();
+                document.querySelectorAll(".section h3").forEach(h3 => {
+                    h3.parentElement.style.display = h3.textContent.toLowerCase().includes(searchText) ? "block" : "none";
+                });
+            });
+        }
+    </script>
+</body>
+</html>

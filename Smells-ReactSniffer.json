@@ -1,0 +1,1308 @@
+{
+  "smells (General Infomation)": {
+    "Props in Initial State": 0,
+    "Use of index as key in rendering with loops": 2,
+    "Component Nesting/JSX Outside the Render": 2,
+    "Large Components": 3,
+    "Prop Drilling": 0,
+    "Too many useState": 0,
+    "Direct DOM Manipulation": 2,
+    "Props Spreading": 8,
+    "Deep Indentation": 11,
+    "Too many props": 0,
+    "Large useEffect": 0,
+    "Mutable Variables": 2,
+    "Procedural Patterns": 0,
+    "String Literals": 25,
+    "Never Using Class Components": 0,
+    "Use PrevState": 0
+  },
+  "files/components smells (Component Smell Information)": {
+    "outputFiles": [
+      {
+        "id": 1,
+        "Large File": "apps\\react-crud\\src\\app\\app.tsx",
+        "File URL": "apps\\react-crud\\src\\app\\app.tsx",
+        "LOC": 129,
+        "N_Components": 1,
+        "N_Functions": 0,
+        "N_Imports": 22
+      },
+      {
+        "id": 2,
+        "Large File": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "LOC": 844,
+        "N_Components": 2,
+        "N_Functions": 0,
+        "N_Imports": 67
+      },
+      {
+        "id": 3,
+        "Large File": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "LOC": 720,
+        "N_Components": 2,
+        "N_Functions": 0,
+        "N_Imports": 59
+      },
+      {
+        "id": 4,
+        "Large File": "apps\\react-crud\\src\\app\\Modules\\Users.tsx",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\Users.tsx",
+        "LOC": 278,
+        "N_Components": 1,
+        "N_Functions": 0,
+        "N_Imports": 42
+      }
+    ],
+    "outputComponents": [
+      {
+        "id": 1,
+        "File": "apps\\react-crud\\src\\app\\app.tsx",
+        "Component": "App",
+        "LC": "N",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": 0,
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 0,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 0,
+        "DI": 0,
+        "P": 0,
+        "LUE": 0,
+        "MV": 0,
+        "PP": 0,
+        "SL": 0,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 2,
+        "File": "apps\\react-crud\\src\\app\\Modules\\Comments.tsx",
+        "Component": "Comments",
+        "LC": "N",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": 0,
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 0,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 0,
+        "DI": 0,
+        "P": 0,
+        "LUE": 0,
+        "MV": 0,
+        "PP": 0,
+        "SL": 0,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 3,
+        "File": "apps\\react-crud\\src\\app\\Modules\\Components\\DialogBox.tsx",
+        "Component": "DialogBox",
+        "LC": "N",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": 0,
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 0,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 0,
+        "DI": 0,
+        "P": 0,
+        "LUE": 0,
+        "MV": 0,
+        "PP": 0,
+        "SL": 1,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 4,
+        "File": "apps\\react-crud\\src\\app\\Modules\\Components\\Toast.tsx",
+        "Component": "ToastMessage",
+        "LC": "N",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": 0,
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 0,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 0,
+        "DI": 0,
+        "P": 0,
+        "LUE": 0,
+        "MV": 0,
+        "PP": 0,
+        "SL": 0,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 5,
+        "File": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "Component": "GridSelection",
+        "LC": "Y",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": "Y",
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 1,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 3,
+        "DI": 6,
+        "P": 0,
+        "LUE": 0,
+        "MV": 1,
+        "PP": 0,
+        "SL": 13,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 6,
+        "File": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "Component": "ActionButtonRenderer",
+        "LC": "N",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": 0,
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 0,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 0,
+        "DI": 0,
+        "P": 0,
+        "LUE": 0,
+        "MV": 0,
+        "PP": 0,
+        "SL": 1,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 7,
+        "File": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "Component": "Posts",
+        "LC": "Y",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 2,
+        "JSX": "Y",
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 1,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 3,
+        "DI": 5,
+        "P": 0,
+        "LUE": 0,
+        "MV": 1,
+        "PP": 0,
+        "SL": 8,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 8,
+        "File": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "Component": "ActionButtonRenderer",
+        "LC": "N",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": 0,
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 0,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 0,
+        "DI": 0,
+        "P": 0,
+        "LUE": 0,
+        "MV": 0,
+        "PP": 0,
+        "SL": 1,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 9,
+        "File": "apps\\react-crud\\src\\app\\Modules\\ToggleSwitch.tsx",
+        "Component": "ToggleSwitch",
+        "LC": "N",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": 0,
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 0,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 0,
+        "DI": 0,
+        "P": 0,
+        "LUE": 0,
+        "MV": 0,
+        "PP": 0,
+        "SL": 0,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      },
+      {
+        "id": 10,
+        "File": "apps\\react-crud\\src\\app\\Modules\\Users.tsx",
+        "Component": "Users",
+        "LC": "Y",
+        "TP": "N",
+        "ICC": "N",
+        "FU": 0,
+        "DOM": 0,
+        "JSX": 0,
+        "UC": 0,
+        "PIS": 0,
+        "AIK": 0,
+        "PD": 0,
+        "TMU": "N",
+        "PS": 2,
+        "DI": 0,
+        "P": 0,
+        "LUE": 0,
+        "MV": 0,
+        "PP": 0,
+        "SL": 1,
+        "CD": "N",
+        "PREVS": 0,
+        "IIC": "Y"
+      }
+    ]
+  },
+  "files/components (Specific Information)": {
+    "allComponents": [
+      {
+        "file": "apps\\react-crud\\src\\app\\app.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\app.tsx",
+        "properties": [],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [
+          "handleValue"
+        ],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "App",
+        "char": 2525,
+        "loc": 86,
+        "arrayIndexKey": [],
+        "propDrilling": [],
+        "useState": [],
+        "propsSpreading": [],
+        "deepIndentation": [],
+        "mutableVariables": [],
+        "proceduralPatterns": [],
+        "stringLiterals": [],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\Comments.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\Comments.tsx",
+        "properties": [],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [
+          "getSelectedRowNodes"
+        ],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "Comments",
+        "char": 1904,
+        "loc": 65,
+        "arrayIndexKey": [],
+        "propDrilling": [],
+        "useState": [],
+        "propsSpreading": [],
+        "deepIndentation": [],
+        "mutableVariables": [],
+        "proceduralPatterns": [],
+        "stringLiterals": [],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\Components\\DialogBox.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\Components\\DialogBox.tsx",
+        "properties": [
+          "open",
+          "size",
+          "status",
+          "content",
+          "direction",
+          "closeButton",
+          "confirm",
+          "cancel"
+        ],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "DialogBox",
+        "char": 784,
+        "loc": 29,
+        "arrayIndexKey": [],
+        "propDrilling": [],
+        "useState": [],
+        "propsSpreading": [],
+        "deepIndentation": [],
+        "mutableVariables": [],
+        "proceduralPatterns": [],
+        "stringLiterals": [
+          {
+            "lineStart": 29,
+            "lineEnd": 29,
+            "line": "{direction === \"column\" ? (",
+            "smellString": "direction === \"column\""
+          }
+        ],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\Components\\Toast.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\Components\\Toast.tsx",
+        "properties": [
+          "status",
+          "headText",
+          "content",
+          "icon",
+          "handleClose"
+        ],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "ToastMessage",
+        "char": 423,
+        "loc": 15,
+        "arrayIndexKey": [],
+        "propDrilling": [],
+        "useState": [],
+        "propsSpreading": [],
+        "deepIndentation": [],
+        "mutableVariables": [],
+        "proceduralPatterns": [],
+        "stringLiterals": [],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "properties": [],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [
+          "ActionButtonRenderer"
+        ],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [
+          "getMultiRowData",
+          "handleInputChange",
+          "createRecord",
+          "handleEditDelete",
+          "generateNewRecord",
+          "handleSubmit",
+          "handleClose",
+          "confirmDialogHandleClose",
+          "confirmationDialogSubmit",
+          "validationStatus",
+          "handleSelectionChange"
+        ],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "GridSelection",
+        "char": 23031,
+        "loc": 752,
+        "arrayIndexKey": [
+          {
+            "lineStart": 747,
+            "lineEnd": 747,
+            "line": "<StackLayout gap={2} direction={'row'} key={rowIndex}>",
+            "smellString": "rowIndex"
+          }
+        ],
+        "propDrilling": [],
+        "useState": [
+          {
+            "lineStart": 93,
+            "lineEnd": 93,
+            "line": "const [selectedValue, setSelectedValue] = useState<ApiEndPoint[]>([]);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 112,
+            "lineEnd": 112,
+            "line": "const [selectedData, setSelectedData] = useState<Row | undefined>();",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 113,
+            "lineEnd": 113,
+            "line": "const [multipleData, setMultipleData] = useState<Row[]>([]);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 114,
+            "lineEnd": 114,
+            "line": "const [editableData, setEditableData] = useState<",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 117,
+            "lineEnd": 117,
+            "line": "const [addNewData, setAddNewData] = useState<",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 120,
+            "lineEnd": 120,
+            "line": "const [originalData, setOriginalData] = useState<",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 123,
+            "lineEnd": 123,
+            "line": "const [defaultData, setDefaultData] = useState<",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 126,
+            "lineEnd": 126,
+            "line": "const [selectedRows, setSelectedRows] = useState(0);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 127,
+            "lineEnd": 127,
+            "line": "const [dialogOpen, setDialogOpen] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 128,
+            "lineEnd": 128,
+            "line": "const [isEdit, setIsEdit] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 129,
+            "lineEnd": 129,
+            "line": "const [isDelete, setIsDelete] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 131,
+            "lineEnd": 131,
+            "line": "useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 144,
+            "lineEnd": 144,
+            "line": "const [toast, setToast] = useState<JSX.Element | null>(null);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 158,
+            "lineEnd": 158,
+            "line": "const [emptyField, setEmptyField] = useState<boolean>(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 159,
+            "lineEnd": 159,
+            "line": "const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 160,
+            "lineEnd": 160,
+            "line": "const [dialogCancellation, setDialogCancellation] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 161,
+            "lineEnd": 161,
+            "line": "const [isAdd, setIsAdd] = useState(false);",
+            "smellString": "useState"
+          }
+        ],
+        "propsSpreading": [
+          {
+            "lineStart": 653,
+            "lineEnd": 653,
+            "line": "<div {...containerProps}>",
+            "smellString": "{...containerProps}"
+          },
+          {
+            "lineStart": 717,
+            "lineEnd": 717,
+            "line": "{...agGridProps}",
+            "smellString": "{...agGridProps}"
+          },
+          {
+            "lineStart": 718,
+            "lineEnd": 718,
+            "line": "{...props}",
+            "smellString": "{...props}"
+          }
+        ],
+        "deepIndentation": [
+          {
+            "lineStart": 168,
+            "lineEnd": 176,
+            "line": "(isAdd || isEdit) && dialogCancellation? 'Are you sure you want to cancel the changes? Any previous changes will not be saved': isDelete? `Are you sure you want to delete the selected ${selectedRows > 1 ? selectedValue[0] : selectedValue[0]?.slice(0, -1)} ?`: `Do you want to proceed with update from the selected ${selectedRows > 1 ? selectedValue[0] : selectedValue[0]?.slice(0, -1)} ?`;",
+            "smellString": "(isAdd || isEdit) && dialogCancellation\r\n      ? 'Are you sure you want to cancel the changes? Any previous changes will not be saved'\r\n      : isDelete\r\n      ? `Are you sure you want to delete the selected ${\r\n          selectedRows > 1 ? selectedValue[0] : selectedValue[0]?.slice(0, -1)\r\n        } ?`\r\n      : `Do you want to proceed with update from the selected ${\r\n          selectedRows > 1 ? selectedValue[0] : selectedValue[0]?.slice(0, -1)\r\n        } ?`"
+          },
+          {
+            "lineStart": 442,
+            "lineEnd": 442,
+            "line": "isEdit ? `Updated` : isDelete ? `Deleted` : `Added`",
+            "smellString": "isEdit ? `Updated` : isDelete ? `Deleted` : `Added`"
+          },
+          {
+            "lineStart": 447,
+            "lineEnd": 447,
+            "line": "isEdit ? `Updated` : isDelete ? `Deleted` : `Added`",
+            "smellString": "isEdit ? `Updated` : isDelete ? `Deleted` : `Added`"
+          },
+          {
+            "lineStart": 590,
+            "lineEnd": 590,
+            "line": "{isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'}",
+            "smellString": "isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'"
+          },
+          {
+            "lineStart": 626,
+            "lineEnd": 630,
+            "line": "{(isAdd || isEdit) && dialogCancellation? 'Accept': isDelete? 'Delete': 'Update'}",
+            "smellString": "(isAdd || isEdit) && dialogCancellation\r\n        ? 'Accept'\r\n        : isDelete\r\n        ? 'Delete'\r\n        : 'Update'"
+          },
+          {
+            "lineStart": 740,
+            "lineEnd": 740,
+            "line": "header={`${isEdit ? 'Edit' : isDelete ? 'Delete' : 'Add'} Item`}",
+            "smellString": "isEdit ? 'Edit' : isDelete ? 'Delete' : 'Add'"
+          }
+        ],
+        "mutableVariables": [
+          {
+            "lineStart": 542,
+            "lineEnd": 542,
+            "line": "let isDisabled = false;",
+            "smellString": "let isDisabled = false;"
+          }
+        ],
+        "proceduralPatterns": [],
+        "stringLiterals": [
+          {
+            "lineStart": 258,
+            "lineEnd": 258,
+            "line": "action === 'edit' ? setIsEdit(true) : setIsDelete(true);",
+            "smellString": "action === 'edit'"
+          },
+          {
+            "lineStart": 301,
+            "lineEnd": 301,
+            "line": "row.some((item) => !item.value || String(item.value).trim() === '')",
+            "smellString": "String(item.value).trim() === ''"
+          },
+          {
+            "lineStart": 316,
+            "lineEnd": 316,
+            "line": "row.some((item) => !item.value || String(item.value).trim() === '')",
+            "smellString": "String(item.value).trim() === ''"
+          },
+          {
+            "lineStart": 355,
+            "lineEnd": 355,
+            "line": "if(endpoint === \"users\"){",
+            "smellString": "endpoint === \"users\""
+          },
+          {
+            "lineStart": 362,
+            "lineEnd": 362,
+            "line": "if(endpoint === \"comments\"){",
+            "smellString": "endpoint === \"comments\""
+          },
+          {
+            "lineStart": 371,
+            "lineEnd": 371,
+            "line": "if(endpoint === \"posts\"){",
+            "smellString": "endpoint === \"posts\""
+          },
+          {
+            "lineStart": 398,
+            "lineEnd": 398,
+            "line": "parseInt(record.find((f) => f.key === 'id')?.value ?? '0', 10)",
+            "smellString": "f.key === 'id'"
+          },
+          {
+            "lineStart": 486,
+            "lineEnd": 486,
+            "line": "Object.values(obj).some((val) => (val ?? '').trim() === '')",
+            "smellString": "(val ?? '').trim() === ''"
+          },
+          {
+            "lineStart": 751,
+            "lineEnd": 751,
+            "line": "key === 'userId' || key === 'id' || key === 'postId';",
+            "smellString": "key === 'userId'"
+          },
+          {
+            "lineStart": 751,
+            "lineEnd": 751,
+            "line": "key === 'userId' || key === 'id' || key === 'postId';",
+            "smellString": "key === 'id'"
+          },
+          {
+            "lineStart": 751,
+            "lineEnd": 751,
+            "line": "key === 'userId' || key === 'id' || key === 'postId';",
+            "smellString": "key === 'postId'"
+          },
+          {
+            "lineStart": 753,
+            "lineEnd": 753,
+            "line": "const multiLineInput = key === 'body';",
+            "smellString": "key === 'body'"
+          },
+          {
+            "lineStart": 802,
+            "lineEnd": 802,
+            "line": "{direction === 'column' ? (",
+            "smellString": "direction === 'column'"
+          }
+        ],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "properties": [],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [
+          "handleClickAction"
+        ],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "ActionButtonRenderer",
+        "char": 762,
+        "loc": 29,
+        "arrayIndexKey": [],
+        "propDrilling": [],
+        "useState": [],
+        "propsSpreading": [],
+        "deepIndentation": [],
+        "mutableVariables": [],
+        "proceduralPatterns": [],
+        "stringLiterals": [
+          {
+            "lineStart": 226,
+            "lineEnd": 226,
+            "line": "actionType === 'edit' ? setIsEdit(true) : setIsDelete(true);",
+            "smellString": "actionType === 'edit'"
+          }
+        ],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "properties": [],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [
+          "ActionButtonRenderer"
+        ],
+        "propsInitialState": [],
+        "domManipulation": [
+          {
+            "lineStart": 306,
+            "lineEnd": 306,
+            "line": "body: post.body,",
+            "smellString": "body"
+          },
+          {
+            "lineStart": 340,
+            "lineEnd": 340,
+            "line": "body: updateDataToStore[0].body || '',",
+            "smellString": "body"
+          }
+        ],
+        "functions": [
+          "getMultiRowData",
+          "handleInputChange",
+          "createRecord",
+          "handleEditDelete",
+          "reorderPost",
+          "handleSubmit",
+          "handleClose",
+          "confirmDialogHandleClose",
+          "confirmationDialogSubmit",
+          "validationStatus"
+        ],
+        "superClass": "no-name",
+        "type": "FunctionDeclaration",
+        "name": "Posts",
+        "char": 20029,
+        "loc": 639,
+        "arrayIndexKey": [
+          {
+            "lineStart": 624,
+            "lineEnd": 624,
+            "line": "<StackLayout gap={2} direction={'row'} key={rowIndex}>",
+            "smellString": "rowIndex"
+          }
+        ],
+        "propDrilling": [],
+        "useState": [
+          {
+            "lineStart": 87,
+            "lineEnd": 87,
+            "line": "const [selectedData, setSelectedData] = useState<Post | undefined>();",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 88,
+            "lineEnd": 88,
+            "line": "const [multipleData, setMultipleData] = useState<Post[]>([]);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 89,
+            "lineEnd": 89,
+            "line": "const [editableData, setEditableData] = useState<",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 92,
+            "lineEnd": 92,
+            "line": "const [addNewData, setAddNewData] = useState<{ key: string; value: any }[][]>(",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 95,
+            "lineEnd": 95,
+            "line": "const [originalData, setOriginalData] = useState<",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 98,
+            "lineEnd": 98,
+            "line": "const [selectedRows, setSelectedRows] = useState(0);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 99,
+            "lineEnd": 99,
+            "line": "const [dialogOpen, setDialogOpen] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 100,
+            "lineEnd": 100,
+            "line": "const [isEdit, setIsEdit] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 101,
+            "lineEnd": 101,
+            "line": "const [isDelete, setIsDelete] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 103,
+            "lineEnd": 103,
+            "line": "useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 116,
+            "lineEnd": 116,
+            "line": "const [toast, setToast] = useState<JSX.Element | null>(null);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 128,
+            "lineEnd": 128,
+            "line": "const [emptyField, setEmptyField] = useState<boolean>(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 129,
+            "lineEnd": 129,
+            "line": "const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 130,
+            "lineEnd": 130,
+            "line": "const [dialogCancellation, setDialogCancellation] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 131,
+            "lineEnd": 131,
+            "line": "const [isAdd, setIsAdd] = useState(false);",
+            "smellString": "useState"
+          }
+        ],
+        "propsSpreading": [
+          {
+            "lineStart": 553,
+            "lineEnd": 553,
+            "line": "{...containerProps}",
+            "smellString": "{...containerProps}"
+          },
+          {
+            "lineStart": 596,
+            "lineEnd": 596,
+            "line": "{...agGridProps}",
+            "smellString": "{...agGridProps}"
+          },
+          {
+            "lineStart": 597,
+            "lineEnd": 597,
+            "line": "{...props}",
+            "smellString": "{...props}"
+          }
+        ],
+        "deepIndentation": [
+          {
+            "lineStart": 138,
+            "lineEnd": 142,
+            "line": "(isAdd || isEdit) && dialogCancellation? 'Are you sure you want to reset all grid data? Any previous changes will not be saved': isDelete? 'Are you sure you want to delete this post?': 'Do you want to proceed with update from the selected post?';",
+            "smellString": "(isAdd || isEdit) && dialogCancellation\r\n      ? 'Are you sure you want to reset all grid data? Any previous changes will not be saved'\r\n      : isDelete\r\n      ? 'Are you sure you want to delete this post?'\r\n      : 'Do you want to proceed with update from the selected post?'"
+          },
+          {
+            "lineStart": 357,
+            "lineEnd": 357,
+            "line": "isEdit ? `Updated` : isDelete ? `Deleted` : `Added`",
+            "smellString": "isEdit ? `Updated` : isDelete ? `Deleted` : `Added`"
+          },
+          {
+            "lineStart": 496,
+            "lineEnd": 496,
+            "line": "{isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'}",
+            "smellString": "isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'"
+          },
+          {
+            "lineStart": 532,
+            "lineEnd": 536,
+            "line": "{(isAdd || isEdit) && dialogCancellation? 'Accept': isDelete? 'Delete': 'Update'}",
+            "smellString": "(isAdd || isEdit) && dialogCancellation\r\n        ? 'Accept'\r\n        : isDelete\r\n        ? 'Delete'\r\n        : 'Update'"
+          },
+          {
+            "lineStart": 617,
+            "lineEnd": 617,
+            "line": "header={`${isEdit ? 'Edit' : isDelete ? 'Delete' : 'Add'} Item`}",
+            "smellString": "isEdit ? 'Edit' : isDelete ? 'Delete' : 'Add'"
+          }
+        ],
+        "mutableVariables": [
+          {
+            "lineStart": 446,
+            "lineEnd": 446,
+            "line": "let isDisabled = false;",
+            "smellString": "let isDisabled = false;"
+          }
+        ],
+        "proceduralPatterns": [],
+        "stringLiterals": [
+          {
+            "lineStart": 215,
+            "lineEnd": 215,
+            "line": "action === 'edit' ? setIsEdit(true) : setIsDelete(true);",
+            "smellString": "action === 'edit'"
+          },
+          {
+            "lineStart": 257,
+            "lineEnd": 257,
+            "line": "row.some((item) => !item.value || String(item.value).trim() === '')",
+            "smellString": "String(item.value).trim() === ''"
+          },
+          {
+            "lineStart": 272,
+            "lineEnd": 272,
+            "line": "row.some((item) => !item.value || String(item.value).trim() === '')",
+            "smellString": "String(item.value).trim() === ''"
+          },
+          {
+            "lineStart": 316,
+            "lineEnd": 316,
+            "line": "parseInt(record.find((f) => f.key === 'id')?.value ?? '0', 10)",
+            "smellString": "f.key === 'id'"
+          },
+          {
+            "lineStart": 627,
+            "lineEnd": 627,
+            "line": "const disableId = key === 'userId' || key === 'id';",
+            "smellString": "key === 'userId'"
+          },
+          {
+            "lineStart": 627,
+            "lineEnd": 627,
+            "line": "const disableId = key === 'userId' || key === 'id';",
+            "smellString": "key === 'id'"
+          },
+          {
+            "lineStart": 629,
+            "lineEnd": 629,
+            "line": "const multiLineInput = key === 'body';",
+            "smellString": "key === 'body'"
+          },
+          {
+            "lineStart": 678,
+            "lineEnd": 678,
+            "line": "{direction === 'column' ? (",
+            "smellString": "direction === 'column'"
+          }
+        ],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "properties": [],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [
+          "handleClickAction"
+        ],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "ActionButtonRenderer",
+        "char": 763,
+        "loc": 29,
+        "arrayIndexKey": [],
+        "propDrilling": [],
+        "useState": [],
+        "propsSpreading": [],
+        "deepIndentation": [],
+        "mutableVariables": [],
+        "proceduralPatterns": [],
+        "stringLiterals": [
+          {
+            "lineStart": 183,
+            "lineEnd": 183,
+            "line": "actionType === 'edit' ? setIsEdit(true) : setIsDelete(true);",
+            "smellString": "actionType === 'edit'"
+          }
+        ],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\ToggleSwitch.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\ToggleSwitch.tsx",
+        "properties": [],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "ToggleSwitch",
+        "char": 789,
+        "loc": 28,
+        "arrayIndexKey": [],
+        "propDrilling": [],
+        "useState": [
+          {
+            "lineStart": 7,
+            "lineEnd": 7,
+            "line": "const [divider, setDivider] = useState(false);",
+            "smellString": "useState"
+          }
+        ],
+        "propsSpreading": [],
+        "deepIndentation": [],
+        "mutableVariables": [],
+        "proceduralPatterns": [],
+        "stringLiterals": [],
+        "largeUseEffect": [],
+        "prevState": []
+      },
+      {
+        "file": "apps\\react-crud\\src\\app\\Modules\\Users.tsx",
+        "file_url": "apps\\react-crud\\src\\app\\Modules\\Users.tsx",
+        "properties": [],
+        "forceUpdate": [],
+        "uncontrolled": [],
+        "classProperties": [],
+        "classMethods": [],
+        "JSXOutsideRender": [],
+        "propsInitialState": [],
+        "domManipulation": [],
+        "functions": [
+          "editButtonRenderer",
+          "handleEditClick",
+          "handleInputChange",
+          "handleSubmit",
+          "handleClose"
+        ],
+        "superClass": "no-name",
+        "type": "ArrowFunctionExpression",
+        "name": "Users",
+        "char": 7231,
+        "loc": 238,
+        "arrayIndexKey": [],
+        "propDrilling": [],
+        "useState": [
+          {
+            "lineStart": 43,
+            "lineEnd": 43,
+            "line": "const [selectedData, setSelectedData] = useState<User | undefined>();",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 44,
+            "lineEnd": 44,
+            "line": "const [editableData, setEditableData] = useState<",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 47,
+            "lineEnd": 47,
+            "line": "const [dialogOpen, setDialogOpen] = useState(false);",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 48,
+            "lineEnd": 48,
+            "line": "const [submittedData, setSubmittedData] = useState<{ [key: string]: any }>(",
+            "smellString": "useState"
+          },
+          {
+            "lineStart": 51,
+            "lineEnd": 51,
+            "line": "const [toast,setToast] = useState<JSX.Element| null>(null)",
+            "smellString": "useState"
+          }
+        ],
+        "propsSpreading": [
+          {
+            "lineStart": 209,
+            "lineEnd": 209,
+            "line": "<div{...containerProps} className=\"text-2xl font-bold mb-4\">",
+            "smellString": "{...containerProps}"
+          },
+          {
+            "lineStart": 214,
+            "lineEnd": 214,
+            "line": "{...agGridProps}",
+            "smellString": "{...agGridProps}"
+          }
+        ],
+        "deepIndentation": [],
+        "mutableVariables": [],
+        "proceduralPatterns": [],
+        "stringLiterals": [
+          {
+            "lineStart": 248,
+            "lineEnd": 248,
+            "line": "{direction === 'column' ? (",
+            "smellString": "direction === 'column'"
+          }
+        ],
+        "largeUseEffect": [],
+        "prevState": []
+      }
+    ],
+    "allFiles": [
+      {
+        "id": 1,
+        "Large File": "apps\\react-crud\\src\\app\\app.tsx",
+        "File URL": "apps\\react-crud\\src\\app\\app.tsx",
+        "LOC": 129,
+        "N_Components": 1,
+        "N_Functions": 0,
+        "N_Imports": 22
+      },
+      {
+        "id": 2,
+        "Large File": "N",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\Comments.tsx",
+        "File": "apps\\react-crud\\src\\app\\Modules\\Comments.tsx",
+        "LOC": 84,
+        "N_Components": 1,
+        "N_Functions": 0,
+        "N_Imports": 15
+      },
+      {
+        "id": 3,
+        "Large File": "N",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\Components\\DialogBox.tsx",
+        "File": "apps\\react-crud\\src\\app\\Modules\\Components\\DialogBox.tsx",
+        "LOC": 45,
+        "N_Components": 1,
+        "N_Functions": 0,
+        "N_Imports": 8
+      },
+      {
+        "id": 4,
+        "Large File": "N",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\Components\\Toast.tsx",
+        "File": "apps\\react-crud\\src\\app\\Modules\\Components\\Toast.tsx",
+        "LOC": 27,
+        "N_Components": 1,
+        "N_Functions": 0,
+        "N_Imports": 9
+      },
+      {
+        "id": 2,
+        "Large File": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "LOC": 844,
+        "N_Components": 2,
+        "N_Functions": 0,
+        "N_Imports": 67
+      },
+      {
+        "id": 3,
+        "Large File": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
+        "LOC": 720,
+        "N_Components": 2,
+        "N_Functions": 0,
+        "N_Imports": 59
+      },
+      {
+        "id": 7,
+        "Large File": "N",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\ToggleSwitch.tsx",
+        "File": "apps\\react-crud\\src\\app\\Modules\\ToggleSwitch.tsx",
+        "LOC": 35,
+        "N_Components": 1,
+        "N_Functions": 0,
+        "N_Imports": 9
+      },
+      {
+        "id": 4,
+        "Large File": "apps\\react-crud\\src\\app\\Modules\\Users.tsx",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\Users.tsx",
+        "LOC": 278,
+        "N_Components": 1,
+        "N_Functions": 0,
+        "N_Imports": 42
+      },
+      {
+        "id": 9,
+        "Large File": "N",
+        "File URL": "apps\\react-crud\\src\\app\\Modules\\Utils\\AgGridStyle.ts",
+        "File": "apps\\react-crud\\src\\app\\Modules\\Utils\\AgGridStyle.ts",
+        "LOC": 71,
+        "N_Components": 0,
+        "N_Functions": 0,
+        "N_Imports": 9
+      },
+      {
+        "id": 10,
+        "Large File": "N",
+        "File URL": "apps\\react-crud\\src\\main.tsx",
+        "File": "apps\\react-crud\\src\\main.tsx",
+        "LOC": 23,
+        "N_Components": 0,
+        "N_Functions": 0,
+        "N_Imports": 7
+      }
+    ]
+  }
+}
