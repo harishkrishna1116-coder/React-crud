@@ -67,7 +67,7 @@ import {
   useUpdateDataMutation,
   Post,
   User,
-  Comment
+  Comment,
 } from '../Slices/gridSlice';
 import { columnConfig } from '../../Config/gridColumnConfig';
 import { formDataConfig } from '../../Config/formDataConfig';
@@ -327,6 +327,36 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     }
   };
 
+  const ALLOWED_FIELDS: Record<string, string[]> = {
+    users: ['id', 'name', 'username', 'email', 'phone', 'website'],
+    posts: ['id', 'userId', 'title', 'body'],
+    comments: ['id', 'postId', 'name', 'email', 'body'],
+  };
+
+  const filterAllowed = (endpoint: string, obj: any) => {
+  const allowed = ALLOWED_FIELDS[endpoint] ?? [];
+  return Object.fromEntries(
+    Object.entries(obj).filter(([k]) => allowed.includes(k))
+  );
+};
+
+const rowTemplate = (endpoint: string, newId: number) => {
+  const fields = ALLOWED_FIELDS[endpoint] ?? ["id"];
+
+  return fields.map((key) => {
+    switch (key) {
+      case "id":
+        return { key, value: newId.toString() };
+      case "userId":
+        return { key, value: Math.ceil(newId / 10).toString() };
+      case "postId":
+        return { key, value: Math.ceil(newId / 5).toString() };
+      default:
+        return { key, value: "" };
+    }
+  });
+};
+
   const generateNewRecord = (
     lastRecord: any,
     formRecord: any,
@@ -337,34 +367,34 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     // const newPostId = Math.ceil(newId / 5);
     // const newUserId = Math.ceil(newId / 10);
 
-    if(endpoint === "users"){
-      return{
-        ...formRecord,
-        id:newId.toString()
-      }
+    if (endpoint === 'users') {
+      return {
+        ...filterAllowed('users',formRecord),
+        id: newId.toString(),
+      };
     }
 
-    if(endpoint === "comments"){
-      const newPostId = Math.ceil(newId/5)
-      return{
-        ...formRecord,
-        id:newId.toString(),
-        postId:newPostId
-      }
+    if (endpoint === 'comments') {
+      const newPostId = Math.ceil(newId / 5);
+      return {
+        ...filterAllowed('comments',formRecord),
+        id: newId.toString(),
+        postId: newPostId,
+      };
     }
 
-    if(endpoint === "posts"){
-      const newUserId = Math.ceil(newId/10)
-      return{
-        ...formRecord,
-        id:newId.toString(),
-        userId:newUserId
-      }
+    if (endpoint === 'posts') {
+      const newUserId = Math.ceil(newId / 10);
+      return {
+        ...filterAllowed('posts',formRecord),
+        id: newId.toString(),
+        userId: newUserId,
+      };
     }
 
     return {
-      ...formRecord,
-      id: newId.toString()
+      ...filterAllowed(endpoint,formRecord),
+      id: newId.toString(),
     };
   };
 
@@ -403,18 +433,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
           selectedValue[0]
         );
         //for adding new post
-        if (getGridData && getGridData.length > 0) {
-          const lastRecord: Row = getGridData[getGridData.length - 1];
-          const newRecord = generateNewRecord(
-            lastRecord,
-            updateDataToStore[0],
-            selectedValue[0]
-          );
-          await addData({
-            endpoint: selectedValue[0],
-            body: newRecord,
-          }).unwrap();
-        }
+     
       }
       setDialogOpen(false);
       setIsAdd(false);
