@@ -23,6 +23,7 @@ import {
   Option,
   Dropdown,
   type DropdownProps,
+  Tooltip,
 } from '@salt-ds/core';
 import {
   EditIcon,
@@ -31,6 +32,8 @@ import {
   ErrorIcon,
   CloseIcon,
   AddIcon,
+  AddDocumentIcon,
+  RemoveDocumentIcon,
 } from '@salt-ds/icons';
 import {
   themeQuartz,
@@ -77,9 +80,9 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
   type Row = Post | Comment | User;
   const [selectedValue, setSelectedValue] = useState<ApiEndPoint[]>([]);
   const options = [
+    { label: 'Comments', value: 'comments' },
     { label: 'Posts', value: 'posts' },
     { label: 'Users', value: 'users' },
-    { label: 'Comments', value: 'comments' },
   ];
   const {
     data: getGridData,
@@ -277,16 +280,23 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
   ) => {
     if (!isEdit) {
       setAddNewData((prev) => {
-        const updated = prev.map((row) =>
-          row.map((item) =>
-            item.key === key ? { ...item, value: newValue } : item
-          )
+        const updated = prev.map((row, i) =>
+          i === rowIndex
+            ? row.map((item) =>
+                item.key === key ? { ...item, value: newValue } : item
+              )
+            : row
         );
         const hasEmpty = updated.some((row) =>
           row.some((item) => !item.value || String(item.value).trim() === '')
         );
+        const sorted = updated.sort((a, b) => {
+          const idA = Number(a.find((item) => item.key === 'id')?.value);
+          const idB = Number(b.find((item) => item.key === 'id')?.value);
+          return idA - idB;
+        });
         setHasEmptyField(hasEmpty);
-        return updated;
+        return sorted;
       });
     } else {
       setEditableData((prev) => {
@@ -305,11 +315,6 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
       });
     }
   };
-  useEffect(() => {
-    console.log('addNewData', addNewData);
-    console.log('forAddbuttonDisable', forAddbuttonDisable);
-    console.log('isAdd', isAdd);
-  }, [addNewData]);
 
   const createRecord = () => {
     const safeGridData = getGridData ?? [];
@@ -327,16 +332,15 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
 
   const handleAddRow = () => {
     if (addNewData.length < 5) {
-      const safeGridData = getGridData ?? [];
-      const lastRecord = safeGridData[safeGridData.length - 1];
-      const startId = Number(lastRecord?.id ?? 0);
-
-      const nextId = startId + addNewData.length + 1; // sequential increment
       const newRow = rowTemplate(selectedValue[0]);
-
       setAddNewData([...addNewData, newRow]);
     }
   };
+
+  const handleRemoveRow = (rowIndex: number) => {
+    setAddNewData((prev) => prev.filter((_, i) => i !== rowIndex));
+  };
+
   const handleEditDelete = () => {
     if (isEdit || isDelete) {
       setConfirmationDialogForEditDelete(true);
@@ -405,41 +409,40 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
   // };
 
   const generateNewRecord = (
-  formRecord: any,
-  endpoint: string,
-  newId: number
-) => {
-  if (endpoint === "users") {
+    formRecord: any,
+    endpoint: string,
+    newId: number
+  ) => {
+    if (endpoint === 'users') {
+      return {
+        ...filterAllowed('users', formRecord),
+        id: newId.toString(),
+      };
+    }
+
+    if (endpoint === 'comments') {
+      const newPostId = Math.ceil(newId / 5);
+      return {
+        ...filterAllowed('comments', formRecord),
+        id: newId.toString(),
+        postId: newPostId,
+      };
+    }
+
+    if (endpoint === 'posts') {
+      const newUserId = Math.ceil(newId / 10);
+      return {
+        ...filterAllowed('posts', formRecord),
+        id: newId.toString(),
+        userId: newUserId,
+      };
+    }
+
     return {
-      ...filterAllowed("users", formRecord),
+      ...filterAllowed(endpoint, formRecord),
       id: newId.toString(),
     };
-  }
-
-  if (endpoint === "comments") {
-    const newPostId = Math.ceil(newId / 5);
-    return {
-      ...filterAllowed("comments", formRecord),
-      id: newId.toString(),
-      postId: newPostId,
-    };
-  }
-
-  if (endpoint === "posts") {
-    const newUserId = Math.ceil(newId / 10);
-    return {
-      ...filterAllowed("posts", formRecord),
-      id: newId.toString(),
-      userId: newUserId,
-    };
-  }
-
-  return {
-    ...filterAllowed(endpoint, formRecord),
-    id: newId.toString(),
   };
-};
-
 
   const handleSubmit = async () => {
     const updateDataToStore: Row[] = formData.map((row, idx) => {
@@ -470,11 +473,6 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
           )
         );
       } else {
-        console.log(
-          'updateDataToStore[0]',
-          updateDataToStore[0],
-          selectedValue[0]
-        );
         //for adding new
         if (isAdd) {
           const safeGridData = getGridData ?? [];
@@ -483,11 +481,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
 
           const newRecords = updateDataToStore.map((formRow, idx) => {
             const newId = currentId + idx + 1;
-            return generateNewRecord(
-              formRow,
-              selectedValue[0],
-              newId
-            );
+            return generateNewRecord(formRow, selectedValue[0], newId);
           });
 
           await Promise.all(
@@ -605,22 +599,21 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     }
   };
 
-    let isDisabled = false;
+  let isDisabled = false;
 
-    if (isEdit) {
-      console.log('edit called');
-      isDisabled =
-        JSON.stringify(origin) === JSON.stringify(editable) ||
-        !allRowsChanged ||
-        hasEmptyField ||
-        confirmDialogOpen;
-    } 
-    // else if (isAdd) {
-    //   console.log('Add called');
-    //   // Add mode
-    //   // isDisabled = forAdd;
-    //   isDisabled = hasEmptyField || confirmDialogOpen
-    // }
+  if (isEdit) {
+    isDisabled =
+      JSON.stringify(origin) === JSON.stringify(editable) ||
+      !allRowsChanged ||
+      hasEmptyField ||
+      confirmDialogOpen;
+  }
+  // else if (isAdd) {
+  //   console.log('Add called');
+  //   // Add mode
+  //   // isDisabled = forAdd;
+  //   isDisabled = hasEmptyField || confirmDialogOpen
+  // }
 
   const closeButton = (
     <Button
@@ -721,15 +714,21 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     <div {...containerProps}>
       <h1 className="text-2xl font-bold mb-6">{pathName}</h1>
       <br></br>
-      <FormField style={{ width: '266px' }}>
-        <FormFieldLabel>Select Data</FormFieldLabel>
+      <FormField className="w-[266px]">
+        <FormFieldLabel className="block text-sm font-medium text-gray-700 mb-1">
+          Select Data
+        </FormFieldLabel>
         <Dropdown
           value={selectedValue[0]}
           onSelectionChange={handleSelectionChange}
-          //   InputProps={{ placeholder: "Select" }}
+          className="w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
         >
           {options.map((val) => (
-            <Option value={val.value} key={val.value}>
+            <Option
+              value={val.value}
+              key={val.value}
+              className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
+            >
               {val.label}
             </Option>
           ))}
@@ -809,31 +808,25 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
             actions={closeButton}
           />
           <DialogContent>
-            {isAdd && (
-              <Button
-                sentiment="accented"
-                appearance="bordered"
-                onClick={handleAddRow}
-                disabled={formData.length >= 5}
-              >
-                <AddIcon /> Add More Fields
-              </Button>
-            )}
-            <FlowLayout>
-              <StackLayout gap={2} direction={'column'}>
+            <FlowLayout className="w-full">
+              <StackLayout className="flex flex-col gap-2 w-full items-stretch">
                 {formData.map((row, rowIndex) => (
-                  <StackLayout gap={2} direction={'row'} key={rowIndex}>
+                  <StackLayout
+                    key={rowIndex}
+                    className="flex flex-row gap-2 w-full items-start"
+                  >
                     {row.map(({ key, value }, index) => {
                       const label = key.charAt(0).toUpperCase() + key.slice(1);
                       const disableId =
                         key === 'userId' || key === 'id' || key === 'postId';
                       if (isAdd && disableId) return null;
                       const multiLineInput = key === 'body';
+
                       return (
-                        <FormField key={index}>
-                          <FormFieldLabel>{label}</FormFieldLabel>
-                          {!multiLineInput ? (
-                            <>
+                        <div key={index} className="flex-1">
+                          <FormField className="w-full">
+                            <FormFieldLabel>{label}</FormFieldLabel>
+                            {!multiLineInput ? (
                               <Input
                                 value={value}
                                 validationStatus={validationStatus(value)}
@@ -847,11 +840,9 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
                                   )
                                 }
                                 disabled={disableId || isDelete}
+                                className="w-full min-h-[61px]"
                               />
-                              {isEdit && !value ? <p>Field is Empty</p> : ''}
-                            </>
-                          ) : (
-                            <>
+                            ) : (
                               <MultilineInput
                                 value={value}
                                 validationStatus={validationStatus(value)}
@@ -865,17 +856,43 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
                                   )
                                 }
                                 disabled={isDelete}
+                                className="w-full"
                               />
-                              {isEdit && !value ? <p>Field is Empty</p> : ''}
-                            </>
-                          )}
-                        </FormField>
+                            )}
+                          </FormField>
+                        </div>
                       );
                     })}
+
+                    {isAdd && (
+                      <div className="flex items-end gap-1">
+                        <Tooltip content="Add Record" placement="top">
+                          <Button
+                            sentiment="accented"
+                            appearance="bordered"
+                            onClick={handleAddRow}
+                            disabled={formData.length >= 5}
+                          >
+                            <AddDocumentIcon />
+                          </Button>
+                        </Tooltip>
+                        <Tooltip content="Remove Record" placement="top">
+                          <Button
+                            sentiment="accented"
+                            appearance="bordered"
+                            onClick={() => handleRemoveRow(rowIndex)}
+                            disabled={formData.length <= 1}
+                          >
+                            <RemoveDocumentIcon />
+                          </Button>
+                        </Tooltip>
+                      </div>
+                    )}
                   </StackLayout>
                 ))}
               </StackLayout>
             </FlowLayout>
+
             <DialogActions>
               {direction === 'column' ? (
                 <StackLayout

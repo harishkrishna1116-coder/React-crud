@@ -62,7 +62,7 @@ const Comments: React.FC<CommentsProps> = ({activeTab}) => {
     );
   return (
     <div>
-      <h1 className="text-10xl font-bold mb-7">{activeTab}</h1>
+      <h1 className="text-10xl font-bold mb-7">{pathName}</h1>
       {/* <Button variant="primary" className="mb-4" onClick={() => navigate('/')}>
         Click to go home page
       </Button> */}

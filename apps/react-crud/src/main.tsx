@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <SaltProvider>
+    <SaltProvider theme='dark'>
       <Provider store={store}>
         <BrowserRouter>
           <App />
