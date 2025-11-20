@@ -140,7 +140,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     )
   );
   const { agGridProps, containerProps } = useAgGridHelpers();
-  const [emptyField, setEmptyField] = useState<boolean>(false);
+  const [hasEmptyField, setHasEmptyField] = useState<boolean>(false);
   const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
   const [dialogCancellation, setDialogCancellation] = useState(false);
   const [isAdd, setIsAdd] = useState(false);
@@ -285,7 +285,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
         const hasEmpty = updated.some((row) =>
           row.some((item) => !item.value || String(item.value).trim() === '')
         );
-        setEmptyField(hasEmpty);
+        setHasEmptyField(hasEmpty);
         return updated;
       });
     } else {
@@ -300,7 +300,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
         const hasEmpty = updated.some((row) =>
           row.some((item) => !item.value || String(item.value).trim() === '')
         );
-        setEmptyField(hasEmpty);
+        setHasEmptyField(hasEmpty);
         return updated;
       });
     }
@@ -312,13 +312,31 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
   }, [addNewData]);
 
   const createRecord = () => {
+    const safeGridData = getGridData ?? [];
+    const lastRecord = safeGridData[safeGridData.length - 1];
+    const startId = Number(lastRecord?.id ?? 0);
     setIsAdd(true);
     setIsEdit(false);
     setIsDelete(false);
-    setAddNewData([formDataConfig[selectedValue[0] as ApiEndPoint]]);
+
+    const firstRow = rowTemplate(selectedValue[0]);
+    //  setAddNewData([formDataConfig[selectedValue[0] as ApiEndPoint]]);
+    setAddNewData([firstRow]);
     setDialogOpen(true);
   };
 
+  const handleAddRow = () => {
+    if (addNewData.length < 5) {
+      const safeGridData = getGridData ?? [];
+      const lastRecord = safeGridData[safeGridData.length - 1];
+      const startId = Number(lastRecord?.id ?? 0);
+
+      const nextId = startId + addNewData.length + 1; // sequential increment
+      const newRow = rowTemplate(selectedValue[0]);
+
+      setAddNewData([...addNewData, newRow]);
+    }
+  };
   const handleEditDelete = () => {
     if (isEdit || isDelete) {
       setConfirmationDialogForEditDelete(true);
@@ -334,69 +352,94 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
   };
 
   const filterAllowed = (endpoint: string, obj: any) => {
-  const allowed = ALLOWED_FIELDS[endpoint] ?? [];
-  return Object.fromEntries(
-    Object.entries(obj).filter(([k]) => allowed.includes(k))
-  );
-};
+    const allowed = ALLOWED_FIELDS[endpoint] ?? [];
+    return Object.fromEntries(
+      Object.entries(obj).filter(([k]) => allowed.includes(k))
+    );
+  };
 
-const rowTemplate = (endpoint: string, newId: number) => {
-  const fields = ALLOWED_FIELDS[endpoint] ?? ["id"];
+  const rowTemplate = (endpoint: string) => {
+    const fields = ALLOWED_FIELDS[endpoint] ?? ['id'];
+    return fields.map((key) => ({ key, value: '' }));
+  };
 
-  return fields.map((key) => {
-    switch (key) {
-      case "id":
-        return { key, value: newId.toString() };
-      case "userId":
-        return { key, value: Math.ceil(newId / 10).toString() };
-      case "postId":
-        return { key, value: Math.ceil(newId / 5).toString() };
-      default:
-        return { key, value: "" };
-    }
-  });
-};
+  // const generateNewRecord = (
+  //   lastRecord: any,
+  //   formRecord: any,
+  //   endpoint: string
+  // ) => {
+  //   const lastId = Number(lastRecord.id);
+  //   const newId = lastId + 1;
+  //   // const newPostId = Math.ceil(newId / 5);
+  //   // const newUserId = Math.ceil(newId / 10);
+
+  //   if (endpoint === 'users') {
+  //     return {
+  //       ...filterAllowed('users', formRecord),
+  //       id: newId.toString(),
+  //     };
+  //   }
+
+  //   if (endpoint === 'comments') {
+  //     const newPostId = Math.ceil(newId / 5);
+  //     return {
+  //       ...filterAllowed('comments', formRecord),
+  //       id: newId.toString(),
+  //       postId: newPostId,
+  //     };
+  //   }
+
+  //   if (endpoint === 'posts') {
+  //     const newUserId = Math.ceil(newId / 10);
+  //     return {
+  //       ...filterAllowed('posts', formRecord),
+  //       id: newId.toString(),
+  //       userId: newUserId,
+  //     };
+  //   }
+
+  //   return {
+  //     ...filterAllowed(endpoint, formRecord),
+  //     id: newId.toString(),
+  //   };
+  // };
 
   const generateNewRecord = (
-    lastRecord: any,
-    formRecord: any,
-    endpoint: string
-  ) => {
-    const lastId = Number(lastRecord.id);
-    const newId = lastId + 1;
-    // const newPostId = Math.ceil(newId / 5);
-    // const newUserId = Math.ceil(newId / 10);
-
-    if (endpoint === 'users') {
-      return {
-        ...filterAllowed('users',formRecord),
-        id: newId.toString(),
-      };
-    }
-
-    if (endpoint === 'comments') {
-      const newPostId = Math.ceil(newId / 5);
-      return {
-        ...filterAllowed('comments',formRecord),
-        id: newId.toString(),
-        postId: newPostId,
-      };
-    }
-
-    if (endpoint === 'posts') {
-      const newUserId = Math.ceil(newId / 10);
-      return {
-        ...filterAllowed('posts',formRecord),
-        id: newId.toString(),
-        userId: newUserId,
-      };
-    }
-
+  formRecord: any,
+  endpoint: string,
+  newId: number
+) => {
+  if (endpoint === "users") {
     return {
-      ...filterAllowed(endpoint,formRecord),
+      ...filterAllowed("users", formRecord),
       id: newId.toString(),
     };
+  }
+
+  if (endpoint === "comments") {
+    const newPostId = Math.ceil(newId / 5);
+    return {
+      ...filterAllowed("comments", formRecord),
+      id: newId.toString(),
+      postId: newPostId,
+    };
+  }
+
+  if (endpoint === "posts") {
+    const newUserId = Math.ceil(newId / 10);
+    return {
+      ...filterAllowed("posts", formRecord),
+      id: newId.toString(),
+      userId: newUserId,
+    };
+  }
+
+  return {
+    ...filterAllowed(endpoint, formRecord),
+    id: newId.toString(),
   };
+};
+
 
   const handleSubmit = async () => {
     const updateDataToStore: Row[] = formData.map((row, idx) => {
@@ -432,8 +475,27 @@ const rowTemplate = (endpoint: string, newId: number) => {
           updateDataToStore[0],
           selectedValue[0]
         );
-        //for adding new post
-     
+        //for adding new
+        if (isAdd) {
+          const safeGridData = getGridData ?? [];
+          const lastRecord = safeGridData[safeGridData.length - 1];
+          let currentId = Number(lastRecord?.id ?? 0);
+
+          const newRecords = updateDataToStore.map((formRow, idx) => {
+            const newId = currentId + idx + 1;
+            return generateNewRecord(
+              formRow,
+              selectedValue[0],
+              newId
+            );
+          });
+
+          await Promise.all(
+            newRecords.map((record) =>
+              addData({ endpoint: selectedValue[0], body: record }).unwrap()
+            )
+          );
+        }
       }
       setDialogOpen(false);
       setIsAdd(false);
@@ -500,7 +562,7 @@ const rowTemplate = (endpoint: string, newId: number) => {
       setIsEdit(false);
       setIsDelete(false);
       setSelectedData(undefined);
-      setEmptyField(false);
+      setHasEmptyField(false);
     }
   };
 
@@ -520,7 +582,7 @@ const rowTemplate = (endpoint: string, newId: number) => {
       setIsEdit(false);
       setIsDelete(false);
       setSelectedData(undefined);
-      setEmptyField(false);
+      setHasEmptyField(false);
       setDialogCancellation(false);
       navigate('/gridselection');
     }
@@ -531,7 +593,7 @@ const rowTemplate = (endpoint: string, newId: number) => {
     setIsEdit(false);
     setIsDelete(false);
     setSelectedData(undefined);
-    setEmptyField(false);
+    setHasEmptyField(false);
     setDialogCancellation(false);
     navigate('/gridselection');
   };
@@ -543,20 +605,22 @@ const rowTemplate = (endpoint: string, newId: number) => {
     }
   };
 
-  let isDisabled = false;
+    let isDisabled = false;
 
-  if (isEdit) {
-    console.log('edit called');
-    isDisabled =
-      JSON.stringify(origin) === JSON.stringify(editable) ||
-      !allRowsChanged ||
-      emptyField ||
-      confirmDialogOpen;
-  } else if (isAdd) {
-    console.log('Add called');
-    // Add mode
-    isDisabled = forAdd;
-  }
+    if (isEdit) {
+      console.log('edit called');
+      isDisabled =
+        JSON.stringify(origin) === JSON.stringify(editable) ||
+        !allRowsChanged ||
+        hasEmptyField ||
+        confirmDialogOpen;
+    } 
+    // else if (isAdd) {
+    //   console.log('Add called');
+    //   // Add mode
+    //   // isDisabled = forAdd;
+    //   isDisabled = hasEmptyField || confirmDialogOpen
+    // }
 
   const closeButton = (
     <Button
@@ -745,6 +809,16 @@ const rowTemplate = (endpoint: string, newId: number) => {
             actions={closeButton}
           />
           <DialogContent>
+            {isAdd && (
+              <Button
+                sentiment="accented"
+                appearance="bordered"
+                onClick={handleAddRow}
+                disabled={formData.length >= 5}
+              >
+                <AddIcon /> Add More Fields
+              </Button>
+            )}
             <FlowLayout>
               <StackLayout gap={2} direction={'column'}>
                 {formData.map((row, rowIndex) => (
@@ -753,7 +827,7 @@ const rowTemplate = (endpoint: string, newId: number) => {
                       const label = key.charAt(0).toUpperCase() + key.slice(1);
                       const disableId =
                         key === 'userId' || key === 'id' || key === 'postId';
-                      // if (isAdd && disableId) return null;
+                      if (isAdd && disableId) return null;
                       const multiLineInput = key === 'body';
                       return (
                         <FormField key={index}>
