@@ -7,7 +7,7 @@ import '@salt-ds/theme/index.css';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import { ThemeContext } from './themeContext';
-// import ThemeToggleButton from './themeToggleButton';
+import ThemeToggleButton from './themeToggleButton';
 
 function Root() {
   const [dark, setDark] = useState(
@@ -33,12 +33,12 @@ function Root() {
       <SaltProvider theme={dark ? 'dark' : 'light'}>
         <Provider store={store}>
           <BrowserRouter>
-            {/* <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white">
+            <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white">
                 <header className="p-4 flex justify-end">
                   <ThemeToggleButton />
                 </header>
-            </div> */}
-              <App/>
+                 <App/>
+            </div> 
           </BrowserRouter>
         </Provider>
       </SaltProvider>

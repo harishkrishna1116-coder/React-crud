@@ -1,14 +1,7 @@
-import { AgGridReact } from 'ag-grid-react';
 import {
   AgGridReact as AgGridReactType,
   type AgGridReactProps,
 } from 'ag-grid-react';
-// import 'ag-grid-community/styles/ag-grid.css';
-// import "ag-grid-community/styles/ag-theme-quartz.css";
-// import "ag-grid-community/styles/ag-theme-quartz-dark.css";
-
-
-import { themeAlpine, themeQuartz } from 'ag-grid-community';
 import {
   Post,
   useAddPostsMutation,
@@ -22,7 +15,6 @@ import {
   ColDef,
   ICellRendererParams,
   ModuleRegistry,
-  RowSelectedEvent,
   RowSelectionOptions,
 } from 'ag-grid-community';
 import React, {
@@ -70,8 +62,7 @@ import { ToastGroup } from '@salt-ds/lab';
 import { useAgGridHelpers } from '../Hooks/AgGridStyle';
 import DialogBox from '../Components/DialogBox';
 import { useNavigate } from 'react-router-dom';
-import { clsx } from 'clsx';
-import { useTheme } from '../../../themeContext';
+import AgGrid from '../Components/AgGrid';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 interface Postsprops extends AgGridReactProps {
@@ -85,7 +76,6 @@ const addData = [
   ],
 ];
 function Posts({ activeTab, ...gridProps }: Postsprops) {
-  const { dark } = useTheme();
   const { data: posts, error, isLoading, refetch } = useGetPostsQuery();
   const [updatePosts, { error: fetchError, isLoading: isUpdating, isSuccess }] =
     useUpdatePostsMutation();
@@ -109,13 +99,7 @@ function Posts({ activeTab, ...gridProps }: Postsprops) {
   const [isDelete, setIsDelete] = useState(false);
   const [confirmationDialogForEditDelete, setConfirmationDialogForEditDelete] =
     useState(false);
-  // const data = selectedData
-  //   ? Object.entries(selectedData).map(([key, value]) => ({ key, value }))
-  //   : multipleData
-  //   ? multipleData.flatMap((row) =>
-  //       Object.entries(row).map(([key, value]) => ({ key, value }))
-  //     )
-  //   : [];
+
   const params = window.location.pathname.split('/');
   const pathName = params[1]
     .split(' ')
@@ -150,13 +134,6 @@ function Posts({ activeTab, ...gridProps }: Postsprops) {
       : 'Do you want to proceed with update from the selected post?';
 
   const navigate = useNavigate();
-  const zebraTheme = themeQuartz.withParams({
-    rowHoverColor: '#c4c5c8ff',
-    accentColor: '#1976d2', // primary highlight color
-    headerBackgroundColor: '#fafafa', // header background
-    foregroundColor: '#333333', // text color
-    borderColor: '#e0e0e0',
-  });
 
   useEffect(() => {
     if (selectedData) {
@@ -288,11 +265,6 @@ function Posts({ activeTab, ...gridProps }: Postsprops) {
       });
     }
   };
-  useEffect(() => {
-    console.log('addNewData', addNewData);
-    console.log('forAddbuttonDisable', forAddbuttonDisable);
-    console.log('isAdd', isAdd);
-  }, [addNewData]);
 
   const createRecord = () => {
     setIsAdd(true);
@@ -562,11 +534,9 @@ function Posts({ activeTab, ...gridProps }: Postsprops) {
 
   return (
     <div {...containerProps}>
-      <h1 className="text-5md font-bold mb-6">{activeTab}</h1>
-
+      {/* <h1 className="text-5md font-bold mb-6">{activeTab}</h1> */}
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
         <Button
-          // style={{ marginLeft: '1107px' }}
           sentiment="accented"
           appearance="bordered"
           onClick={createRecord}
@@ -577,7 +547,6 @@ function Posts({ activeTab, ...gridProps }: Postsprops) {
         </Button>
         &nbsp;
         <Button
-          // style={{ marginLeft: '1107px' }}
           sentiment="accented"
           appearance="bordered"
           onClick={() => getMultiRowData('edit')}
@@ -588,7 +557,6 @@ function Posts({ activeTab, ...gridProps }: Postsprops) {
         </Button>
         &nbsp;
         <Button
-          // style={{ marginLeft: '1107px' }}
           sentiment="accented"
           appearance="bordered"
           onClick={() => getMultiRowData('delete')}
@@ -598,29 +566,26 @@ function Posts({ activeTab, ...gridProps }: Postsprops) {
           Delete Records
         </Button>
       </div>
-      <div
-        className={dark ? 'ag-theme-quartz-dark' : 'ag-theme-quartz'}
-        style={{ height: 500 }}
-      >
-        <AgGridReact<Post>
-          {...agGridProps}
-          {...gridProps}
-          theme='legacy'
-          rowData={posts ?? []}
-          columnDefs={columnDefs}
-          defaultColDef={defaultColDef}
-          // animateRows={true}
-          // domLayout="autoHeight"
-          pagination={true}
-          rowSelection={rowSelection}
-          ref={gridRef}
-          onSelectionChanged={(e) =>
-            setSelectedRows(e.api.getSelectedRows().length)
-          }
-          // onRowSelected={(e) => selectedRowNodes(e)}
-          paginationPageSizeSelector={[5, 10, 25, 50, 100]}
-        />
-      </div>
+
+      <AgGrid<Post>
+        {...agGridProps}
+        {...gridProps}
+        theme="legacy"
+        rowData={posts ?? []}
+        columnDefs={columnDefs}
+        defaultColDef={defaultColDef}
+        // animateRows={true}
+        // domLayout="autoHeight"
+        pagination={true}
+        rowSelection={rowSelection}
+        ref={gridRef}
+        onSelectionChanged={(e) =>
+          setSelectedRows(e.api.getSelectedRows().length)
+        }
+        // onRowSelected={(e) => selectedRowNodes(e)}
+        paginationPageSizeSelector={[5, 10, 25, 50, 100]}
+      />
+
       {dialogOpen && (
         <Dialog open={dialogOpen} size="large">
           <DialogHeader

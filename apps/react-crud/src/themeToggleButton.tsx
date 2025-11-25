@@ -9,7 +9,7 @@ export default function ThemeToggleButton() {
       onClick={toggleTheme}
       className="p-2 rounded-md border bg-gray-100 dark:bg-gray-800 dark:text-white"
     >
-      {dark ? "🌙 Night" : "☀️ Day"}
+      {dark ? "🌙 Dark" : "☀️ Light"}
     </button>
   );
 }

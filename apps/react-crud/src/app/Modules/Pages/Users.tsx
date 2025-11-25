@@ -1,26 +1,11 @@
-import React, {
-  ElementType,
-  JSX,
-  ReactElement,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
-import 'ag-grid-community/styles/ag-grid.css';
-// import 'ag-grid-community/styles/ag-theme-quartz.css';
-// import 'ag-grid-community/styles/ag-theme-quartz-dark.css';
+import React, { ElementType, JSX, useEffect, useMemo, useState } from 'react';
 
-import {
-  AgGridReact,
-  AgGridReact as AgGridReactType,
-  type AgGridReactProps,
-} from 'ag-grid-react';
+import { type AgGridReactProps } from 'ag-grid-react';
 
 import {
   ColDef,
   ModuleRegistry,
   AllCommunityModule,
-  RowSelectedEvent,
   RowSelectionOptions,
   ICellRendererParams,
 } from 'ag-grid-community';
@@ -31,7 +16,6 @@ import {
 } from '../Slices/slice';
 import {
   Button,
-  Card,
   Dialog,
   DialogActions,
   DialogContent,
@@ -39,7 +23,6 @@ import {
   FlowLayout,
   FormField,
   FormFieldLabel,
-  GridLayout,
   Input,
   Scrim,
   Spinner,
@@ -48,27 +31,19 @@ import {
   StackLayoutProps,
   useResponsiveProp,
 } from '@salt-ds/core';
-import { useNavigate, useParams } from 'react-router-dom';
-import {
-  CloneIcon,
-  CloseIcon,
-  ErrorIcon,
-  SuccessCircleIcon,
-} from '@salt-ds/icons';
+import { useNavigate } from 'react-router-dom';
+import { CloseIcon, ErrorIcon, SuccessCircleIcon } from '@salt-ds/icons';
 import { ToastMessage } from '../Components/Toast';
 import { useAgGridHelpers } from '../Hooks/AgGridStyle';
-import { useTheme } from '../../../themeContext';
-ModuleRegistry.registerModules([AllCommunityModule]);
+import AgGrid from '../Components/AgGrid';
 
 interface UsersProps extends AgGridReactProps {
   activeTab: string;
-
 }
 
-const Users: React.FC<UsersProps> = ({ activeTab,...props }) => {
-  const { dark } = useTheme();
+const Users: React.FC<UsersProps> = ({ activeTab, ...props }) => {
   const { data: users, error, isLoading, refetch } = useGetUsersQuery();
-  const [updateUser, { isLoading: isUpdating, error: fetchError, isSuccess }] =
+  const [updateUser, { isLoading: isUpdating, error: fetchError }] =
     useUpdateUsersMutation();
   const [selectedData, setSelectedData] = useState<User | undefined>();
   const [editableData, setEditableData] = useState<
@@ -92,12 +67,7 @@ const Users: React.FC<UsersProps> = ({ activeTab,...props }) => {
     if (selectedData) {
       setEditableData(data);
     }
-    console.log('selectedData', editableData);
   }, [selectedData]);
-
-  useEffect(() => {
-    console.log('submittedData', submittedData);
-  }, [submittedData]);
 
   const params = window.location.pathname.split('/');
 
@@ -121,8 +91,8 @@ const Users: React.FC<UsersProps> = ({ activeTab,...props }) => {
   };
   const columns: ColDef<User>[] = [
     { headerName: 'ID', field: 'id' },
-    { headerName: 'Name', field: 'name' },
-    { headerName: 'UserName', field: 'username' },
+    { headerName: 'Name', field: 'name', flex: 1 },
+    { headerName: 'UserName', field: 'username', flex: 1 },
     { headerName: 'Email', field: 'email' },
     {
       headerName: 'Actions',
@@ -130,7 +100,6 @@ const Users: React.FC<UsersProps> = ({ activeTab,...props }) => {
       cellRenderer: editButtonRenderer,
     },
   ];
-  console.log('users', users);
 
   const rowSelection: RowSelectionOptions = {
     mode: 'multiRow',
@@ -148,7 +117,6 @@ const Users: React.FC<UsersProps> = ({ activeTab,...props }) => {
     const dataToStore = Object.fromEntries(
       editableData.map(({ key, value }) => [key, value])
     );
-    console.log('dataToStore', dataToStore);
     try {
       await updateUser(dataToStore).unwrap();
       setDialogOpen(false);
@@ -238,27 +206,23 @@ const Users: React.FC<UsersProps> = ({ activeTab,...props }) => {
     </StackLayout>
   );
   return (
-    <div {...containerProps} className="text-2xl font-bold mb-4">
-      <h1 className="text-4md font-bold mb-4">{activeTab}</h1>
-      {/* <Button variant="primary" className="mb-4" onClick={() => navigate('/')}>Back to Home page</Button> */}
-      <div
-        // className={dark ? 'ag-theme-quartz-dark' : 'ag-theme-quartz'}
-        style={{ height: 500, marginTop: '10px' }}
-      >
-        <AgGridReact<User>
-          {...agGridProps}
-          {...props}
-          rowData={users ?? []}
-          columnDefs={columns}
-          defaultColDef={defaultColDef}
-          // rowSelection={rowSelection}
-          // animateRows={true}
-          domLayout="autoHeight"
-          pagination={true}
-          // onRowSelected={(e) => selectedRowNodes(e)}
-          paginationPageSizeSelector={[5, 10]}
-        />
-      </div>
+    <div {...containerProps}>
+      {/* <h1 className="text-4md font-bold mb-4">{activeTab}</h1> */}
+      <AgGrid<User>
+        {...agGridProps}
+        {...props}
+        theme="legacy"
+        rowData={users ?? []}
+        columnDefs={columns}
+        defaultColDef={defaultColDef}
+        rowSelection={rowSelection}
+        // animateRows={true}
+        // domLayout="autoHeight"
+        pagination={true}
+        // onRowSelected={(e) => selectedRowNodes(e)}
+        paginationPageSizeSelector={[5, 10]}
+      />
+
       {dialogOpen && (
         <Dialog open={dialogOpen} size="large">
           <DialogHeader header="Edit Item" actions={closeButton} />

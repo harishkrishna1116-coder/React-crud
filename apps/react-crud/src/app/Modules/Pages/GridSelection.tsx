@@ -72,10 +72,11 @@ import {
 } from '../Slices/gridSlice';
 import { columnConfig } from '../../Config/gridColumnConfig';
 import { useTheme } from '../../../themeContext';
+import AgGrid from '../Components/AgGrid';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 const GridSelection: React.FC = (props: AgGridReactProps) => {
-  const{dark} = useTheme()
+  const { dark } = useTheme();
   type Row = Post | Comment | User;
   const [selectedValue, setSelectedValue] = useState<ApiEndPoint[]>([]);
   const options = [
@@ -711,7 +712,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
 
   return (
     <div {...containerProps}>
-      <h1 className="text-2xl font-bold mb-6">{pathName}</h1>
+      {/* <h1 className="text-2xl font-bold mb-6">{pathName}</h1> */}
       <br></br>
       <FormField className="w-[266px]">
         <FormFieldLabel className="block text-sm font-medium text-gray-700 mb-1">
@@ -775,29 +776,24 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
             </Button>
           </div>
 
-          <div
-           className={dark ? "ag-theme-alpine-dark" : "ag-theme-alpine"}
-            style={{ height: 500, marginTop: '10px' }}
-          >
-            <AgGridReact<Row>
-              {...agGridProps}
-              {...props}
-              theme="legacy"
-              rowData={getGridData ?? []}
-              columnDefs={columnDefs}
-              defaultColDef={defaultColDef}
-              // animateRows={true}
-              // domLayout="autoHeight"
-              pagination={true}
-              rowSelection={rowSelection}
-              ref={gridRef}
-              onSelectionChanged={(e) =>
-                setSelectedRows(e.api.getSelectedRows().length)
-              }
-              // onRowSelected={(e) => selectedRowNodes(e)}
-              paginationPageSizeSelector={[5, 10, 25, 50, 100]}
-            />
-          </div>
+          <AgGrid<Row>
+            {...agGridProps}
+            {...props}
+            theme="legacy"
+            rowData={getGridData ?? []}
+            columnDefs={columnDefs}
+            defaultColDef={defaultColDef}
+            // animateRows={true}
+            // domLayout="autoHeight"
+            pagination={true}
+            rowSelection={rowSelection}
+            ref={gridRef}
+            onSelectionChanged={(e) =>
+              setSelectedRows(e.api.getSelectedRows().length)
+            }
+            // onRowSelected={(e) => selectedRowNodes(e)}
+            paginationPageSizeSelector={[5, 10, 25, 50, 100]}
+          />
         </>
       )}
       {dialogOpen && (

@@ -70,7 +70,6 @@ const App: React.FC = () => {
       <StackLayout>
         <div
           style={{ display: 'flex', justifyContent: 'space-between' }}
-          
         >
           <TabsNext value={activeTab} onChange={handleValue}>
             <TabBar>
