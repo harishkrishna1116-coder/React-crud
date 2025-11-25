@@ -2,7 +2,6 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import '@salt-ds/theme/index.css';
-import { themeAlpine } from 'ag-grid-community';
 import {
   Button,
   StackLayoutProps,
@@ -23,6 +22,7 @@ import {
   Option,
   Dropdown,
   type DropdownProps,
+  Tooltip,
 } from '@salt-ds/core';
 import {
   EditIcon,
@@ -31,9 +31,10 @@ import {
   ErrorIcon,
   CloseIcon,
   AddIcon,
+  AddDocumentIcon,
+  RemoveDocumentIcon,
 } from '@salt-ds/icons';
 import {
-  themeQuartz,
   ICellRendererParams,
   ColDef,
   RowSelectionOptions,
@@ -67,19 +68,21 @@ import {
   useUpdateDataMutation,
   Post,
   User,
-  Comment
+  Comment,
 } from '../Slices/gridSlice';
 import { columnConfig } from '../../Config/gridColumnConfig';
-import { formDataConfig } from '../../Config/formDataConfig';
+import { useTheme } from '../../../themeContext';
+import AgGrid from '../Components/AgGrid';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 const GridSelection: React.FC = (props: AgGridReactProps) => {
+  const { dark } = useTheme();
   type Row = Post | Comment | User;
   const [selectedValue, setSelectedValue] = useState<ApiEndPoint[]>([]);
   const options = [
+    { label: 'Comments', value: 'comments' },
     { label: 'Posts', value: 'posts' },
     { label: 'Users', value: 'users' },
-    { label: 'Comments', value: 'comments' },
   ];
   const {
     data: getGridData,
@@ -140,7 +143,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     )
   );
   const { agGridProps, containerProps } = useAgGridHelpers();
-  const [emptyField, setEmptyField] = useState<boolean>(false);
+  const [hasEmptyField, setHasEmptyField] = useState<boolean>(false);
   const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
   const [dialogCancellation, setDialogCancellation] = useState(false);
   const [isAdd, setIsAdd] = useState(false);
@@ -277,16 +280,23 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
   ) => {
     if (!isEdit) {
       setAddNewData((prev) => {
-        const updated = prev.map((row) =>
-          row.map((item) =>
-            item.key === key ? { ...item, value: newValue } : item
-          )
+        const updated = prev.map((row, i) =>
+          i === rowIndex
+            ? row.map((item) =>
+                item.key === key ? { ...item, value: newValue } : item
+              )
+            : row
         );
         const hasEmpty = updated.some((row) =>
           row.some((item) => !item.value || String(item.value).trim() === '')
         );
-        setEmptyField(hasEmpty);
-        return updated;
+        const sorted = updated.sort((a, b) => {
+          const idA = Number(a.find((item) => item.key === 'id')?.value);
+          const idB = Number(b.find((item) => item.key === 'id')?.value);
+          return idA - idB;
+        });
+        setHasEmptyField(hasEmpty);
+        return sorted;
       });
     } else {
       setEditableData((prev) => {
@@ -300,23 +310,35 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
         const hasEmpty = updated.some((row) =>
           row.some((item) => !item.value || String(item.value).trim() === '')
         );
-        setEmptyField(hasEmpty);
+        setHasEmptyField(hasEmpty);
         return updated;
       });
     }
   };
-  useEffect(() => {
-    console.log('addNewData', addNewData);
-    console.log('forAddbuttonDisable', forAddbuttonDisable);
-    console.log('isAdd', isAdd);
-  }, [addNewData]);
 
   const createRecord = () => {
+    const safeGridData = getGridData ?? [];
+    const lastRecord = safeGridData[safeGridData.length - 1];
+    const startId = Number(lastRecord?.id ?? 0);
     setIsAdd(true);
     setIsEdit(false);
     setIsDelete(false);
-    setAddNewData([formDataConfig[selectedValue[0] as ApiEndPoint]]);
+
+    const firstRow = rowTemplate(selectedValue[0]);
+    //  setAddNewData([formDataConfig[selectedValue[0] as ApiEndPoint]]);
+    setAddNewData([firstRow]);
     setDialogOpen(true);
+  };
+
+  const handleAddRow = () => {
+    if (addNewData.length < 5) {
+      const newRow = rowTemplate(selectedValue[0]);
+      setAddNewData([...addNewData, newRow]);
+    }
+  };
+
+  const handleRemoveRow = (rowIndex: number) => {
+    setAddNewData((prev) => prev.filter((_, i) => i !== rowIndex));
   };
 
   const handleEditDelete = () => {
@@ -327,44 +349,98 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     }
   };
 
+  const ALLOWED_FIELDS: Record<string, string[]> = {
+    users: ['id', 'name', 'username', 'email', 'phone', 'website'],
+    posts: ['id', 'userId', 'title', 'body'],
+    comments: ['id', 'postId', 'name', 'email', 'body'],
+  };
+
+  const filterAllowed = (endpoint: string, obj: any) => {
+    const allowed = ALLOWED_FIELDS[endpoint] ?? [];
+    return Object.fromEntries(
+      Object.entries(obj).filter(([k]) => allowed.includes(k))
+    );
+  };
+
+  const rowTemplate = (endpoint: string) => {
+    const fields = ALLOWED_FIELDS[endpoint] ?? ['id'];
+    return fields.map((key) => ({ key, value: '' }));
+  };
+
+  // const generateNewRecord = (
+  //   lastRecord: any,
+  //   formRecord: any,
+  //   endpoint: string
+  // ) => {
+  //   const lastId = Number(lastRecord.id);
+  //   const newId = lastId + 1;
+  //   // const newPostId = Math.ceil(newId / 5);
+  //   // const newUserId = Math.ceil(newId / 10);
+
+  //   if (endpoint === 'users') {
+  //     return {
+  //       ...filterAllowed('users', formRecord),
+  //       id: newId.toString(),
+  //     };
+  //   }
+
+  //   if (endpoint === 'comments') {
+  //     const newPostId = Math.ceil(newId / 5);
+  //     return {
+  //       ...filterAllowed('comments', formRecord),
+  //       id: newId.toString(),
+  //       postId: newPostId,
+  //     };
+  //   }
+
+  //   if (endpoint === 'posts') {
+  //     const newUserId = Math.ceil(newId / 10);
+  //     return {
+  //       ...filterAllowed('posts', formRecord),
+  //       id: newId.toString(),
+  //       userId: newUserId,
+  //     };
+  //   }
+
+  //   return {
+  //     ...filterAllowed(endpoint, formRecord),
+  //     id: newId.toString(),
+  //   };
+  // };
+
   const generateNewRecord = (
-    lastRecord: any,
     formRecord: any,
-    endpoint: string
+    endpoint: string,
+    newId: number
   ) => {
-    const lastId = Number(lastRecord.id);
-    const newId = lastId + 1;
-    // const newPostId = Math.ceil(newId / 5);
-    // const newUserId = Math.ceil(newId / 10);
-
-    if(endpoint === "users"){
-      return{
-        ...formRecord,
-        id:newId.toString()
-      }
+    if (endpoint === 'users') {
+      return {
+        ...filterAllowed('users', formRecord),
+        id: newId.toString(),
+      };
     }
 
-    if(endpoint === "comments"){
-      const newPostId = Math.ceil(newId/5)
-      return{
-        ...formRecord,
-        id:newId.toString(),
-        postId:newPostId
-      }
+    if (endpoint === 'comments') {
+      const newPostId = Math.ceil(newId / 5);
+      return {
+        ...filterAllowed('comments', formRecord),
+        id: newId.toString(),
+        postId: newPostId,
+      };
     }
 
-    if(endpoint === "posts"){
-      const newUserId = Math.ceil(newId/10)
-      return{
-        ...formRecord,
-        id:newId.toString(),
-        userId:newUserId
-      }
+    if (endpoint === 'posts') {
+      const newUserId = Math.ceil(newId / 10);
+      return {
+        ...filterAllowed('posts', formRecord),
+        id: newId.toString(),
+        userId: newUserId,
+      };
     }
 
     return {
-      ...formRecord,
-      id: newId.toString()
+      ...filterAllowed(endpoint, formRecord),
+      id: newId.toString(),
     };
   };
 
@@ -397,23 +473,22 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
           )
         );
       } else {
-        console.log(
-          'updateDataToStore[0]',
-          updateDataToStore[0],
-          selectedValue[0]
-        );
-        //for adding new post
-        if (getGridData && getGridData.length > 0) {
-          const lastRecord: Row = getGridData[getGridData.length - 1];
-          const newRecord = generateNewRecord(
-            lastRecord,
-            updateDataToStore[0],
-            selectedValue[0]
+        //for adding new
+        if (isAdd) {
+          const safeGridData = getGridData ?? [];
+          const lastRecord = safeGridData[safeGridData.length - 1];
+          let currentId = Number(lastRecord?.id ?? 0);
+
+          const newRecords = updateDataToStore.map((formRow, idx) => {
+            const newId = currentId + idx + 1;
+            return generateNewRecord(formRow, selectedValue[0], newId);
+          });
+
+          await Promise.all(
+            newRecords.map((record) =>
+              addData({ endpoint: selectedValue[0], body: record }).unwrap()
+            )
           );
-          await addData({
-            endpoint: selectedValue[0],
-            body: newRecord,
-          }).unwrap();
         }
       }
       setDialogOpen(false);
@@ -481,7 +556,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
       setIsEdit(false);
       setIsDelete(false);
       setSelectedData(undefined);
-      setEmptyField(false);
+      setHasEmptyField(false);
     }
   };
 
@@ -501,7 +576,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
       setIsEdit(false);
       setIsDelete(false);
       setSelectedData(undefined);
-      setEmptyField(false);
+      setHasEmptyField(false);
       setDialogCancellation(false);
       navigate('/gridselection');
     }
@@ -512,7 +587,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     setIsEdit(false);
     setIsDelete(false);
     setSelectedData(undefined);
-    setEmptyField(false);
+    setHasEmptyField(false);
     setDialogCancellation(false);
     navigate('/gridselection');
   };
@@ -527,17 +602,18 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
   let isDisabled = false;
 
   if (isEdit) {
-    console.log('edit called');
     isDisabled =
       JSON.stringify(origin) === JSON.stringify(editable) ||
       !allRowsChanged ||
-      emptyField ||
+      hasEmptyField ||
       confirmDialogOpen;
-  } else if (isAdd) {
-    console.log('Add called');
-    // Add mode
-    isDisabled = forAdd;
   }
+  // else if (isAdd) {
+  //   console.log('Add called');
+  //   // Add mode
+  //   // isDisabled = forAdd;
+  //   isDisabled = hasEmptyField || confirmDialogOpen
+  // }
 
   const closeButton = (
     <Button
@@ -636,17 +712,23 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
 
   return (
     <div {...containerProps}>
-      <h1 className="text-2xl font-bold mb-6">{pathName}</h1>
+      {/* <h1 className="text-2xl font-bold mb-6">{pathName}</h1> */}
       <br></br>
-      <FormField style={{ width: '266px' }}>
-        <FormFieldLabel>Select Data</FormFieldLabel>
+      <FormField className="w-[266px]">
+        <FormFieldLabel className="block text-sm font-medium text-gray-700 mb-1">
+          Select Data
+        </FormFieldLabel>
         <Dropdown
           value={selectedValue[0]}
           onSelectionChange={handleSelectionChange}
-          //   InputProps={{ placeholder: "Select" }}
+          className="w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
         >
           {options.map((val) => (
-            <Option value={val.value} key={val.value}>
+            <Option
+              value={val.value}
+              key={val.value}
+              className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
+            >
               {val.label}
             </Option>
           ))}
@@ -694,29 +776,24 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
             </Button>
           </div>
 
-          <div
-            className="ag-theme-quartz"
-            style={{ height: 500, marginTop: '10px' }}
-          >
-            <AgGridReact<Row>
-              {...agGridProps}
-              {...props}
-              theme="legacy"
-              rowData={getGridData ?? []}
-              columnDefs={columnDefs}
-              defaultColDef={defaultColDef}
-              // animateRows={true}
-              // domLayout="autoHeight"
-              pagination={true}
-              rowSelection={rowSelection}
-              ref={gridRef}
-              onSelectionChanged={(e) =>
-                setSelectedRows(e.api.getSelectedRows().length)
-              }
-              // onRowSelected={(e) => selectedRowNodes(e)}
-              paginationPageSizeSelector={[5, 10, 25, 50, 100]}
-            />
-          </div>
+          <AgGrid<Row>
+            {...agGridProps}
+            {...props}
+            theme="legacy"
+            rowData={getGridData ?? []}
+            columnDefs={columnDefs}
+            defaultColDef={defaultColDef}
+            // animateRows={true}
+            // domLayout="autoHeight"
+            pagination={true}
+            rowSelection={rowSelection}
+            ref={gridRef}
+            onSelectionChanged={(e) =>
+              setSelectedRows(e.api.getSelectedRows().length)
+            }
+            // onRowSelected={(e) => selectedRowNodes(e)}
+            paginationPageSizeSelector={[5, 10, 25, 50, 100]}
+          />
         </>
       )}
       {dialogOpen && (
@@ -726,21 +803,25 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
             actions={closeButton}
           />
           <DialogContent>
-            <FlowLayout>
-              <StackLayout gap={2} direction={'column'}>
+            <FlowLayout className="w-full">
+              <StackLayout className="flex flex-col gap-2 w-full items-stretch">
                 {formData.map((row, rowIndex) => (
-                  <StackLayout gap={2} direction={'row'} key={rowIndex}>
+                  <StackLayout
+                    key={rowIndex}
+                    className="flex flex-row gap-2 w-full items-start"
+                  >
                     {row.map(({ key, value }, index) => {
                       const label = key.charAt(0).toUpperCase() + key.slice(1);
                       const disableId =
                         key === 'userId' || key === 'id' || key === 'postId';
-                      // if (isAdd && disableId) return null;
+                      if (isAdd && disableId) return null;
                       const multiLineInput = key === 'body';
+
                       return (
-                        <FormField key={index}>
-                          <FormFieldLabel>{label}</FormFieldLabel>
-                          {!multiLineInput ? (
-                            <>
+                        <div key={index} className="flex-1">
+                          <FormField className="w-full">
+                            <FormFieldLabel>{label}</FormFieldLabel>
+                            {!multiLineInput ? (
                               <Input
                                 value={value}
                                 validationStatus={validationStatus(value)}
@@ -754,11 +835,9 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
                                   )
                                 }
                                 disabled={disableId || isDelete}
+                                className="w-full min-h-[61px]"
                               />
-                              {isEdit && !value ? <p>Field is Empty</p> : ''}
-                            </>
-                          ) : (
-                            <>
+                            ) : (
                               <MultilineInput
                                 value={value}
                                 validationStatus={validationStatus(value)}
@@ -772,17 +851,43 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
                                   )
                                 }
                                 disabled={isDelete}
+                                className="w-full"
                               />
-                              {isEdit && !value ? <p>Field is Empty</p> : ''}
-                            </>
-                          )}
-                        </FormField>
+                            )}
+                          </FormField>
+                        </div>
                       );
                     })}
+
+                    {isAdd && (
+                      <div className="flex items-end gap-1">
+                        <Tooltip content="Add Record" placement="top">
+                          <Button
+                            sentiment="accented"
+                            appearance="bordered"
+                            onClick={handleAddRow}
+                            disabled={formData.length >= 5}
+                          >
+                            <AddDocumentIcon />
+                          </Button>
+                        </Tooltip>
+                        <Tooltip content="Remove Record" placement="top">
+                          <Button
+                            sentiment="accented"
+                            appearance="bordered"
+                            onClick={() => handleRemoveRow(rowIndex)}
+                            disabled={formData.length <= 1}
+                          >
+                            <RemoveDocumentIcon />
+                          </Button>
+                        </Tooltip>
+                      </div>
+                    )}
                   </StackLayout>
                 ))}
               </StackLayout>
             </FlowLayout>
+
             <DialogActions>
               {direction === 'column' ? (
                 <StackLayout

@@ -8,7 +8,7 @@ module.exports = {
     clean: true,
   },
   devServer: {
-    port: 4200,
+    port: 4300,
     historyApiFallback: {
       index: '/index.html',
       disableDotRule: true,

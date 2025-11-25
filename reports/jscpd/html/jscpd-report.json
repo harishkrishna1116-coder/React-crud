@@ -1,10 +1,414 @@
 {
   "statistics": {
-    "detectionDate": "2025-11-14T12:47:44.989Z",
+    "detectionDate": "2025-11-25T06:33:17.573Z",
     "formats": {
+      "tsx": {
+        "sources": {
+          "apps/react-crud/src/app/Modules/Slices/slice.tsx": {
+            "lines": 119,
+            "tokens": 1098,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Slices/gridSlice.tsx": {
+            "lines": 113,
+            "tokens": 1008,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 164,
+            "percentage": 8.85,
+            "percentageTokens": 16.27,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/Users.tsx": {
+            "lines": 312,
+            "tokens": 2665,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 52,
+            "duplicatedTokens": 438,
+            "percentage": 16.67,
+            "percentageTokens": 16.44,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/ToggleSwitch.tsx": {
+            "lines": 37,
+            "tokens": 326,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/Posts.tsx": {
+            "lines": 728,
+            "tokens": 6668,
+            "sources": 1,
+            "clones": 24,
+            "duplicatedLines": 480,
+            "duplicatedTokens": 4323,
+            "percentage": 65.93,
+            "percentageTokens": 64.83,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/GridSelection.tsx": {
+            "lines": 936,
+            "tokens": 8360,
+            "sources": 1,
+            "clones": 19,
+            "duplicatedLines": 418,
+            "duplicatedTokens": 3798,
+            "percentage": 44.66,
+            "percentageTokens": 45.43,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/Comments.tsx": {
+            "lines": 85,
+            "tokens": 869,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 89,
+            "percentage": 7.06,
+            "percentageTokens": 10.24,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Components/Toast.tsx": {
+            "lines": 26,
+            "tokens": 283,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Components/DialogBox.tsx": {
+            "lines": 44,
+            "tokens": 407,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/store.tsx": {
+            "lines": 14,
+            "tokens": 161,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/nx-welcome.tsx": {
+            "lines": 855,
+            "tokens": 2763,
+            "sources": 1,
+            "clones": 20,
+            "duplicatedLines": 306,
+            "duplicatedTokens": 1542,
+            "percentage": 35.79,
+            "percentageTokens": 55.81,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/app.tsx": {
+            "lines": 119,
+            "tokens": 1012,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/app.test.tsx": {
+            "lines": 103,
+            "tokens": 913,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/themeToggleButton.tsx": {
+            "lines": 14,
+            "tokens": 104,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/themeContext.tsx": {
+            "lines": 16,
+            "tokens": 138,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/main.tsx": {
+            "lines": 52,
+            "tokens": 428,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 3573,
+          "tokens": 27203,
+          "sources": 16,
+          "clones": 35,
+          "duplicatedLines": 636,
+          "duplicatedTokens": 5177,
+          "percentage": 17.8,
+          "percentageTokens": 19.03,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "apps/react-crud/src/app/Modules/Pages/Users.tsx": {
+            "lines": 183,
+            "tokens": 1548,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 127,
+            "duplicatedTokens": 1158,
+            "percentage": 69.4,
+            "percentageTokens": 74.81,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/ToggleSwitch.tsx": {
+            "lines": 6,
+            "tokens": 83,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/Posts.tsx": {
+            "lines": 520,
+            "tokens": 4570,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 455,
+            "duplicatedTokens": 3688,
+            "percentage": 87.5,
+            "percentageTokens": 80.7,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/GridSelection.tsx": {
+            "lines": 710,
+            "tokens": 6016,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 328,
+            "duplicatedTokens": 2530,
+            "percentage": 46.2,
+            "percentageTokens": 42.05,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Pages/Comments.tsx": {
+            "lines": 0,
+            "tokens": 27,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Components/Toast.tsx": {
+            "lines": 9,
+            "tokens": 92,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/Modules/Components/DialogBox.tsx": {
+            "lines": 11,
+            "tokens": 102,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/app.tsx": {
+            "lines": 40,
+            "tokens": 356,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/app/app.test.tsx": {
+            "lines": 21,
+            "tokens": 165,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/themeToggleButton.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/src/main.tsx": {
+            "lines": 2,
+            "tokens": 49,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/webpack.config.js": {
+            "lines": 35,
+            "tokens": 280,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/tailwind.config.js": {
+            "lines": 28,
+            "tokens": 134,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/postcss.config.js": {
+            "lines": 14,
+            "tokens": 76,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/react-crud/jest.config.cjs": {
+            "lines": 10,
+            "tokens": 95,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1589,
+          "tokens": 13596,
+          "sources": 15,
+          "clones": 4,
+          "duplicatedLines": 455,
+          "duplicatedTokens": 3688,
+          "percentage": 28.63,
+          "percentageTokens": 27.13,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
       "typescript": {
         "sources": {
-          "apps/react-crud/src/app/Modules/Utils/AgGridStyle.ts": {
+          "apps/react-crud/src/app/Modules/Hooks/AgGridStyle.ts": {
             "lines": 70,
             "tokens": 664,
             "sources": 1,
@@ -63,349 +467,17 @@
             "percentageTokens": 0,
             "newDuplicatedLines": 0,
             "newClones": 0
-          },
-          "apps/react-crud/jest.config.cts": {
-            "lines": 9,
-            "tokens": 86,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
           }
         },
         "total": {
-          "lines": 205,
-          "tokens": 1826,
-          "sources": 6,
+          "lines": 196,
+          "tokens": 1740,
+          "sources": 5,
           "clones": 0,
           "duplicatedLines": 0,
           "duplicatedTokens": 0,
           "percentage": 0,
           "percentageTokens": 0,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
-      "javascript": {
-        "sources": {
-          "apps/react-crud/src/app/Modules/Components/Toast.tsx": {
-            "lines": 9,
-            "tokens": 92,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/Components/DialogBox.tsx": {
-            "lines": 11,
-            "tokens": 102,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/ToggleSwitch.tsx": {
-            "lines": 2,
-            "tokens": 36,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/Posts.tsx": {
-            "lines": 522,
-            "tokens": 4584,
-            "sources": 1,
-            "clones": 2,
-            "duplicatedLines": 332,
-            "duplicatedTokens": 2687,
-            "percentage": 63.6,
-            "percentageTokens": 58.62,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/GridSelection.tsx": {
-            "lines": 603,
-            "tokens": 5121,
-            "sources": 1,
-            "clones": 2,
-            "duplicatedLines": 332,
-            "duplicatedTokens": 2687,
-            "percentage": 55.06,
-            "percentageTokens": 52.47,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/Comments.tsx": {
-            "lines": 0,
-            "tokens": 14,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/app.tsx": {
-            "lines": 25,
-            "tokens": 294,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/main.tsx": {
-            "lines": 0,
-            "tokens": 3,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/webpack.config.js": {
-            "lines": 35,
-            "tokens": 280,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/tailwind.config.js": {
-            "lines": 27,
-            "tokens": 127,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/postcss.config.js": {
-            "lines": 14,
-            "tokens": 76,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 1248,
-          "tokens": 10729,
-          "sources": 11,
-          "clones": 2,
-          "duplicatedLines": 332,
-          "duplicatedTokens": 2687,
-          "percentage": 26.6,
-          "percentageTokens": 25.04,
-          "newDuplicatedLines": 0,
-          "newClones": 0
-        }
-      },
-      "tsx": {
-        "sources": {
-          "apps/react-crud/src/app/Modules/Components/Toast.tsx": {
-            "lines": 26,
-            "tokens": 283,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/Components/DialogBox.tsx": {
-            "lines": 44,
-            "tokens": 404,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/ToggleSwitch.tsx": {
-            "lines": 33,
-            "tokens": 290,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/Posts.tsx": {
-            "lines": 718,
-            "tokens": 6600,
-            "sources": 1,
-            "clones": 23,
-            "duplicatedLines": 556,
-            "duplicatedTokens": 5081,
-            "percentage": 77.44,
-            "percentageTokens": 76.98,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/GridSelection.tsx": {
-            "lines": 842,
-            "tokens": 7570,
-            "sources": 1,
-            "clones": 20,
-            "duplicatedLines": 535,
-            "duplicatedTokens": 4821,
-            "percentage": 63.54,
-            "percentageTokens": 63.69,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/Modules/Comments.tsx": {
-            "lines": 82,
-            "tokens": 846,
-            "sources": 1,
-            "clones": 1,
-            "duplicatedLines": 5,
-            "duplicatedTokens": 84,
-            "percentage": 6.1,
-            "percentageTokens": 9.93,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/store.tsx": {
-            "lines": 14,
-            "tokens": 161,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/slice.tsx": {
-            "lines": 119,
-            "tokens": 1098,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/nx-welcome.tsx": {
-            "lines": 855,
-            "tokens": 2763,
-            "sources": 1,
-            "clones": 20,
-            "duplicatedLines": 306,
-            "duplicatedTokens": 1542,
-            "percentage": 35.79,
-            "percentageTokens": 55.81,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/gridSlice.tsx": {
-            "lines": 113,
-            "tokens": 1008,
-            "sources": 1,
-            "clones": 2,
-            "duplicatedLines": 10,
-            "duplicatedTokens": 164,
-            "percentage": 8.85,
-            "percentageTokens": 16.27,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/app.tsx": {
-            "lines": 127,
-            "tokens": 989,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/app/app.spec.tsx": {
-            "lines": 26,
-            "tokens": 148,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          },
-          "apps/react-crud/src/main.tsx": {
-            "lines": 21,
-            "tokens": 176,
-            "sources": 1,
-            "clones": 0,
-            "duplicatedLines": 0,
-            "duplicatedTokens": 0,
-            "percentage": 0,
-            "percentageTokens": 0,
-            "newDuplicatedLines": 0,
-            "newClones": 0
-          }
-        },
-        "total": {
-          "lines": 3020,
-          "tokens": 22336,
-          "sources": 13,
-          "clones": 33,
-          "duplicatedLines": 706,
-          "duplicatedTokens": 5846,
-          "percentage": 23.38,
-          "percentageTokens": 26.17,
           "newDuplicatedLines": 0,
           "newClones": 0
         }
@@ -493,8 +565,8 @@
             "newClones": 0
           },
           "apps/react-crud/tsconfig.spec.json": {
-            "lines": 30,
-            "tokens": 131,
+            "lines": 32,
+            "tokens": 147,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -518,7 +590,7 @@
           },
           "apps/react-crud/tsconfig.app.json": {
             "lines": 29,
-            "tokens": 150,
+            "tokens": 153,
             "sources": 1,
             "clones": 0,
             "duplicatedLines": 0,
@@ -542,8 +614,8 @@
           }
         },
         "total": {
-          "lines": 102,
-          "tokens": 497,
+          "lines": 104,
+          "tokens": 516,
           "sources": 6,
           "clones": 0,
           "duplicatedLines": 0,
@@ -556,14 +628,14 @@
       }
     },
     "total": {
-      "lines": 4589,
-      "tokens": 35511,
-      "sources": 38,
-      "clones": 35,
-      "duplicatedLines": 1038,
-      "duplicatedTokens": 8533,
-      "percentage": 22.62,
-      "percentageTokens": 24.03,
+      "lines": 5476,
+      "tokens": 43178,
+      "sources": 44,
+      "clones": 39,
+      "duplicatedLines": 1091,
+      "duplicatedTokens": 8865,
+      "percentage": 19.92,
+      "percentageTokens": 20.53,
       "newDuplicatedLines": 0,
       "newClones": 0
     }
@@ -571,37 +643,145 @@
   "duplicates": [
     {
       "format": "tsx",
+      "lines": 6,
+      "fragment": ": builder.mutation<\r\n      User[] | Comment[] | Post[],\r\n      { endpoint: ApiEndPoint; body: BodyMap[ApiEndPoint] }\r\n    >({\r\n      query: ({ endpoint, body }) => ({\r\n        url: `/${endpoint}/",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Slices\\gridSlice.tsx",
+        "start": 73,
+        "end": 78,
+        "startLoc": {
+          "line": 73,
+          "column": 11,
+          "position": 608
+        },
+        "endLoc": {
+          "line": 78,
+          "column": 2,
+          "position": 690
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Slices\\gridSlice.tsx",
+        "start": 63,
+        "end": 68,
+        "startLoc": {
+          "line": 63,
+          "column": 8,
+          "position": 495
+        },
+        "endLoc": {
+          "line": 68,
+          "column": 2,
+          "position": 577
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 128,
+      "fragment": "}\r\n          icon={<SuccessCircleIcon aria-label=\"success\" />}\r\n          handleClose={() => setToast(null)}\r\n        />\r\n      );\r\n      refetch();\r\n    } catch (err) {\r\n      console.log(err);\r\n      setToast(\r\n        <ToastMessage\r\n          status=\"error\"\r\n          headText=\"Failed\"\r\n          content=\"Failed to Update\"\r\n          icon={<ErrorIcon aria-label=\"error\" />}\r\n          handleClose={() => setToast(null)}\r\n        />\r\n      );\r\n      refetch();\r\n    }\r\n  };\r\n\r\n  const allRowsChanged = editableData.every((row, i) => {\r\n    const orginalRow = originalData[i];\r\n    const oriObj = Object.fromEntries(\r\n      orginalRow.map(({ key, value }) => [key, String(value ?? '').trim()])\r\n    );\r\n    const editObj = Object.fromEntries(\r\n      row.map(({ key, value }) => [key, String(value ?? '').trim()])\r\n    );\r\n    return Object.keys(oriObj).some((k) => oriObj[k] !== editObj[k]);\r\n  });\r\n\r\n  const forAdd = forAddbuttonDisable.some(\r\n    (obj) => !obj.title.trim() || !obj.body.trim()\r\n  );\r\n  const handleClose = () => {\r\n    if ((confirmationDialog && isEdit) || (isAdd && !forAdd)) {\r\n      setConfirmDialogOpen(true);\r\n      setDialogCancellation(true);\r\n    } else {\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setEmptyField(false);\r\n    }\r\n  };\r\n\r\n  const confirmDialogHandleClose = () => {\r\n    setConfirmDialogOpen(false);\r\n    setDialogCancellation(false);\r\n    setConfirmationDialogForEditDelete(false);\r\n  };\r\n\r\n  const confirmationDialogSubmit = () => {\r\n    if (isEdit || isDelete) {\r\n      !dialogCancellation ? handleSubmit() : null;\r\n      setConfirmationDialogForEditDelete(false);\r\n      setConfirmDialogOpen(false);\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setEmptyField(false);\r\n      setDialogCancellation(false);\r\n      navigate('/posts');\r\n    }\r\n    setConfirmationDialogForEditDelete(false);\r\n    setConfirmDialogOpen(false);\r\n    setDialogOpen(false);\r\n    setIsAdd(false);\r\n    setIsEdit(false);\r\n    setIsDelete(false);\r\n    setSelectedData(undefined);\r\n    setEmptyField(false);\r\n    setDialogCancellation(false);\r\n    navigate('/posts');\r\n  };\r\n\r\n  const validationStatus = (value: string) => {\r\n    if (isEdit) {\r\n      const isValid = !value;\r\n      return !isValid ? undefined : 'error';\r\n    }\r\n  };\r\n\r\n  let isDisabled = false;\r\n\r\n  if (isEdit) {\r\n    console.log('edit called');\r\n    isDisabled =\r\n      JSON.stringify(origin) === JSON.stringify(editable) ||\r\n      !allRowsChanged ||\r\n      emptyField ||\r\n      confirmDialogOpen;\r\n  } else if (isAdd) {\r\n    console.log('Add called');\r\n    // Add mode\r\n    isDisabled = forAddbuttonDisable.some(\r\n      (obj) => !obj.title.trim() || !obj.body.trim()\r\n    );\r\n  }\r\n\r\n  const closeButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={handleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const direction: StackLayoutProps<ElementType>['direction'] =\r\n    useResponsiveProp(\r\n      {\r\n        xs: 'column',\r\n        sm: 'row',\r\n        lg: 'row',\r\n        xl: 'row',\r\n      },\r\n      'row'\r\n    );\r\n\r\n  const cancel = (\r\n    <Button sentiment=\"accented\" appearance=\"bordered\" onClick={handleClose",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 370,
+        "end": 497,
+        "startLoc": {
+          "line": 370,
+          "column": 26,
+          "position": 3759
+        },
+        "endLoc": {
+          "line": 497,
+          "column": 12,
+          "position": 4917
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Users.tsx",
+        "start": 120,
+        "end": 204,
+        "startLoc": {
+          "line": 120,
+          "column": 16,
+          "position": 1067
+        },
+        "endLoc": {
+          "line": 204,
+          "column": 11,
+          "position": 1803
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 6,
+      "fragment": "const params = window.location.pathname.split('/');\r\n  const pathName = params[1]\r\n    .split(' ')\r\n    .map((val) => val.charAt(0).toUpperCase() + val.slice(1))\r\n    .join(' ');\r\n  const [",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 119,
+        "end": 124,
+        "startLoc": {
+          "line": 119,
+          "column": 3,
+          "position": 1022
+        },
+        "endLoc": {
+          "line": 124,
+          "column": 2,
+          "position": 1106
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Users.tsx",
+        "start": 102,
+        "end": 109,
+        "startLoc": {
+          "line": 102,
+          "column": 3,
+          "position": 883
+        },
+        "endLoc": {
+          "line": 109,
+          "column": 9,
+          "position": 971
+        }
+      }
+    },
+    {
+      "format": "tsx",
       "lines": 9,
       "fragment": ");\r\n        const hasEmpty = updated.some((row) =>\r\n          row.some((item) => !item.value || String(item.value).trim() === '')\r\n        );\r\n        setEmptyField(hasEmpty);\r\n        return updated;\r\n      });\r\n    }\r\n  }",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 270,
-        "end": 278,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 282,
+        "end": 290,
         "startLoc": {
-          "line": 270,
+          "line": 282,
           "column": 9,
-          "position": 2803
+          "position": 2885
         },
         "endLoc": {
-          "line": 278,
+          "line": 290,
           "column": 2,
-          "position": 2891
+          "position": 2973
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 255,
-        "end": 262,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 267,
+        "end": 274,
         "startLoc": {
-          "line": 255,
+          "line": 267,
           "column": 9,
-          "position": 2617
+          "position": 2699
         },
         "endLoc": {
-          "line": 262,
+          "line": 274,
           "column": 5,
-          "position": 2703
+          "position": 2785
         }
       }
     },
@@ -611,105 +791,213 @@
       "fragment": "setConfirmationDialogForEditDelete(false);\r\n    setConfirmDialogOpen(false);\r\n    setDialogOpen(false);\r\n    setIsAdd(false);\r\n    setIsEdit(false);\r\n    setIsDelete(false);\r\n    setSelectedData(undefined);\r\n    setEmptyField(false);\r\n    setDialogCancellation(false);\r\n    navigate('/posts');\r\n  };",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 427,
-        "end": 437,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 439,
+        "end": 449,
         "startLoc": {
-          "line": 427,
+          "line": 439,
           "column": 5,
-          "position": 4366
+          "position": 4448
         },
         "endLoc": {
-          "line": 437,
+          "line": 449,
           "column": 2,
-          "position": 4447
+          "position": 4529
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 416,
-        "end": 427,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 428,
+        "end": 439,
         "startLoc": {
-          "line": 416,
+          "line": 428,
           "column": 7,
-          "position": 4282
+          "position": 4364
         },
         "endLoc": {
-          "line": 427,
+          "line": 439,
           "column": 35,
-          "position": 4366
+          "position": 4448
         }
       }
     },
     {
-      "format": "javascript",
-      "lines": 210,
-      "fragment": "Updated` : isDelete ? `Deleted` : `Added`\r\n          } Successfully`}\r\n          icon={<SuccessCircleIcon aria-label=\"success\" />}\r\n          handleClose={() => setToast(null)}\r\n        />\r\n      );\r\n      setSelectedRows(0);\r\n      refetch();\r\n    } catch (err) {\r\n      console.log(err);\r\n      setToast(\r\n        <ToastMessage\r\n          status=\"error\"\r\n          headText=\"Failed\"\r\n          content=\"Failed to Update\"\r\n          icon={<ErrorIcon aria-label=\"error\" />}\r\n          handleClose={() => setToast(null)}\r\n        />\r\n      );\r\n      refetch();\r\n    }\r\n  };\r\n\r\n  const allRowsChanged = editableData.every((row, i) => {\r\n    const orginalRow = originalData[i];\r\n    const oriObj = Object.fromEntries(\r\n      orginalRow.map(({ key, value }) => [key, String(value ?? '').trim()])\r\n    );\r\n    const editObj = Object.fromEntries(\r\n      row.map(({ key, value }) => [key, String(value ?? '').trim()])\r\n    );\r\n    return Object.keys(oriObj).some((k) => oriObj[k] !== editObj[k]);\r\n  });\r\n\r\n  // const forAdd = forAddbuttonDisable.some(\r\n  //   (obj) => !obj.title.trim() || !obj.body.trim()\r\n  // );\r\n\r\n  const forAdd = forAddbuttonDisable.some((obj) =>\r\n    Object.values(obj).some((val) => (val ?? '').trim() === '')\r\n  );\r\n\r\n  const handleClose = () => {\r\n    if ((confirmationDialog && isEdit) || (isAdd && !forAdd)) {\r\n      setConfirmDialogOpen(true);\r\n      setDialogCancellation(true);\r\n    } else {\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setEmptyField(false);\r\n    }\r\n  };\r\n\r\n  const confirmDialogHandleClose = () => {\r\n    setConfirmDialogOpen(false);\r\n    setDialogCancellation(false);\r\n    setConfirmationDialogForEditDelete(false);\r\n  };\r\n\r\n  const confirmationDialogSubmit = () => {\r\n    if (isEdit || isDelete) {\r\n      !dialogCancellation ? handleSubmit() : null;\r\n      setConfirmationDialogForEditDelete(false);\r\n      setConfirmDialogOpen(false);\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setEmptyField(false);\r\n      setDialogCancellation(false);\r\n      navigate('/gridselection');\r\n    }\r\n    setConfirmationDialogForEditDelete(false);\r\n    setConfirmDialogOpen(false);\r\n    setDialogOpen(false);\r\n    setIsAdd(false);\r\n    setIsEdit(false);\r\n    setIsDelete(false);\r\n    setSelectedData(undefined);\r\n    setEmptyField(false);\r\n    setDialogCancellation(false);\r\n    navigate('/gridselection');\r\n  };\r\n\r\n  const validationStatus = (value: string) => {\r\n    if (isEdit) {\r\n      const isValid = !value;\r\n      return !isValid ? undefined : 'error';\r\n    }\r\n  };\r\n\r\n  let isDisabled = false;\r\n\r\n  if (isEdit) {\r\n    console.log('edit called');\r\n    isDisabled =\r\n      JSON.stringify(origin) === JSON.stringify(editable) ||\r\n      !allRowsChanged ||\r\n      emptyField ||\r\n      confirmDialogOpen;\r\n  } else if (isAdd) {\r\n    console.log('Add called');\r\n    // Add mode\r\n    isDisabled = forAdd;\r\n  }\r\n\r\n  const closeButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={handleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const direction: StackLayoutProps<ElementType>['direction'] =\r\n    useResponsiveProp(\r\n      {\r\n        xs: 'column',\r\n        sm: 'row',\r\n        lg: 'row',\r\n        xl: 'row',\r\n      },\r\n      'row'\r\n    );\r\n\r\n  const cancel = (\r\n    <Button sentiment=\"accented\" appearance=\"bordered\" onClick={handleClose}>\r\n      Cancel\r\n    </Button>\r\n  );\r\n\r\n  const accept = (\r\n    <Button\r\n      sentiment={isDelete ? 'negative' : 'accented'}\r\n      onClick={handleEditDelete}\r\n      disabled={isDisabled}\r\n    >\r\n      {isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'}\r\n    </Button>\r\n  );\r\n\r\n  const endItem = (\r\n    <StackLayout direction={{ xs: 'column', sm: 'row' }} gap={1}>\r\n      {cancel}\r\n      {accept}\r\n    </StackLayout>\r\n  );\r\n\r\n  const confirmationDialogCloseButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={confirmDialogHandleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const confirmationCancel = (\r\n    <Button\r\n      sentiment=\"accented\"\r\n      appearance=\"bordered\"\r\n      onClick={confirmDialogHandleClose}\r\n    >\r\n      Cancel\r\n    </Button>\r\n  );\r\n\r\n  const confirm = (\r\n    <Button\r\n      sentiment={isDelete ? 'negative' : 'accented'}\r\n      onClick={confirmationDialogSubmit}\r\n    >\r\n      {(isAdd || isEdit) && dialogCancellation\r\n        ? 'Accept'\r\n        : isDelete\r\n        ? 'Delete'\r\n        : 'Update'}\r\n    </Button>\r\n  );\r\n\r\n  if (isLoading || isUpdating)\r\n    return (\r\n      <Scrim open={isLoading || isUpdating}>\r\n        <Spinner size=\"medium\"></Spinner>\r\n      </Scrim>\r\n    );\r\n  if (error || fetchError)\r\n    return (\r\n      <p className=\"text-center mt-10 text-red-500\">Error fetching users</p>\r\n    );\r\n\r\n  const handleSelectionChange: DropdownProps['onSelectionChange'] = (\r\n    _event,\r\n    newSelect\r\n  ) => {\r\n    setSelectedValue(newSelect as ApiEndPoint[]);\r\n  };\r\n\r\n  return (\r\n    <div {...containerProps}>\r\n      <h1 className=\"text-2xl font-bold mb-6\">{pathName}</h1>\r\n      <br></br>\r\n      <FormField style={{",
+      "format": "tsx",
+      "lines": 15,
+      "fragment": "</Button>\r\n  );\r\n\r\n  if (isLoading || isUpdating)\r\n    return (\r\n      <Scrim open={isLoading || isUpdating}>\r\n        <Spinner size=\"medium\"></Spinner>\r\n      </Scrim>\r\n    );\r\n  if (error || fetchError)\r\n    return (\r\n      <p className=\"text-center mt-10 text-red-500\">Error fetching users</p>\r\n    );\r\n\r\n  return",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 447,
-        "end": 656,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 549,
+        "end": 563,
         "startLoc": {
-          "line": 447,
-          "column": 23,
-          "position": 4440
-        },
-        "endLoc": {
-          "line": 656,
-          "column": 2,
-          "position": 6174
-        }
-      },
-      "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 357,
-        "end": 554,
-        "startLoc": {
-          "line": 357,
-          "column": 23,
-          "position": 3671
-        },
-        "endLoc": {
-          "line": 554,
+          "line": 549,
           "column": 5,
-          "position": 5316
+          "position": 5266
+        },
+        "endLoc": {
+          "line": 563,
+          "column": 7,
+          "position": 5382
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Users.tsx",
+        "start": 199,
+        "end": 213,
+        "startLoc": {
+          "line": 199,
+          "column": 5,
+          "position": 1766
+        },
+        "endLoc": {
+          "line": 213,
+          "column": 6,
+          "position": 1882
         }
       }
     },
     {
-      "format": "javascript",
-      "lines": 124,
-      "fragment": " }}\r\n          >\r\n            <AgGridReact<Row>\r\n              {...agGridProps}\r\n              {...props}\r\n              theme=\"legacy\"\r\n              rowData={getGridData ?? []}\r\n              columnDefs={columnDefs}\r\n              defaultColDef={defaultColDef}\r\n              // animateRows={true}\r\n              // domLayout=\"autoHeight\"\r\n              pagination={true}\r\n              rowSelection={rowSelection}\r\n              ref={gridRef}\r\n              onSelectionChanged={(e) =>\r\n                setSelectedRows(e.api.getSelectedRows().length)\r\n              }\r\n              // onRowSelected={(e) => selectedRowNodes(e)}\r\n              paginationPageSizeSelector={[5, 10, 25, 50, 100]}\r\n            />\r\n          </div>\r\n        </>\r\n      )}\r\n      {dialogOpen && (\r\n        <Dialog open={dialogOpen} size=\"large\">\r\n          <DialogHeader\r\n            header={`${isEdit ? 'Edit' : isDelete ? 'Delete' : 'Add'} Item`}\r\n            actions={closeButton}\r\n          />\r\n          <DialogContent>\r\n            <FlowLayout>\r\n              <StackLayout gap={2} direction={'column'}>\r\n                {formData.map((row, rowIndex) => (\r\n                  <StackLayout gap={2} direction={'row'} key={rowIndex}>\r\n                    {row.map(({ key, value }, index) => {\r\n                      const label = key.charAt(0).toUpperCase() + key.slice(1);\r\n                      const disableId =\r\n                        key === 'userId' || key === 'id' || key === 'postId';\r\n                      // if (isAdd && disableId) return null;\r\n                      const multiLineInput = key === 'body';\r\n                      return (\r\n                        <FormField key={index}>\r\n                          <FormFieldLabel>{label}</FormFieldLabel>\r\n                          {!multiLineInput ? (\r\n                            <>\r\n                              <Input\r\n                                value={value}\r\n                                validationStatus={validationStatus(value)}\r\n                                onChange={(\r\n                                  e: React.ChangeEvent<HTMLInputElement>\r\n                                ) =>\r\n                                  handleInputChange(\r\n                                    rowIndex,\r\n                                    key,\r\n                                    e.target.value\r\n                                  )\r\n                                }\r\n                                disabled={disableId || isDelete}\r\n                              />\r\n                              {isEdit && !value ? <p>Field is Empty</p> : ''}\r\n                            </>\r\n                          ) : (\r\n                            <>\r\n                              <MultilineInput\r\n                                value={value}\r\n                                validationStatus={validationStatus(value)}\r\n                                onChange={(\r\n                                  e: React.ChangeEvent<HTMLInputElement>\r\n                                ) =>\r\n                                  handleInputChange(\r\n                                    rowIndex,\r\n                                    key,\r\n                                    e.target.value\r\n                                  )\r\n                                }\r\n                                disabled={isDelete}\r\n                              />\r\n                              {isEdit && !value ? <p>Field is Empty</p> : ''}\r\n                            </>\r\n                          )}\r\n                        </FormField>\r\n                      );\r\n                    })}\r\n                  </StackLayout>\r\n                ))}\r\n              </StackLayout>\r\n            </FlowLayout>\r\n            <DialogActions>\r\n              {direction === 'column' ? (\r\n                <StackLayout\r\n                  gap={1}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                >\r\n                  {accept}\r\n                  {cancel}\r\n                  {''}\r\n                </StackLayout>\r\n              ) : (\r\n                <SplitLayout\r\n                  direction={'row'}\r\n                  startItem={''}\r\n                  endItem={endItem}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                />\r\n              )}\r\n            </DialogActions>\r\n          </DialogContent>\r\n        </Dialog>\r\n      )}\r\n      {toast && <ToastGroup placement=\"top-right\">{toast}</ToastGroup>}\r\n      {(confirmDialogOpen || confirmationDialogForEditDelete) && (\r\n        <DialogBox\r\n          open={confirmDialogOpen || confirmationDialogForEditDelete}\r\n          size=\"small\"\r\n          status={isDelete ? 'error' : 'warning'}\r\n          content={confirmDialogContent}\r\n          direction={direction}\r\n          confirm={confirm}\r\n          cancel={confirmationCancel}\r\n          closeButton={confirmationDialogCloseButton}",
+      "format": "tsx",
+      "lines": 28,
+      "fragment": "</FlowLayout>\r\n            <DialogActions>\r\n              {direction === 'column' ? (\r\n                <StackLayout\r\n                  gap={1}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                >\r\n                  {accept}\r\n                  {cancel}\r\n                  {''}\r\n                </StackLayout>\r\n              ) : (\r\n                <SplitLayout\r\n                  direction={'row'}\r\n                  startItem={''}\r\n                  endItem={endItem}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                />\r\n              )}\r\n            </DialogActions>\r\n          </DialogContent>\r\n        </Dialog>\r\n      )}\r\n      {",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 714,
-        "end": 837,
-        "startLoc": {
-          "line": 714,
-          "column": 7,
-          "position": 6587
-        },
-        "endLoc": {
-          "line": 837,
-          "column": 2,
-          "position": 7540
-        }
-      },
-      "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 594,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 686,
         "end": 713,
         "startLoc": {
-          "line": 594,
-          "column": 4,
-          "position": 5621
+          "line": 686,
+          "column": 13,
+          "position": 6393
         },
         "endLoc": {
           "line": 713,
           "column": 2,
-          "position": 6571
+          "position": 6542
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Users.tsx",
+        "start": 283,
+        "end": 310,
+        "startLoc": {
+          "line": 283,
+          "column": 13,
+          "position": 2497
+        },
+        "endLoc": {
+          "line": 310,
+          "column": 3,
+          "position": 2646
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 216,
+      "fragment": "Updated` : isDelete ? `Deleted` : `Added`\r\n          } Successfully`}\r\n          icon={<SuccessCircleIcon aria-label=\"success\" />}\r\n          handleClose={() => setToast(null)}\r\n        />\r\n      );\r\n      setSelectedRows(0);\r\n      refetch();\r\n    } catch (err) {\r\n      console.log(err);\r\n      setToast(\r\n        <ToastMessage\r\n          status=\"error\"\r\n          headText=\"Failed\"\r\n          content=\"Failed to Update\"\r\n          icon={<ErrorIcon aria-label=\"error\" />}\r\n          handleClose={() => setToast(null)}\r\n        />\r\n      );\r\n      refetch();\r\n    }\r\n  };\r\n\r\n  const allRowsChanged = editableData.every((row, i) => {\r\n    const orginalRow = originalData[i];\r\n    const oriObj = Object.fromEntries(\r\n      orginalRow.map(({ key, value }) => [key, String(value ?? '').trim()])\r\n    );\r\n    const editObj = Object.fromEntries(\r\n      row.map(({ key, value }) => [key, String(value ?? '').trim()])\r\n    );\r\n    return Object.keys(oriObj).some((k) => oriObj[k] !== editObj[k]);\r\n  });\r\n\r\n  // const forAdd = forAddbuttonDisable.some(\r\n  //   (obj) => !obj.title.trim() || !obj.body.trim()\r\n  // );\r\n\r\n  const forAdd = forAddbuttonDisable.some((obj) =>\r\n    Object.values(obj).some((val) => (val ?? '').trim() === '')\r\n  );\r\n\r\n  const handleClose = () => {\r\n    if ((confirmationDialog && isEdit) || (isAdd && !forAdd)) {\r\n      setConfirmDialogOpen(true);\r\n      setDialogCancellation(true);\r\n    } else {\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setHasEmptyField(false);\r\n    }\r\n  };\r\n\r\n  const confirmDialogHandleClose = () => {\r\n    setConfirmDialogOpen(false);\r\n    setDialogCancellation(false);\r\n    setConfirmationDialogForEditDelete(false);\r\n  };\r\n\r\n  const confirmationDialogSubmit = () => {\r\n    if (isEdit || isDelete) {\r\n      !dialogCancellation ? handleSubmit() : null;\r\n      setConfirmationDialogForEditDelete(false);\r\n      setConfirmDialogOpen(false);\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setHasEmptyField(false);\r\n      setDialogCancellation(false);\r\n      navigate('/gridselection');\r\n    }\r\n    setConfirmationDialogForEditDelete(false);\r\n    setConfirmDialogOpen(false);\r\n    setDialogOpen(false);\r\n    setIsAdd(false);\r\n    setIsEdit(false);\r\n    setIsDelete(false);\r\n    setSelectedData(undefined);\r\n    setHasEmptyField(false);\r\n    setDialogCancellation(false);\r\n    navigate('/gridselection');\r\n  };\r\n\r\n  const validationStatus = (value: string) => {\r\n    if (isEdit) {\r\n      const isValid = !value;\r\n      return !isValid ? undefined : 'error';\r\n    }\r\n  };\r\n\r\n  let isDisabled = false;\r\n\r\n  if (isEdit) {\r\n    isDisabled =\r\n      JSON.stringify(origin) === JSON.stringify(editable) ||\r\n      !allRowsChanged ||\r\n      hasEmptyField ||\r\n      confirmDialogOpen;\r\n  }\r\n  // else if (isAdd) {\r\n  //   console.log('Add called');\r\n  //   // Add mode\r\n  //   // isDisabled = forAdd;\r\n  //   isDisabled = hasEmptyField || confirmDialogOpen\r\n  // }\r\n\r\n  const closeButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={handleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const direction: StackLayoutProps<ElementType>['direction'] =\r\n    useResponsiveProp(\r\n      {\r\n        xs: 'column',\r\n        sm: 'row',\r\n        lg: 'row',\r\n        xl: 'row',\r\n      },\r\n      'row'\r\n    );\r\n\r\n  const cancel = (\r\n    <Button sentiment=\"accented\" appearance=\"bordered\" onClick={handleClose}>\r\n      Cancel\r\n    </Button>\r\n  );\r\n\r\n  const accept = (\r\n    <Button\r\n      sentiment={isDelete ? 'negative' : 'accented'}\r\n      onClick={handleEditDelete}\r\n      disabled={isDisabled}\r\n    >\r\n      {isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'}\r\n    </Button>\r\n  );\r\n\r\n  const endItem = (\r\n    <StackLayout direction={{ xs: 'column', sm: 'row' }} gap={1}>\r\n      {cancel}\r\n      {accept}\r\n    </StackLayout>\r\n  );\r\n\r\n  const confirmationDialogCloseButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={confirmDialogHandleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const confirmationCancel = (\r\n    <Button\r\n      sentiment=\"accented\"\r\n      appearance=\"bordered\"\r\n      onClick={confirmDialogHandleClose}\r\n    >\r\n      Cancel\r\n    </Button>\r\n  );\r\n\r\n  const confirm = (\r\n    <Button\r\n      sentiment={isDelete ? 'negative' : 'accented'}\r\n      onClick={confirmationDialogSubmit}\r\n    >\r\n      {(isAdd || isEdit) && dialogCancellation\r\n        ? 'Accept'\r\n        : isDelete\r\n        ? 'Delete'\r\n        : 'Update'}\r\n    </Button>\r\n  );\r\n\r\n  if (isLoading || isUpdating)\r\n    return (\r\n      <Scrim open={isLoading || isUpdating}>\r\n        <Spinner size=\"medium\"></Spinner>\r\n      </Scrim>\r\n    );\r\n  if (error || fetchError)\r\n    return (\r\n      <p className=\"text-center mt-10 text-red-500\">Error fetching users</p>\r\n    );\r\n\r\n  const handleSelectionChange: DropdownProps['onSelectionChange'] = (\r\n    _event,\r\n    newSelect\r\n  ) => {\r\n    setSelectedValue(newSelect as ApiEndPoint[]);\r\n  };\r\n\r\n  return (\r\n    <div {...containerProps}>\r\n      <h1 className=\"text-2xl font-bold mb-6\">{pathName}</h1>\r\n      <br></br>\r\n      <FormField className=\"w-[266px]\">\r\n        <FormFieldLabel className=\"block text-sm font-medium text-gray-700 mb-1\">\r\n          Select Data\r\n        </FormFieldLabel>\r\n        <Dropdown\r\n          value={selectedValue",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 506,
+        "end": 721,
+        "startLoc": {
+          "line": 506,
+          "column": 23,
+          "position": 5081
+        },
+        "endLoc": {
+          "line": 721,
+          "column": 14,
+          "position": 6828
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 369,
+        "end": 567,
+        "startLoc": {
+          "line": 369,
+          "column": 23,
+          "position": 3753
+        },
+        "endLoc": {
+          "line": 567,
+          "column": 2,
+          "position": 5425
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 66,
+      "fragment": "}\r\n          />\r\n          <DialogContent>\r\n            <FlowLayout className=\"w-full\">\r\n              <StackLayout className=\"flex flex-col gap-2 w-full items-stretch\">\r\n                {formData.map((row, rowIndex) => (\r\n                  <StackLayout\r\n                    key={rowIndex}\r\n                    className=\"flex flex-row gap-2 w-full items-start\"\r\n                  >\r\n                    {row.map(({ key, value }, index) => {\r\n                      const label = key.charAt(0).toUpperCase() + key.slice(1);\r\n                      const disableId =\r\n                        key === 'userId' || key === 'id' || key === 'postId';\r\n                      if (isAdd && disableId) return null;\r\n                      const multiLineInput = key === 'body';\r\n\r\n                      return (\r\n                        <div key={index} className=\"flex-1\">\r\n                          <FormField className=\"w-full\">\r\n                            <FormFieldLabel>{label}</FormFieldLabel>\r\n                            {!multiLineInput ? (\r\n                              <Input\r\n                                value={value}\r\n                                validationStatus={validationStatus(value)}\r\n                                onChange={(\r\n                                  e: React.ChangeEvent<HTMLInputElement>\r\n                                ) =>\r\n                                  handleInputChange(\r\n                                    rowIndex,\r\n                                    key,\r\n                                    e.target.value\r\n                                  )\r\n                                }\r\n                                disabled={disableId || isDelete}\r\n                                className=\"w-full min-h-[61px]\"\r\n                              />\r\n                            ) : (\r\n                              <MultilineInput\r\n                                value={value}\r\n                                validationStatus={validationStatus(value)}\r\n                                onChange={(\r\n                                  e: React.ChangeEvent<HTMLInputElement>\r\n                                ) =>\r\n                                  handleInputChange(\r\n                                    rowIndex,\r\n                                    key,\r\n                                    e.target.value\r\n                                  )\r\n                                }\r\n                                disabled={isDelete}\r\n                                className=\"w-full\"\r\n                              />\r\n                            )}\r\n                          </FormField>\r\n                        </div>\r\n                      );\r\n                    })}\r\n\r\n                    {isAdd && (\r\n                      <div className=\"flex items-end gap-1\">\r\n                        <Tooltip content=\"Add Record\" placement=\"top\">\r\n                          <Button\r\n                            sentiment=\"accented\"\r\n                            appearance=\"bordered\"\r\n                            onClick={handleAddRow",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 807,
+        "end": 872,
+        "startLoc": {
+          "line": 807,
+          "column": 12,
+          "position": 7454
+        },
+        "endLoc": {
+          "line": 872,
+          "column": 13,
+          "position": 7935
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 634,
+        "end": 690,
+        "startLoc": {
+          "line": 634,
+          "column": 6,
+          "position": 5977
+        },
+        "endLoc": {
+          "line": 690,
+          "column": 2,
+          "position": 6424
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 49,
+      "fragment": "}\r\n                          >\r\n                            <RemoveDocumentIcon />\r\n                          </Button>\r\n                        </Tooltip>\r\n                      </div>\r\n                    )}\r\n                  </StackLayout>\r\n                ))}\r\n              </StackLayout>\r\n            </FlowLayout>\r\n\r\n            <DialogActions>\r\n              {direction === 'column' ? (\r\n                <StackLayout\r\n                  gap={1}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                >\r\n                  {accept}\r\n                  {cancel}\r\n                  {''}\r\n                </StackLayout>\r\n              ) : (\r\n                <SplitLayout\r\n                  direction={'row'}\r\n                  startItem={''}\r\n                  endItem={endItem}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                />\r\n              )}\r\n            </DialogActions>\r\n          </DialogContent>\r\n        </Dialog>\r\n      )}\r\n      {toast && <ToastGroup placement=\"top-right\">{toast}</ToastGroup>}\r\n      {(confirmDialogOpen || confirmationDialogForEditDelete) && (\r\n        <DialogBox\r\n          open={confirmDialogOpen || confirmationDialogForEditDelete}\r\n          size=\"small\"\r\n          status={isDelete ? 'error' : 'warning'}\r\n          content={confirmDialogContent}\r\n          direction={direction}\r\n          confirm={confirm}\r\n          cancel={confirmationCancel}\r\n          closeButton={confirmationDialogCloseButton}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 883,
+        "end": 931,
+        "startLoc": {
+          "line": 883,
+          "column": 2,
+          "position": 8028
+        },
+        "endLoc": {
+          "line": 931,
+          "column": 2,
+          "position": 8330
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 675,
+        "end": 723,
+        "startLoc": {
+          "line": 675,
+          "column": 9,
+          "position": 6312
+        },
+        "endLoc": {
+          "line": 723,
+          "column": 2,
+          "position": 6639
         }
       }
     },
@@ -719,33 +1007,33 @@
       "fragment": "[]>([]);\r\n  const [editableData, setEditableData] = useState<\r\n    { key: string; value: any }[][]\r\n  >([]);\r\n  const [addNewData, setAddNewData] = useState<\r\n    { key: string; value: string",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 113,
-        "end": 118,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 100,
+        "end": 105,
         "startLoc": {
-          "line": 113,
+          "line": 100,
           "column": 4,
-          "position": 907
+          "position": 802
         },
         "endLoc": {
-          "line": 118,
+          "line": 105,
           "column": 7,
-          "position": 991
+          "position": 886
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 88,
-        "end": 92,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 96,
+        "end": 100,
         "startLoc": {
-          "line": 88,
+          "line": 96,
           "column": 5,
-          "position": 702
+          "position": 748
         },
         "endLoc": {
-          "line": 92,
+          "line": 100,
           "column": 4,
-          "position": 783
+          "position": 829
         }
       }
     },
@@ -755,33 +1043,33 @@
       "fragment": "] = useState<\r\n    { key: string; value: any }[][]\r\n  >([]);\r\n  const [selectedRows, setSelectedRows] = useState(0);\r\n  const [dialogOpen, setDialogOpen] = useState(false);\r\n  const [isEdit, setIsEdit] = useState(false);\r\n  const [isDelete, setIsDelete] = useState(false);\r\n  const [confirmationDialogForEditDelete, setConfirmationDialogForEditDelete] =\r\n    useState(false);\r\n  // const data = selectedData\r\n  //   ? Object.entries(selectedData).map(([key, value]) => ({ key, value }))\r\n  //   : multipleData\r\n  //   ? multipleData.flatMap((row) =>\r\n  //       Object.entries(row).map(([key, value]) => ({ key, value }))\r\n  //     )\r\n  //   : [];\r\n  const params = window.location.pathname.split('/');\r\n  const pathName = params[1]\r\n    .split(' ')\r\n    .map((val) => val.charAt(0).toUpperCase() + val.slice(1))\r\n    .join(' ');\r\n  const [toast, setToast] = useState<JSX.Element | null>(null);\r\n  const gridRef = useRef<AgGridReactType<Row",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 123,
-        "end": 145,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 110,
+        "end": 132,
         "startLoc": {
-          "line": 123,
+          "line": 110,
           "column": 15,
-          "position": 1067
+          "position": 962
         },
         "endLoc": {
-          "line": 145,
+          "line": 132,
           "column": 4,
-          "position": 1351
+          "position": 1246
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 95,
-        "end": 117,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 103,
+        "end": 125,
         "startLoc": {
-          "line": 95,
+          "line": 103,
           "column": 16,
-          "position": 812
+          "position": 858
         },
         "endLoc": {
-          "line": 117,
+          "line": 125,
           "column": 5,
-          "position": 1096
+          "position": 1142
         }
       }
     },
@@ -791,105 +1079,69 @@
       "fragment": ">>(null);\r\n  const origin = originalData.map((row) =>\r\n    Object.fromEntries(row.map(({ key, value }) => [key, String(value).trim()]))\r\n  );\r\n  const editable = editableData.map((row) =>\r\n    Object.fromEntries(row.map(({ key, value }) => [key, String(value).trim()]))\r\n  );\r\n  const forAddbuttonDisable = addNewData.map((row) =>\r\n    Object.fromEntries(\r\n      row.map(({ key, value }) => [key, String(value ?",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 132,
+        "end": 141,
+        "startLoc": {
+          "line": 132,
+          "column": 4,
+          "position": 1247
+        },
+        "endLoc": {
+          "line": 141,
+          "column": 2,
+          "position": 1430
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 125,
+        "end": 133,
+        "startLoc": {
+          "line": 125,
+          "column": 5,
+          "position": 1143
+        },
+        "endLoc": {
+          "line": 133,
+          "column": 2,
+          "position": 1322
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 12,
+      "fragment": "] = useState<boolean>(false);\r\n  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);\r\n  const [dialogCancellation, setDialogCancellation] = useState(false);\r\n  const [isAdd, setIsAdd] = useState(false);\r\n  const formData = isEdit || isDelete ? editableData : addNewData;\r\n\r\n  const confirmationDialog =\r\n    JSON.stringify(origin) !== JSON.stringify(editable);\r\n\r\n  const confirmDialogContent =\r\n    (isAdd || isEdit) && dialogCancellation\r\n      ? 'Are you sure you want to cancel the changes? Any previous changes will not be saved'",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
         "start": 145,
-        "end": 154,
+        "end": 156,
         "startLoc": {
           "line": 145,
-          "column": 4,
-          "position": 1352
+          "column": 17,
+          "position": 1480
         },
         "endLoc": {
-          "line": 154,
-          "column": 2,
-          "position": 1535
-        }
-      },
-      "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 117,
-        "end": 125,
-        "startLoc": {
-          "line": 117,
-          "column": 5,
-          "position": 1097
-        },
-        "endLoc": {
-          "line": 125,
-          "column": 2,
-          "position": 1276
-        }
-      }
-    },
-    {
-      "format": "tsx",
-      "lines": 16,
-      "fragment": ").trim()])\r\n    )\r\n  );\r\n  const { agGridProps, containerProps } = useAgGridHelpers();\r\n  const [emptyField, setEmptyField] = useState<boolean>(false);\r\n  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);\r\n  const [dialogCancellation, setDialogCancellation] = useState(false);\r\n  const [isAdd, setIsAdd] = useState(false);\r\n  const formData = isEdit || isDelete ? editableData : addNewData;\r\n\r\n  const confirmationDialog =\r\n    JSON.stringify(origin) !== JSON.stringify(editable);\r\n\r\n  const confirmDialogContent =\r\n    (isAdd || isEdit) && dialogCancellation\r\n      ? 'Are you sure you want to cancel the changes? Any previous changes will not be saved'",
-      "tokens": 0,
-      "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 154,
-        "end": 169,
-        "startLoc": {
-          "line": 154,
-          "column": 3,
-          "position": 1539
-        },
-        "endLoc": {
-          "line": 169,
+          "line": 156,
           "column": 86,
-          "position": 1735
+          "position": 1630
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 125,
-        "end": 139,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 136,
+        "end": 147,
         "startLoc": {
-          "line": 125,
-          "column": 6,
-          "position": 1276
+          "line": 136,
+          "column": 14,
+          "position": 1365
         },
         "endLoc": {
-          "line": 139,
+          "line": 147,
           "column": 87,
-          "position": 1469
-        }
-      }
-    },
-    {
-      "format": "tsx",
-      "lines": 9,
-      "fragment": "([\r\n        Object.entries(selectedData).map(([key, value]) => ({ key, value })),\r\n      ]);\r\n    }\r\n  }, [selectedData]);\r\n\r\n  useEffect(() => {\r\n    if (multipleData.length > 0) {\r\n      const",
-      "tokens": 0,
-      "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 196,
-        "end": 204,
-        "startLoc": {
-          "line": 196,
-          "column": 15,
-          "position": 2020
-        },
-        "endLoc": {
-          "line": 204,
-          "column": 6,
-          "position": 2110
-        }
-      },
-      "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 158,
-        "end": 166,
-        "startLoc": {
-          "line": 158,
-          "column": 16,
-          "position": 1644
-        },
-        "endLoc": {
-          "line": 166,
-          "column": 16,
-          "position": 1734
+          "position": 1515
         }
       }
     },
@@ -899,33 +1151,33 @@
       "fragment": "(\r\n        multipleData.map((row) =>\r\n          Object.entries(row).map(([key, value]) => ({ key, value }))\r\n        )\r\n      );\r\n    }\r\n  }, [multipleData]);\r\n\r\n  const ActionButtonRenderer = (e: ICellRendererParams<Row",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 214,
-        "end": 222,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 201,
+        "end": 209,
         "startLoc": {
-          "line": 214,
+          "line": 201,
           "column": 15,
-          "position": 2227
+          "position": 2122
         },
         "endLoc": {
-          "line": 222,
+          "line": 209,
           "column": 4,
-          "position": 2315
+          "position": 2210
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 171,
-        "end": 179,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 183,
+        "end": 191,
         "startLoc": {
-          "line": 171,
+          "line": 183,
           "column": 16,
-          "position": 1795
+          "position": 1877
         },
         "endLoc": {
-          "line": 179,
+          "line": 191,
           "column": 5,
-          "position": 1883
+          "position": 1965
         }
       }
     },
@@ -935,69 +1187,141 @@
       "fragment": ">) => {\r\n    const handleClickAction = (actionType: string) => {\r\n      setDialogOpen(true);\r\n      setSelectedData(e.data);\r\n      actionType === 'edit' ? setIsEdit(true) : setIsDelete(true);\r\n    };\r\n\r\n    return (\r\n      <>\r\n        <Button\r\n          sentiment=\"accented\"\r\n          appearance=\"transparent\"\r\n          disabled={selectedRows >= 1}\r\n          onClick={() => handleClickAction('edit')}\r\n        >\r\n          <EditIcon />\r\n        </Button>\r\n        &nbsp;\r\n        <Button\r\n          sentiment=\"accented\"\r\n          appearance=\"transparent\"\r\n          disabled={selectedRows >= 1}\r\n          onClick={() => handleClickAction('delete')}\r\n        >\r\n          <DeleteIcon />\r\n        </Button>\r\n      </>\r\n    );\r\n  };\r\n\r\n  const getMultiRowData = (action: string) => {\r\n    if (!gridRef.current) return false;\r\n    const selected = gridRef.current.api.getSelectedRows();\r\n    const order = selected.sort((a, b) => Number(a.id) - Number(b.id));\r\n    if (order.length > 0) {\r\n      setDialogOpen(true);\r\n      action === 'edit' ? setIsEdit(true) : setIsDelete(true);\r\n      setMultipleData(order);\r\n    }\r\n  };\r\n\r\n  const baseColumns",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 222,
-        "end": 263,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 209,
+        "end": 250,
         "startLoc": {
-          "line": 222,
+          "line": 209,
           "column": 4,
-          "position": 2316
+          "position": 2211
         },
         "endLoc": {
-          "line": 263,
+          "line": 250,
           "column": 12,
-          "position": 2696
+          "position": 2591
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 179,
-        "end": 220,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 191,
+        "end": 232,
         "startLoc": {
-          "line": 179,
+          "line": 191,
           "column": 5,
-          "position": 1884
+          "position": 1966
         },
         "endLoc": {
-          "line": 220,
+          "line": 232,
           "column": 11,
-          "position": 2264
+          "position": 2346
         }
       }
     },
     {
       "format": "tsx",
-      "lines": 60,
-      "fragment": "];\r\n\r\n  const rowSelection: RowSelectionOptions = {\r\n    mode: 'multiRow',\r\n    headerCheckbox: true,\r\n  };\r\n\r\n  const defaultColDef = useMemo(() => {\r\n    return {\r\n      filter: 'agTextColumnFilter',\r\n      floatingFilter: true,\r\n    };\r\n  }, []);\r\n\r\n  const handleInputChange = (\r\n    rowIndex: number,\r\n    key: string,\r\n    newValue: string\r\n  ) => {\r\n    if (!isEdit) {\r\n      setAddNewData((prev) => {\r\n        const updated = prev.map((row) =>\r\n          row.map((item) =>\r\n            item.key === key ? { ...item, value: newValue } : item\r\n          )\r\n        );\r\n        const hasEmpty = updated.some((row) =>\r\n          row.some((item) => !item.value || String(item.value).trim() === '')\r\n        );\r\n        setEmptyField(hasEmpty);\r\n        return updated;\r\n      });\r\n    } else {\r\n      setEditableData((prev) => {\r\n        const updated = prev.map((row, i) =>\r\n          i === rowIndex\r\n            ? row.map((item) =>\r\n                item.key === key ? { ...item, value: newValue } : item\r\n              )\r\n            : row\r\n        );\r\n        const hasEmpty = updated.some((row) =>\r\n          row.some((item) => !item.value || String(item.value).trim() === '')\r\n        );\r\n        setEmptyField(hasEmpty);\r\n        return updated;\r\n      });\r\n    }\r\n  };\r\n  useEffect(() => {\r\n    console.log('addNewData', addNewData);\r\n    console.log('forAddbuttonDisable', forAddbuttonDisable);\r\n    console.log('isAdd', isAdd);\r\n  }, [addNewData]);\r\n\r\n  const createRecord = () => {\r\n    setIsAdd(true);\r\n    setIsEdit(false);\r\n    setIsDelete(false);\r\n    setAddNewData([",
+      "lines": 22,
+      "fragment": "];\r\n\r\n  const rowSelection: RowSelectionOptions = {\r\n    mode: 'multiRow',\r\n    headerCheckbox: true,\r\n  };\r\n\r\n  const defaultColDef = useMemo(() => {\r\n    return {\r\n      filter: 'agTextColumnFilter',\r\n      floatingFilter: true,\r\n    };\r\n  }, []);\r\n\r\n  const handleInputChange = (\r\n    rowIndex: number,\r\n    key: string,\r\n    newValue: string\r\n  ) => {\r\n    if (!isEdit) {\r\n      setAddNewData((prev) => {\r\n        const updated = prev.map((row,",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 274,
-        "end": 333,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 261,
+        "end": 282,
         "startLoc": {
-          "line": 274,
+          "line": 261,
           "column": 13,
-          "position": 2802
+          "position": 2697
         },
         "endLoc": {
-          "line": 333,
+          "line": 282,
           "column": 2,
-          "position": 3411
+          "position": 2872
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 230,
-        "end": 289,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 242,
+        "end": 263,
         "startLoc": {
-          "line": 230,
+          "line": 242,
           "column": 3,
-          "position": 2391
+          "position": 2473
         },
         "endLoc": {
-          "line": 289,
+          "line": 263,
+          "column": 2,
+          "position": 2648
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 12,
+      "fragment": "((prev) => {\r\n        const updated = prev.map((row, i) =>\r\n          i === rowIndex\r\n            ? row.map((item) =>\r\n                item.key === key ? { ...item, value: newValue } : item\r\n              )\r\n            : row\r\n        );\r\n        const hasEmpty = updated.some((row) =>\r\n          row.some((item) => !item.value || String(item.value).trim() === '')\r\n        );\r\n        const",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 281,
+        "end": 292,
+        "startLoc": {
+          "line": 281,
+          "column": 14,
+          "position": 2849
+        },
+        "endLoc": {
+          "line": 292,
+          "column": 6,
+          "position": 3005
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 275,
+        "end": 286,
+        "startLoc": {
+          "line": 275,
+          "column": 16,
+          "position": 2792
+        },
+        "endLoc": {
+          "line": 286,
+          "column": 14,
+          "position": 2948
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 15,
+      "fragment": ";\r\n      });\r\n    } else {\r\n      setEditableData((prev) => {\r\n        const updated = prev.map((row, i) =>\r\n          i === rowIndex\r\n            ? row.map((item) =>\r\n                item.key === key ? { ...item, value: newValue } : item\r\n              )\r\n            : row\r\n        );\r\n        const hasEmpty = updated.some((row) =>\r\n          row.some((item) => !item.value || String(item.value).trim() === '')\r\n        );\r\n        setHasEmptyField",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 298,
+        "end": 312,
+        "startLoc": {
+          "line": 298,
+          "column": 7,
+          "position": 3124
+        },
+        "endLoc": {
+          "line": 312,
+          "column": 17,
+          "position": 3299
+        }
+      },
+      "secondFile": {
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 272,
+        "end": 286,
+        "startLoc": {
+          "line": 272,
           "column": 8,
-          "position": 3000
+          "position": 2773
+        },
+        "endLoc": {
+          "line": 286,
+          "column": 14,
+          "position": 2948
         }
       }
     },
@@ -1007,33 +1331,33 @@
       "fragment": "[];\r\n\r\n    const deleteDataFromStore = formData.map((record) =>\r\n      parseInt(record.find((f) => f.key === 'id')?.value ?? '0', 10)\r\n    );\r\n\r\n    try {\r\n      if (isEdit) {\r\n        await Promise.all(\r\n          updateDataToStore.map((data",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 395,
-        "end": 404,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 455,
+        "end": 464,
         "startLoc": {
-          "line": 395,
+          "line": 455,
           "column": 4,
-          "position": 3969
+          "position": 4561
         },
         "endLoc": {
-          "line": 404,
+          "line": 464,
           "column": 5,
-          "position": 4067
+          "position": 4659
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 313,
-        "end": 321,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 325,
+        "end": 333,
         "startLoc": {
-          "line": 313,
+          "line": 325,
           "column": 5,
-          "position": 3237
+          "position": 3319
         },
         "endLoc": {
-          "line": 321,
+          "line": 333,
           "column": 5,
-          "position": 3333
+          "position": 3415
         }
       }
     },
@@ -1043,249 +1367,213 @@
       "fragment": ");\r\n      refetch();\r\n    } catch (err) {\r\n      console.log(err);\r\n      setToast(\r\n        <ToastMessage\r\n          status=\"error\"\r\n          headText=\"Failed\"\r\n          content=\"Failed to Update\"\r\n          icon={<ErrorIcon aria-label=\"error\" />}\r\n          handleClose={() => setToast(null)}\r\n        />\r\n      );\r\n      refetch();\r\n    }\r\n  };\r\n\r\n  const allRowsChanged = editableData.every((row, i) => {\r\n    const orginalRow = originalData[i];\r\n    const oriObj = Object.fromEntries(\r\n      orginalRow.map(({ key, value }) => [key, String(value ?? '').trim()])\r\n    );\r\n    const editObj = Object.fromEntries(\r\n      row.map(({ key, value }) => [key, String(value ?? '').trim()])\r\n    );\r\n    return Object.keys(oriObj).some((k) => oriObj[k] !== editObj[k]);\r\n  });\r\n\r\n  // const forAdd = forAddbuttonDisable.some(",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 453,
-        "end": 481,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 512,
+        "end": 540,
         "startLoc": {
-          "line": 453,
+          "line": 512,
           "column": 2,
-          "position": 4489
+          "position": 5130
         },
         "endLoc": {
-          "line": 481,
+          "line": 540,
           "column": 44,
-          "position": 4797
+          "position": 5438
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 362,
-        "end": 390,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 374,
+        "end": 402,
         "startLoc": {
-          "line": 362,
+          "line": 374,
           "column": 7,
-          "position": 3712
+          "position": 3794
         },
         "endLoc": {
-          "line": 390,
+          "line": 402,
           "column": 6,
-          "position": 4020
+          "position": 4102
         }
       }
     },
     {
       "format": "tsx",
-      "lines": 36,
-      "fragment": ")\r\n  );\r\n\r\n  const handleClose = () => {\r\n    if ((confirmationDialog && isEdit) || (isAdd && !forAdd)) {\r\n      setConfirmDialogOpen(true);\r\n      setDialogCancellation(true);\r\n    } else {\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setEmptyField(false);\r\n    }\r\n  };\r\n\r\n  const confirmDialogHandleClose = () => {\r\n    setConfirmDialogOpen(false);\r\n    setDialogCancellation(false);\r\n    setConfirmationDialogForEditDelete(false);\r\n  };\r\n\r\n  const confirmationDialogSubmit = () => {\r\n    if (isEdit || isDelete) {\r\n      !dialogCancellation ? handleSubmit() : null;\r\n      setConfirmationDialogForEditDelete(false);\r\n      setConfirmDialogOpen(false);\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setEmptyField(false);\r\n      setDialogCancellation(false);\r\n      navigate('/gridselection'",
+      "lines": 14,
+      "fragment": ")\r\n  );\r\n\r\n  const handleClose = () => {\r\n    if ((confirmationDialog && isEdit) || (isAdd && !forAdd)) {\r\n      setConfirmDialogOpen(true);\r\n      setDialogCancellation(true);\r\n    } else {\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setHasEmptyField",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 486,
-        "end": 521,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 545,
+        "end": 558,
         "startLoc": {
-          "line": 486,
+          "line": 545,
           "column": 3,
-          "position": 4860
+          "position": 5501
         },
         "endLoc": {
-          "line": 521,
+          "line": 558,
           "column": 17,
-          "position": 5161
+          "position": 5618
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 391,
-        "end": 425,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 403,
+        "end": 415,
         "startLoc": {
-          "line": 391,
+          "line": 403,
           "column": 2,
-          "position": 4057
+          "position": 4139
         },
         "endLoc": {
-          "line": 425,
-          "column": 9,
-          "position": 4356
+          "line": 415,
+          "column": 14,
+          "position": 4254
         }
       }
     },
     {
       "format": "tsx",
-      "lines": 12,
-      "fragment": ");\r\n    }\r\n    setConfirmationDialogForEditDelete(false);\r\n    setConfirmDialogOpen(false);\r\n    setDialogOpen(false);\r\n    setIsAdd(false);\r\n    setIsEdit(false);\r\n    setIsDelete(false);\r\n    setSelectedData(undefined);\r\n    setEmptyField(false);\r\n    setDialogCancellation(false);\r\n    navigate('/gridselection'",
+      "lines": 21,
+      "fragment": "(false);\r\n    }\r\n  };\r\n\r\n  const confirmDialogHandleClose = () => {\r\n    setConfirmDialogOpen(false);\r\n    setDialogCancellation(false);\r\n    setConfirmationDialogForEditDelete(false);\r\n  };\r\n\r\n  const confirmationDialogSubmit = () => {\r\n    if (isEdit || isDelete) {\r\n      !dialogCancellation ? handleSubmit() : null;\r\n      setConfirmationDialogForEditDelete(false);\r\n      setConfirmDialogOpen(false);\r\n      setDialogOpen(false);\r\n      setIsAdd(false);\r\n      setIsEdit(false);\r\n      setIsDelete(false);\r\n      setSelectedData(undefined);\r\n      setHasEmptyField",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 521,
-        "end": 532,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 558,
+        "end": 578,
         "startLoc": {
-          "line": 521,
+          "line": 558,
           "column": 17,
-          "position": 5162
+          "position": 5619
         },
         "endLoc": {
-          "line": 532,
+          "line": 578,
           "column": 17,
-          "position": 5245
+          "position": 5784
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 425,
-        "end": 436,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 415,
+        "end": 435,
         "startLoc": {
-          "line": 425,
-          "column": 9,
-          "position": 4357
+          "line": 415,
+          "column": 14,
+          "position": 4255
         },
         "endLoc": {
-          "line": 436,
-          "column": 9,
-          "position": 4440
+          "line": 435,
+          "column": 14,
+          "position": 4420
         }
       }
     },
     {
       "format": "tsx",
       "lines": 11,
-      "fragment": "setConfirmationDialogForEditDelete(false);\r\n    setConfirmDialogOpen(false);\r\n    setDialogOpen(false);\r\n    setIsAdd(false);\r\n    setIsEdit(false);\r\n    setIsDelete(false);\r\n    setSelectedData(undefined);\r\n    setEmptyField(false);\r\n    setDialogCancellation(false);\r\n    navigate('/gridselection');\r\n  };",
+      "fragment": "setConfirmationDialogForEditDelete(false);\r\n    setConfirmDialogOpen(false);\r\n    setDialogOpen(false);\r\n    setIsAdd(false);\r\n    setIsEdit(false);\r\n    setIsDelete(false);\r\n    setSelectedData(undefined);\r\n    setHasEmptyField(false);\r\n    setDialogCancellation(false);\r\n    navigate('/gridselection');\r\n  };",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 523,
-        "end": 533,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 582,
+        "end": 592,
         "startLoc": {
-          "line": 523,
+          "line": 582,
           "column": 5,
-          "position": 5171
+          "position": 5812
         },
         "endLoc": {
-          "line": 533,
+          "line": 592,
           "column": 2,
-          "position": 5252
+          "position": 5893
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 512,
-        "end": 523,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 571,
+        "end": 582,
         "startLoc": {
-          "line": 512,
+          "line": 571,
           "column": 7,
-          "position": 5087
+          "position": 5728
         },
         "endLoc": {
-          "line": 523,
+          "line": 582,
           "column": 35,
-          "position": 5171
+          "position": 5812
         }
       }
     },
     {
       "format": "tsx",
-      "lines": 23,
-      "fragment": ");\r\n  };\r\n\r\n  const validationStatus = (value: string) => {\r\n    if (isEdit) {\r\n      const isValid = !value;\r\n      return !isValid ? undefined : 'error';\r\n    }\r\n  };\r\n\r\n  let isDisabled = false;\r\n\r\n  if (isEdit) {\r\n    console.log('edit called');\r\n    isDisabled =\r\n      JSON.stringify(origin) === JSON.stringify(editable) ||\r\n      !allRowsChanged ||\r\n      emptyField ||\r\n      confirmDialogOpen;\r\n  } else if (isAdd) {\r\n    console.log('Add called');\r\n    // Add mode\r\n    isDisabled = forAdd",
+      "lines": 89,
+      "fragment": "const closeButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={handleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const direction: StackLayoutProps<ElementType>['direction'] =\r\n    useResponsiveProp(\r\n      {\r\n        xs: 'column',\r\n        sm: 'row',\r\n        lg: 'row',\r\n        xl: 'row',\r\n      },\r\n      'row'\r\n    );\r\n\r\n  const cancel = (\r\n    <Button sentiment=\"accented\" appearance=\"bordered\" onClick={handleClose}>\r\n      Cancel\r\n    </Button>\r\n  );\r\n\r\n  const accept = (\r\n    <Button\r\n      sentiment={isDelete ? 'negative' : 'accented'}\r\n      onClick={handleEditDelete}\r\n      disabled={isDisabled}\r\n    >\r\n      {isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'}\r\n    </Button>\r\n  );\r\n\r\n  const endItem = (\r\n    <StackLayout direction={{ xs: 'column', sm: 'row' }} gap={1}>\r\n      {cancel}\r\n      {accept}\r\n    </StackLayout>\r\n  );\r\n\r\n  const confirmationDialogCloseButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={confirmDialogHandleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const confirmationCancel = (\r\n    <Button\r\n      sentiment=\"accented\"\r\n      appearance=\"bordered\"\r\n      onClick={confirmDialogHandleClose}\r\n    >\r\n      Cancel\r\n    </Button>\r\n  );\r\n\r\n  const confirm = (\r\n    <Button\r\n      sentiment={isDelete ? 'negative' : 'accented'}\r\n      onClick={confirmationDialogSubmit}\r\n    >\r\n      {(isAdd || isEdit) && dialogCancellation\r\n        ? 'Accept'\r\n        : isDelete\r\n        ? 'Delete'\r\n        : 'Update'}\r\n    </Button>\r\n  );\r\n\r\n  if (isLoading || isUpdating)\r\n    return (\r\n      <Scrim open={isLoading || isUpdating}>\r\n        <Spinner size=\"medium\"></Spinner>\r\n      </Scrim>\r\n    );\r\n  if (error || fetchError)\r\n    return (\r\n      <p className=\"text-center mt-10 text-red-500\">Error fetching users</p>\r\n    );\r\n\r\n  const handleSelectionChange",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 532,
-        "end": 554,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 617,
+        "end": 705,
         "startLoc": {
-          "line": 532,
-          "column": 17,
-          "position": 5246
-        },
-        "endLoc": {
-          "line": 554,
-          "column": 7,
-          "position": 5435
-        }
-      },
-      "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 436,
-        "end": 458,
-        "startLoc": {
-          "line": 436,
-          "column": 9,
-          "position": 4441
-        },
-        "endLoc": {
-          "line": 458,
-          "column": 20,
-          "position": 4630
-        }
-      }
-    },
-    {
-      "format": "tsx",
-      "lines": 90,
-      "fragment": ";\r\n  }\r\n\r\n  const closeButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={handleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const direction: StackLayoutProps<ElementType>['direction'] =\r\n    useResponsiveProp(\r\n      {\r\n        xs: 'column',\r\n        sm: 'row',\r\n        lg: 'row',\r\n        xl: 'row',\r\n      },\r\n      'row'\r\n    );\r\n\r\n  const cancel = (\r\n    <Button sentiment=\"accented\" appearance=\"bordered\" onClick={handleClose}>\r\n      Cancel\r\n    </Button>\r\n  );\r\n\r\n  const accept = (\r\n    <Button\r\n      sentiment={isDelete ? 'negative' : 'accented'}\r\n      onClick={handleEditDelete}\r\n      disabled={isDisabled}\r\n    >\r\n      {isEdit ? 'Update' : isDelete ? 'Delete' : 'Add'}\r\n    </Button>\r\n  );\r\n\r\n  const endItem = (\r\n    <StackLayout direction={{ xs: 'column', sm: 'row' }} gap={1}>\r\n      {cancel}\r\n      {accept}\r\n    </StackLayout>\r\n  );\r\n\r\n  const confirmationDialogCloseButton = (\r\n    <Button\r\n      aria-label=\"closing-dialog\"\r\n      appearance=\"transparent\"\r\n      onClick={confirmDialogHandleClose}\r\n    >\r\n      <CloseIcon aria-hidden />\r\n    </Button>\r\n  );\r\n\r\n  const confirmationCancel = (\r\n    <Button\r\n      sentiment=\"accented\"\r\n      appearance=\"bordered\"\r\n      onClick={confirmDialogHandleClose}\r\n    >\r\n      Cancel\r\n    </Button>\r\n  );\r\n\r\n  const confirm = (\r\n    <Button\r\n      sentiment={isDelete ? 'negative' : 'accented'}\r\n      onClick={confirmationDialogSubmit}\r\n    >\r\n      {(isAdd || isEdit) && dialogCancellation\r\n        ? 'Accept'\r\n        : isDelete\r\n        ? 'Delete'\r\n        : 'Update'}\r\n    </Button>\r\n  );\r\n\r\n  if (isLoading || isUpdating)\r\n    return (\r\n      <Scrim open={isLoading || isUpdating}>\r\n        <Spinner size=\"medium\"></Spinner>\r\n      </Scrim>\r\n    );\r\n  if (error || fetchError)\r\n    return (\r\n      <p className=\"text-center mt-10 text-red-500\">Error fetching users</p>\r\n    );",
-      "tokens": 0,
-      "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 554,
-        "end": 643,
-        "startLoc": {
-          "line": 554,
-          "column": 7,
-          "position": 5436
-        },
-        "endLoc": {
-          "line": 643,
-          "column": 2,
+          "line": 617,
+          "column": 3,
           "position": 6064
+        },
+        "endLoc": {
+          "line": 705,
+          "column": 22,
+          "position": 6690
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 460,
-        "end": 551,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 475,
+        "end": 213,
         "startLoc": {
-          "line": 460,
-          "column": 2,
-          "position": 4666
+          "line": 475,
+          "column": 3,
+          "position": 4758
         },
         "endLoc": {
-          "line": 551,
-          "column": 7,
-          "position": 5299
+          "line": 213,
+          "column": 10,
+          "position": 1884
         }
       }
     },
     {
       "format": "tsx",
       "lines": 37,
-      "fragment": ">\r\n            <Button\r\n              // style={{ marginLeft: '1107px' }}\r\n              sentiment=\"accented\"\r\n              appearance=\"bordered\"\r\n              onClick={createRecord}\r\n              disabled={selectedRows > 0}\r\n            >\r\n              <AddIcon />\r\n              Add Record\r\n            </Button>\r\n            &nbsp;\r\n            <Button\r\n              // style={{ marginLeft: '1107px' }}\r\n              sentiment=\"accented\"\r\n              appearance=\"bordered\"\r\n              onClick={() => getMultiRowData('edit')}\r\n              disabled={selectedRows <= 1}\r\n            >\r\n              <EditIcon />\r\n              Edit Records\r\n            </Button>\r\n            &nbsp;\r\n            <Button\r\n              // style={{ marginLeft: '1107px' }}\r\n              sentiment=\"accented\"\r\n              appearance=\"bordered\"\r\n              onClick={() => getMultiRowData('delete')}\r\n              disabled={selectedRows <= 1}\r\n            >\r\n              <DeleteIcon />\r\n              Delete Records\r\n            </Button>\r\n          </div>\r\n\r\n          <div\r\n            ",
+      "fragment": ">\r\n            <Button\r\n              // style={{ marginLeft: '1107px' }}\r\n              sentiment=\"accented\"\r\n              appearance=\"bordered\"\r\n              onClick={createRecord}\r\n              disabled={selectedRows > 0}\r\n            >\r\n              <AddIcon />\r\n              Add Record\r\n            </Button>\r\n            &nbsp;\r\n            <Button\r\n              // style={{ marginLeft: '1107px' }}\r\n              sentiment=\"accented\"\r\n              appearance=\"bordered\"\r\n              onClick={() => getMultiRowData('edit')}\r\n              disabled={selectedRows <= 1}\r\n            >\r\n              <EditIcon />\r\n              Edit Records\r\n            </Button>\r\n            &nbsp;\r\n            <Button\r\n              // style={{ marginLeft: '1107px' }}\r\n              sentiment=\"accented\"\r\n              appearance=\"bordered\"\r\n              onClick={() => getMultiRowData('delete')}\r\n              disabled={selectedRows <= 1}\r\n            >\r\n              <DeleteIcon />\r\n              Delete Records\r\n            </Button>\r\n          </div>\r\n\r\n          <div\r\n           ",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 677,
-        "end": 713,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 743,
+        "end": 779,
         "startLoc": {
-          "line": 677,
+          "line": 743,
           "column": 11,
-          "position": 6337
+          "position": 6964
         },
         "endLoc": {
-          "line": 713,
-          "column": 13,
-          "position": 6567
+          "line": 779,
+          "column": 12,
+          "position": 7194
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 560,
-        "end": 594,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 567,
+        "end": 602,
         "startLoc": {
-          "line": 560,
+          "line": 567,
           "column": 2,
-          "position": 5378
+          "position": 5438
         },
         "endLoc": {
-          "line": 594,
-          "column": 2,
-          "position": 5606
+          "line": 602,
+          "column": 9,
+          "position": 5666
         }
       }
     },
@@ -1295,141 +1583,105 @@
       "fragment": "?? []}\r\n              columnDefs={columnDefs}\r\n              defaultColDef={defaultColDef}\r\n              // animateRows={true}\r\n              // domLayout=\"autoHeight\"\r\n              pagination={true}\r\n              rowSelection={rowSelection}\r\n              ref={gridRef}\r\n              onSelectionChanged={(e) =>\r\n                setSelectedRows(e.api.getSelectedRows().length)\r\n              }\r\n              // onRowSelected={(e) => selectedRowNodes(e)}\r\n              paginationPageSizeSelector={[5, 10, 25, 50, 100]}\r\n            />\r\n          </div>\r\n        <",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 720,
-        "end": 735,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 786,
+        "end": 801,
         "startLoc": {
-          "line": 720,
+          "line": 786,
           "column": 2,
-          "position": 6628
+          "position": 7262
         },
         "endLoc": {
-          "line": 735,
+          "line": 801,
           "column": 2,
-          "position": 6752
+          "position": 7386
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 599,
-        "end": 614,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 609,
+        "end": 624,
         "startLoc": {
-          "line": 599,
+          "line": 609,
           "column": 2,
-          "position": 5661
+          "position": 5729
         },
         "endLoc": {
-          "line": 614,
+          "line": 624,
           "column": 2,
-          "position": 5785
+          "position": 5853
         }
       }
     },
     {
       "format": "tsx",
-      "lines": 15,
-      "fragment": "{dialogOpen && (\r\n        <Dialog open={dialogOpen} size=\"large\">\r\n          <DialogHeader\r\n            header={`${isEdit ? 'Edit' : isDelete ? 'Delete' : 'Add'} Item`}\r\n            actions={closeButton}\r\n          />\r\n          <DialogContent>\r\n            <FlowLayout>\r\n              <StackLayout gap={2} direction={'column'}>\r\n                {formData.map((row, rowIndex) => (\r\n                  <StackLayout gap={2} direction={'row'} key={rowIndex}>\r\n                    {row.map(({ key, value }, index) => {\r\n                      const label = key.charAt(0).toUpperCase() + key.slice(1);\r\n                      const disableId =\r\n                        key === 'userId' || key === 'id' ||",
+      "lines": 48,
+      "fragment": ")}\r\n                  </StackLayout>\r\n                ))}\r\n              </StackLayout>\r\n            </FlowLayout>\r\n\r\n            <DialogActions>\r\n              {direction === 'column' ? (\r\n                <StackLayout\r\n                  gap={1}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                >\r\n                  {accept}\r\n                  {cancel}\r\n                  {''}\r\n                </StackLayout>\r\n              ) : (\r\n                <SplitLayout\r\n                  direction={'row'}\r\n                  startItem={''}\r\n                  endItem={endItem}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                />\r\n              )}\r\n            </DialogActions>\r\n          </DialogContent>\r\n        </Dialog>\r\n      )}\r\n      {toast && <ToastGroup placement=\"top-right\">{toast}</ToastGroup>}\r\n      {(confirmDialogOpen || confirmationDialogForEditDelete) && (\r\n        <DialogBox\r\n          open={confirmDialogOpen || confirmationDialogForEditDelete}\r\n          size=\"small\"\r\n          status={isDelete ? 'error' : 'warning'}\r\n          content={confirmDialogContent}\r\n          direction={direction}\r\n          confirm={confirm}\r\n          cancel={confirmationCancel}\r\n          closeButton={confirmationDialogCloseButton}\r\n        />\r\n      )}\r\n    </div>\r\n  );\r\n};",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 737,
-        "end": 751,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\GridSelection.tsx",
+        "start": 889,
+        "end": 936,
         "startLoc": {
-          "line": 737,
-          "column": 7,
-          "position": 6763
+          "line": 889,
+          "column": 21,
+          "position": 8059
         },
         "endLoc": {
-          "line": 751,
-          "column": 3,
-          "position": 6974
+          "line": 936,
+          "column": 2,
+          "position": 8352
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 614,
-        "end": 627,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Posts.tsx",
+        "start": 682,
+        "end": 729,
         "startLoc": {
-          "line": 614,
-          "column": 7,
-          "position": 5785
+          "line": 682,
+          "column": 2,
+          "position": 6370
         },
         "endLoc": {
-          "line": 627,
-          "column": 2,
-          "position": 5993
+          "line": 729,
+          "column": 7,
+          "position": 6663
         }
       }
     },
     {
       "format": "tsx",
-      "lines": 90,
-      "fragment": "const multiLineInput = key === 'body';\r\n                      return (\r\n                        <FormField key={index}>\r\n                          <FormFieldLabel>{label}</FormFieldLabel>\r\n                          {!multiLineInput ? (\r\n                            <>\r\n                              <Input\r\n                                value={value}\r\n                                validationStatus={validationStatus(value)}\r\n                                onChange={(\r\n                                  e: React.ChangeEvent<HTMLInputElement>\r\n                                ) =>\r\n                                  handleInputChange(\r\n                                    rowIndex,\r\n                                    key,\r\n                                    e.target.value\r\n                                  )\r\n                                }\r\n                                disabled={disableId || isDelete}\r\n                              />\r\n                              {isEdit && !value ? <p>Field is Empty</p> : ''}\r\n                            </>\r\n                          ) : (\r\n                            <>\r\n                              <MultilineInput\r\n                                value={value}\r\n                                validationStatus={validationStatus(value)}\r\n                                onChange={(\r\n                                  e: React.ChangeEvent<HTMLInputElement>\r\n                                ) =>\r\n                                  handleInputChange(\r\n                                    rowIndex,\r\n                                    key,\r\n                                    e.target.value\r\n                                  )\r\n                                }\r\n                                disabled={isDelete}\r\n                              />\r\n                              {isEdit && !value ? <p>Field is Empty</p> : ''}\r\n                            </>\r\n                          )}\r\n                        </FormField>\r\n                      );\r\n                    })}\r\n                  </StackLayout>\r\n                ))}\r\n              </StackLayout>\r\n            </FlowLayout>\r\n            <DialogActions>\r\n              {direction === 'column' ? (\r\n                <StackLayout\r\n                  gap={1}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                >\r\n                  {accept}\r\n                  {cancel}\r\n                  {''}\r\n                </StackLayout>\r\n              ) : (\r\n                <SplitLayout\r\n                  direction={'row'}\r\n                  startItem={''}\r\n                  endItem={endItem}\r\n                  style={{\r\n                    width: '100%',\r\n                  }}\r\n                />\r\n              )}\r\n            </DialogActions>\r\n          </DialogContent>\r\n        </Dialog>\r\n      )}\r\n      {toast && <ToastGroup placement=\"top-right\">{toast}</ToastGroup>}\r\n      {(confirmDialogOpen || confirmationDialogForEditDelete) && (\r\n        <DialogBox\r\n          open={confirmDialogOpen || confirmationDialogForEditDelete}\r\n          size=\"small\"\r\n          status={isDelete ? 'error' : 'warning'}\r\n          content={confirmDialogContent}\r\n          direction={direction}\r\n          confirm={confirm}\r\n          cancel={confirmationCancel}\r\n          closeButton={confirmationDialogCloseButton}\r\n        />\r\n      )}\r\n    </div>\r\n  );\r\n};",
+      "lines": 7,
+      "fragment": ");\r\n  const params = window.location.pathname.split('/');\r\n  const pathName = params[1]\r\n    .split(' ')\r\n    .map((val) => val.charAt(0).toUpperCase() + val.slice(1))\r\n    .join(' ');\r\n  const columns",
       "tokens": 0,
       "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\GridSelection.tsx",
-        "start": 753,
-        "end": 842,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Comments.tsx",
+        "start": 23,
+        "end": 29,
         "startLoc": {
-          "line": 753,
-          "column": 23,
-          "position": 6989
+          "line": 23,
+          "column": 2,
+          "position": 220
         },
         "endLoc": {
-          "line": 842,
-          "column": 2,
-          "position": 7562
+          "line": 29,
+          "column": 8,
+          "position": 309
         }
       },
       "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 629,
-        "end": 719,
+        "name": "apps\\react-crud\\src\\app\\Modules\\Pages\\Users.tsx",
+        "start": 100,
+        "end": 109,
         "startLoc": {
-          "line": 629,
-          "column": 23,
-          "position": 6020
+          "line": 100,
+          "column": 2,
+          "position": 876
         },
         "endLoc": {
-          "line": 719,
-          "column": 7,
-          "position": 6595
-        }
-      }
-    },
-    {
-      "format": "tsx",
-      "lines": 6,
-      "fragment": "const params = window.location.pathname.split('/');\r\n  const pathName = params[1]\r\n    .split(' ')\r\n    .map((val) => val.charAt(0).toUpperCase() + val.slice(1))\r\n    .join(' ');\r\n  const navigate",
-      "tokens": 0,
-      "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Comments.tsx",
-        "start": 20,
-        "end": 25,
-        "startLoc": {
-          "line": 20,
-          "column": 3,
-          "position": 196
-        },
-        "endLoc": {
-          "line": 25,
+          "line": 109,
           "column": 9,
-          "position": 280
-        }
-      },
-      "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\Modules\\Posts.tsx",
-        "start": 111,
-        "end": 116,
-        "startLoc": {
-          "line": 111,
-          "column": 3,
-          "position": 976
-        },
-        "endLoc": {
-          "line": 116,
-          "column": 2,
-          "position": 1060
+          "position": 971
         }
       }
     },
@@ -1790,42 +2042,6 @@
           "line": 756,
           "column": 6,
           "position": 2131
-        }
-      }
-    },
-    {
-      "format": "tsx",
-      "lines": 6,
-      "fragment": ": builder.mutation<\r\n      User[] | Comment[] | Post[],\r\n      { endpoint: ApiEndPoint; body: BodyMap[ApiEndPoint] }\r\n    >({\r\n      query: ({ endpoint, body }) => ({\r\n        url: `/${endpoint}/",
-      "tokens": 0,
-      "firstFile": {
-        "name": "apps\\react-crud\\src\\app\\gridSlice.tsx",
-        "start": 73,
-        "end": 78,
-        "startLoc": {
-          "line": 73,
-          "column": 11,
-          "position": 608
-        },
-        "endLoc": {
-          "line": 78,
-          "column": 2,
-          "position": 690
-        }
-      },
-      "secondFile": {
-        "name": "apps\\react-crud\\src\\app\\gridSlice.tsx",
-        "start": 63,
-        "end": 68,
-        "startLoc": {
-          "line": 63,
-          "column": 8,
-          "position": 495
-        },
-        "endLoc": {
-          "line": 68,
-          "column": 2,
-          "position": 577
         }
       }
     }

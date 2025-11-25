@@ -3,25 +3,10 @@
     {
       "id": "1",
       "name": "Leanne Graham",
-      "username": "Bret",
+      "username": "Bret Lee",
       "email": "Sincere@april.biz",
-      "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
-      },
       "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org",
-      "company": {
-        "name": "Romaguera-Crona",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
-      }
+      "website": "hildegard.org"
     },
     {
       "id": "2",
@@ -256,64 +241,19 @@
     },
     {
       "id": "14",
-      "userId": 10,
-      "title": "Emporio Armani",
-      "body": "EmPorio nasnsskssmd kdwdwdw kkqemqnqe kmnqqkkwq",
-      "postId": 20,
-      "name": "Griffin grade",
-      "username": "bbdvddvdv",
-      "email": "asbd adad ",
-      "phone": "saddgdad",
-      "website": "adsSqgewvwt"
+      "name": "Shrek",
+      "username": "green_shrek",
+      "email": "gs@haloween.com",
+      "phone": "76353562722",
+      "website": "shrek.com"
     },
     {
       "id": "15",
-      "userId": 10,
-      "title": "Emporio Armani",
-      "body": "EmPorio nasnsskssmd kdwdwdw kkqemqnqe kmnqqkkwq",
-      "postId": 20,
-      "name": "ASSsSa",
-      "username": "asdfsaawdadd",
-      "email": "asdddaas",
-      "phone": "asfasasffdfasd",
-      "website": "asddaddda"
-    },
-    {
-      "id": "16",
-      "userId": 10,
-      "title": "Emporio Armani",
-      "body": "lasmssQSsqqs kQMEEMWWN",
-      "postId": 101,
-      "name": "sdkmnsdsnd",
-      "email": "msd msds dsmddmsds",
-      "username": "as sdkddskddks",
-      "phone": "sdms d sdmsd dmsd",
-      "website": "msd s sm dm dmsd "
-    },
-    {
-      "id": "17",
-      "name": "hgrteew",
-      "username": "djdjdjjddj",
-      "email": "kwkkkekekek",
-      "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157",
-        "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
-        }
-      },
-      "phone": "wkwkwkwkwkwk",
-      "website": "kkwkwkwkwkwwk",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
-      },
-      "body": "ndndndndnnddnndndndnndnndndndnndndndndndnnd",
-      "postId": 101
+      "name": "Cocoa",
+      "username": "Cocoamelon",
+      "email": "coco@melon.com",
+      "phone": "622027336302",
+      "website": "cocomelon.in"
     }
   ],
   "comments": [
@@ -3746,22 +3686,6 @@
       "name": "excepturi sunt cum a et rerum quo voluptatibus quia",
       "email": "Wilburn_Labadie@araceli.name",
       "body": "et necessitatibus tempora ipsum quaerat inventore est quasi quidem\nea repudiandae laborum omnis ab reprehenderit ut\nratione sit numquam culpa a rem\natque aut et"
-    },
-    {
-      "id": "500",
-      "postId": 100,
-      "name": "hdfertyu",
-      "email": "jsjdbbdfbb@hdff.in",
-      "body": "kjjjejejejejwijdJJJejiejq"
-    },
-    {
-      "id": "501",
-      "userId": 10,
-      "title": "Emporio Armani",
-      "body": "mdndnddnddndndnddmdmdmdmdmdmdm",
-      "postId": 101,
-      "name": "Gferww",
-      "email": "mdndbduadhuq"
     }
   ],
   "posts": [
@@ -4101,6 +4025,48 @@
       "userId": 11,
       "title": "Frdndd ",
       "body": ",Aalksdndadwdaadh"
+    },
+    {
+      "id": "103",
+      "title": "Posttitlepostbody",
+      "body": "post body",
+      "userId": 11
+    },
+    {
+      "id": "104",
+      "title": "Grunts",
+      "body": "hshshsai jbabbasdbbqjbssb absabsbasbasqsjsnqn",
+      "userId": 11
+    },
+    {
+      "id": "105",
+      "userId": 11,
+      "title": "msmsmsmmssms",
+      "body": "smsmssmmssm"
+    },
+    {
+      "id": "106",
+      "userId": 11,
+      "title": "msmsmsmmssms",
+      "body": "smsmssmmssm"
+    },
+    {
+      "id": "107",
+      "userId": 11,
+      "title": "Hello",
+      "body": "World"
+    },
+    {
+      "id": "108",
+      "userId": 11,
+      "title": "World",
+      "body": "Hello"
+    },
+    {
+      "id": "109",
+      "userId": 11,
+      "title": "Hello World",
+      "body": "World Hello"
     }
   ]
 }

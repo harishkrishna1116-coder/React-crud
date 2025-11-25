@@ -1,7 +1,5 @@
 import React, { useMemo } from 'react';
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-alpine.css';
-import { AgGridReact } from 'ag-grid-react';
+import {type AgGridReactProps } from 'ag-grid-react';
 import {
   ColDef,
   ModuleRegistry,
@@ -9,15 +7,18 @@ import {
   RowSelectionOptions,
   RowSelectedEvent,
 } from 'ag-grid-community';
-import {  Scrim, Spinner } from '@salt-ds/core';
+import { Scrim, Spinner } from '@salt-ds/core';
 import { Comment, useGetCommentsQuery } from '../Slices/slice';
+import AgGrid from '../Components/AgGrid';
+import { useAgGridHelpers } from '../Hooks/AgGridStyle';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
-interface CommentsProps{
-  activeTab:string
+interface CommentsProps extends AgGridReactProps {
+  activeTab: string;
 }
 
-const Comments: React.FC<CommentsProps> = ({activeTab}) => {
+const Comments: React.FC<CommentsProps> = ({ activeTab, ...gridProps }) => {
+  const { agGridProps, containerProps } = useAgGridHelpers();
   const { data: comments, error, isLoading } = useGetCommentsQuery();
   const params = window.location.pathname.split('/');
   const pathName = params[1]
@@ -49,7 +50,6 @@ const Comments: React.FC<CommentsProps> = ({activeTab}) => {
     }
   };
 
-
   if (isLoading)
     return (
       <Scrim>
@@ -61,23 +61,20 @@ const Comments: React.FC<CommentsProps> = ({activeTab}) => {
       <p className="text-center mt-10 text-red-500">Error fetching users</p>
     );
   return (
-    <div>
-      <h1 className="text-10xl font-bold mb-7">{activeTab}</h1>
-      {/* <Button variant="primary" className="mb-4" onClick={() => navigate('/')}>
-        Click to go home page
-      </Button> */}
-      <br></br>
-      <div className="ag-theme-salt-variant-zebra"  style={{ height: 400, width: 1100 }}>
-        <AgGridReact<Comment>
-          rowData={comments ?? []}
-          columnDefs={columns}
-          defaultColDef={defaultColDef}
-          rowSelection={rowSelection}
-          pagination={true}
-          onRowSelected={(e) => getSelectedRowNodes(e)}
-          paginationPageSizeSelector={[10, 25, 50, 100]}
-        />
-      </div>
+    <div {...containerProps}>
+      {/* <h1 className="text-10xl font-bold mb-7">{pathName}</h1> */}
+      <AgGrid<Comment>
+        {...agGridProps}
+        {...gridProps}
+        theme="legacy"
+        rowData={comments ?? []}
+        columnDefs={columns}
+        defaultColDef={defaultColDef}
+        rowSelection={rowSelection}
+        pagination={true}
+        onRowSelected={(e) => getSelectedRowNodes(e)}
+        paginationPageSizeSelector={[10, 25, 50, 100]}
+      />
     </div>
   );
 };
