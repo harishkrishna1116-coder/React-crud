@@ -2,7 +2,6 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import '@salt-ds/theme/index.css';
-import { themeAlpine } from 'ag-grid-community';
 import {
   Button,
   StackLayoutProps,
@@ -36,7 +35,6 @@ import {
   RemoveDocumentIcon,
 } from '@salt-ds/icons';
 import {
-  themeQuartz,
   ICellRendererParams,
   ColDef,
   RowSelectionOptions,
@@ -73,10 +71,11 @@ import {
   Comment,
 } from '../Slices/gridSlice';
 import { columnConfig } from '../../Config/gridColumnConfig';
-import { formDataConfig } from '../../Config/formDataConfig';
+import { useTheme } from '../../../themeContext';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 const GridSelection: React.FC = (props: AgGridReactProps) => {
+  const{dark} = useTheme()
   type Row = Post | Comment | User;
   const [selectedValue, setSelectedValue] = useState<ApiEndPoint[]>([]);
   const options = [
@@ -777,7 +776,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
           </div>
 
           <div
-            className="ag-theme-quartz"
+           className={dark ? "ag-theme-alpine-dark" : "ag-theme-alpine"}
             style={{ height: 500, marginTop: '10px' }}
           >
             <AgGridReact<Row>

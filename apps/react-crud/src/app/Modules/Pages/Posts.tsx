@@ -3,9 +3,11 @@ import {
   AgGridReact as AgGridReactType,
   type AgGridReactProps,
 } from 'ag-grid-react';
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-alpine.css';
-import 'ag-grid-community/styles/ag-theme-quartz.css';
+// import 'ag-grid-community/styles/ag-grid.css';
+// import "ag-grid-community/styles/ag-theme-quartz.css";
+// import "ag-grid-community/styles/ag-theme-quartz-dark.css";
+
+
 import { themeAlpine, themeQuartz } from 'ag-grid-community';
 import {
   Post,
@@ -69,10 +71,11 @@ import { useAgGridHelpers } from '../Hooks/AgGridStyle';
 import DialogBox from '../Components/DialogBox';
 import { useNavigate } from 'react-router-dom';
 import { clsx } from 'clsx';
+import { useTheme } from '../../../themeContext';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
-interface Postsprops extends AgGridReactProps{
-  activeTab:string
+interface Postsprops extends AgGridReactProps {
+  activeTab: string;
 }
 
 const addData = [
@@ -81,7 +84,8 @@ const addData = [
     { key: 'body', value: '' },
   ],
 ];
-function Posts({activeTab,...gridProps}:Postsprops) {
+function Posts({ activeTab, ...gridProps }: Postsprops) {
+  const { dark } = useTheme();
   const { data: posts, error, isLoading, refetch } = useGetPostsQuery();
   const [updatePosts, { error: fetchError, isLoading: isUpdating, isSuccess }] =
     useUpdatePostsMutation();
@@ -166,8 +170,8 @@ function Posts({activeTab,...gridProps}:Postsprops) {
   }, [selectedData]);
 
   useEffect(() => {
-    console.log("activeTabbb",activeTab)
-  },[])
+    console.log('activeTabbb', activeTab);
+  }, []);
 
   useEffect(() => {
     if (multipleData.length > 0) {
@@ -554,15 +558,10 @@ function Posts({activeTab,...gridProps}:Postsprops) {
   if (error || fetchError)
     return (
       <p className="text-center mt-10 text-red-500">Error fetching users</p>
-    )
+    );
 
   return (
-    <div
-      {...containerProps}
-      className={clsx(containerProps.className, {
-        'ag-theme-salt-variant-zebra': 'zebra',
-      })}
-    >
+    <div {...containerProps}>
       <h1 className="text-5md font-bold mb-6">{activeTab}</h1>
 
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -599,7 +598,10 @@ function Posts({activeTab,...gridProps}:Postsprops) {
           Delete Records
         </Button>
       </div>
-      <div className="ag-theme-quartz" style={{ height: 500 }}>
+      <div
+        className={dark ? 'ag-theme-quartz-dark' : 'ag-theme-quartz'}
+        style={{ height: 500 }}
+      >
         <AgGridReact<Post>
           {...agGridProps}
           {...gridProps}

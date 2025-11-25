@@ -11,6 +11,7 @@ import {
 } from 'ag-grid-community';
 import {  Scrim, Spinner } from '@salt-ds/core';
 import { Comment, useGetCommentsQuery } from '../Slices/slice';
+import { useTheme } from '../../../themeContext';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 interface CommentsProps{
@@ -18,6 +19,7 @@ interface CommentsProps{
 }
 
 const Comments: React.FC<CommentsProps> = ({activeTab}) => {
+  const{dark} = useTheme();
   const { data: comments, error, isLoading } = useGetCommentsQuery();
   const params = window.location.pathname.split('/');
   const pathName = params[1]
@@ -67,7 +69,7 @@ const Comments: React.FC<CommentsProps> = ({activeTab}) => {
         Click to go home page
       </Button> */}
       <br></br>
-      <div className="ag-theme-salt-variant-zebra"  style={{ height: 400, width: 1100 }}>
+      <div className={dark ? "ag-theme-alpine-dark" : "ag-theme-alpine"}  style={{ height: 400, width: 1100 }}>
         <AgGridReact<Comment>
           rowData={comments ?? []}
           columnDefs={columns}

@@ -1,7 +1,21 @@
-import React, { ElementType, JSX, ReactElement, useEffect, useMemo, useState } from 'react';
+import React, {
+  ElementType,
+  JSX,
+  ReactElement,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-alpine.css';
-import { AgGridReact } from 'ag-grid-react';
+// import 'ag-grid-community/styles/ag-theme-quartz.css';
+// import 'ag-grid-community/styles/ag-theme-quartz-dark.css';
+
+import {
+  AgGridReact,
+  AgGridReact as AgGridReactType,
+  type AgGridReactProps,
+} from 'ag-grid-react';
+
 import {
   ColDef,
   ModuleRegistry,
@@ -10,7 +24,11 @@ import {
   RowSelectionOptions,
   ICellRendererParams,
 } from 'ag-grid-community';
-import { useGetUsersQuery, User, useUpdateUsersMutation } from '../Slices/slice';
+import {
+  useGetUsersQuery,
+  User,
+  useUpdateUsersMutation,
+} from '../Slices/slice';
 import {
   Button,
   Card,
@@ -31,17 +49,25 @@ import {
   useResponsiveProp,
 } from '@salt-ds/core';
 import { useNavigate, useParams } from 'react-router-dom';
-import { CloneIcon, CloseIcon, ErrorIcon, SuccessCircleIcon } from '@salt-ds/icons';
+import {
+  CloneIcon,
+  CloseIcon,
+  ErrorIcon,
+  SuccessCircleIcon,
+} from '@salt-ds/icons';
 import { ToastMessage } from '../Components/Toast';
 import { useAgGridHelpers } from '../Hooks/AgGridStyle';
+import { useTheme } from '../../../themeContext';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
-interface UsersProps{
-  activeTab:string
+interface UsersProps extends AgGridReactProps {
+  activeTab: string;
+
 }
 
-const Users: React.FC<UsersProps> = ({activeTab}) => {
-  const { data: users, error, isLoading,refetch } = useGetUsersQuery();
+const Users: React.FC<UsersProps> = ({ activeTab,...props }) => {
+  const { dark } = useTheme();
+  const { data: users, error, isLoading, refetch } = useGetUsersQuery();
   const [updateUser, { isLoading: isUpdating, error: fetchError, isSuccess }] =
     useUpdateUsersMutation();
   const [selectedData, setSelectedData] = useState<User | undefined>();
@@ -52,7 +78,7 @@ const Users: React.FC<UsersProps> = ({activeTab}) => {
   const [submittedData, setSubmittedData] = useState<{ [key: string]: any }>(
     {}
   );
-  const [toast,setToast] = useState<JSX.Element| null>(null)
+  const [toast, setToast] = useState<JSX.Element | null>(null);
   const unWantedKeys = ['address', 'company'];
   const data = selectedData
     ? Object.entries(selectedData)
@@ -60,7 +86,7 @@ const Users: React.FC<UsersProps> = ({activeTab}) => {
         .filter(({ key }) => !unWantedKeys.includes(key))
     : [];
 
-    const{agGridProps,containerProps} = useAgGridHelpers()
+  const { agGridProps, containerProps } = useAgGridHelpers();
 
   useEffect(() => {
     if (selectedData) {
@@ -122,30 +148,32 @@ const Users: React.FC<UsersProps> = ({activeTab}) => {
     const dataToStore = Object.fromEntries(
       editableData.map(({ key, value }) => [key, value])
     );
-    console.log('dataToStore',dataToStore)
+    console.log('dataToStore', dataToStore);
     try {
       await updateUser(dataToStore).unwrap();
       setDialogOpen(false);
-      setToast(<ToastMessage
-               status="success"
-               headText="Updated Successfully"
-               content="Post was Updated Successfully"
-               icon={<SuccessCircleIcon aria-label='success'/>}
-               handleClose={() => setToast(null)}
-             />)
-      refetch()
+      setToast(
+        <ToastMessage
+          status="success"
+          headText="Updated Successfully"
+          content="Post was Updated Successfully"
+          icon={<SuccessCircleIcon aria-label="success" />}
+          handleClose={() => setToast(null)}
+        />
+      );
+      refetch();
     } catch (err) {
-         console.error('err', err);
-        setToast(
-              <ToastMessage
-                status="error"
-                headText="Failed"
-                content="Failed to Update"
-                icon={<ErrorIcon aria-label='error'/>}
-                handleClose={() => setToast(null)}
-              />
-            );
-      refetch()
+      console.error('err', err);
+      setToast(
+        <ToastMessage
+          status="error"
+          headText="Failed"
+          content="Failed to Update"
+          icon={<ErrorIcon aria-label="error" />}
+          handleClose={() => setToast(null)}
+        />
+      );
+      refetch();
     }
     // setSubmittedData(dataToStore);
   };
@@ -210,71 +238,75 @@ const Users: React.FC<UsersProps> = ({activeTab}) => {
     </StackLayout>
   );
   return (
-    <div{...containerProps} className="text-2xl font-bold mb-4">
+    <div {...containerProps} className="text-2xl font-bold mb-4">
       <h1 className="text-4md font-bold mb-4">{activeTab}</h1>
       {/* <Button variant="primary" className="mb-4" onClick={() => navigate('/')}>Back to Home page</Button> */}
-      <div className="ag-theme-alpine" style={{ height: 400, width: 1100 }}>
+      <div
+        // className={dark ? 'ag-theme-quartz-dark' : 'ag-theme-quartz'}
+        style={{ height: 500, marginTop: '10px' }}
+      >
         <AgGridReact<User>
           {...agGridProps}
+          {...props}
           rowData={users ?? []}
           columnDefs={columns}
           defaultColDef={defaultColDef}
           // rowSelection={rowSelection}
-          animateRows={true}
+          // animateRows={true}
           domLayout="autoHeight"
           pagination={true}
           // onRowSelected={(e) => selectedRowNodes(e)}
           paginationPageSizeSelector={[5, 10]}
         />
-        {dialogOpen && (
-          <Dialog open={dialogOpen} size="large">
-            <DialogHeader header="Edit Item" actions={closeButton} />
-            <DialogContent>
-              <FlowLayout>
-                {editableData.map(({ key, value }) => {
-                  const label = key.charAt(0).toUpperCase() + key.slice(1);
-                  return (
-                    <StackLayout gap={1} direction={'row'}>
-                      <FormField>
-                        <FormFieldLabel>{label}</FormFieldLabel>
-                        <Input
-                          value={value}
-                          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                            handleInputChange(key, e.target.value)
-                          }
-                        />
-                      </FormField>
-                    </StackLayout>
-                  );
-                })}
-              </FlowLayout>
-              <DialogActions>
-                {direction === 'column' ? (
-                  <StackLayout
-                    gap={1}
-                    style={{
-                      width: '100%',
-                    }}
-                  >
-                    {accept}
-                    {cancel}
-                    {''}
-                  </StackLayout>
-                ) : (
-                  <SplitLayout
-                    direction={'row'}
-                    startItem={''}
-                    endItem={endItem}
-                    style={{
-                      width: '100%',
-                    }}
-                  />
-                )}
-              </DialogActions>
-            </DialogContent>
-          </Dialog>
-        )}
       </div>
+      {dialogOpen && (
+        <Dialog open={dialogOpen} size="large">
+          <DialogHeader header="Edit Item" actions={closeButton} />
+          <DialogContent>
+            <FlowLayout>
+              {editableData.map(({ key, value }) => {
+                const label = key.charAt(0).toUpperCase() + key.slice(1);
+                return (
+                  <StackLayout gap={1} direction={'row'}>
+                    <FormField>
+                      <FormFieldLabel>{label}</FormFieldLabel>
+                      <Input
+                        value={value}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                          handleInputChange(key, e.target.value)
+                        }
+                      />
+                    </FormField>
+                  </StackLayout>
+                );
+              })}
+            </FlowLayout>
+            <DialogActions>
+              {direction === 'column' ? (
+                <StackLayout
+                  gap={1}
+                  style={{
+                    width: '100%',
+                  }}
+                >
+                  {accept}
+                  {cancel}
+                  {''}
+                </StackLayout>
+              ) : (
+                <SplitLayout
+                  direction={'row'}
+                  startItem={''}
+                  endItem={endItem}
+                  style={{
+                    width: '100%',
+                  }}
+                />
+              )}
+            </DialogActions>
+          </DialogContent>
+        </Dialog>
+      )}
     </div>
   );
 };
