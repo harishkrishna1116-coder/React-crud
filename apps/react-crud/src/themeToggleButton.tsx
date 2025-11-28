@@ -8,6 +8,7 @@ export default function ThemeToggleButton() {
     <button
       onClick={toggleTheme}
       className="p-2 rounded-md border bg-gray-100 dark:bg-gray-800 dark:text-white"
+      style={{zIndex:9999}}
     >
       {dark ? "🌙 Dark" : "☀️ Light"}
     </button>

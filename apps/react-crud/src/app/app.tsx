@@ -69,7 +69,7 @@ const App: React.FC = () => {
     <div className="text-black dark:text-white">
       <StackLayout>
         <div
-          style={{ display: 'flex', justifyContent: 'space-between' }}
+          style={{ display: 'flex', justifyContent: 'space-between', marginTop:'-40px' }}
         >
           <TabsNext value={activeTab} onChange={handleValue}>
             <TabBar>
