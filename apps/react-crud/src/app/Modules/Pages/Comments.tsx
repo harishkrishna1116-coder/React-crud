@@ -58,7 +58,7 @@ const Comments: React.FC<CommentsProps> = ({ activeTab, ...gridProps }) => {
     );
   if (error)
     return (
-      <p className="text-center mt-10 text-red-500">Error fetching users</p>
+      <p className="text-center mt-10 text-red-500">Error fetching Comments</p>
     );
   return (
     <div {...containerProps}>

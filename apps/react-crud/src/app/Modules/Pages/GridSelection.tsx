@@ -661,7 +661,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     );
   if (error || fetchError)
     return (
-      <p className="text-center mt-10 text-red-500">Error fetching users</p>
+      <p className="text-center mt-10 text-red-500">Error fetching {selectedValue}</p>
     );
 
   const handleSelectionChange: DropdownProps['onSelectionChange'] = (
@@ -676,7 +676,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
       {/* <h1 className="text-2xl font-bold mb-6">{pathName}</h1> */}
       <br></br>
       <FormField className="w-[266px]">
-        <FormFieldLabel className="block text-sm font-medium text-gray-700 mb-1">
+        <FormFieldLabel className="block text-sm font-medium text-rose-700 mb-1">
           Select Data
         </FormFieldLabel>
         <Dropdown
@@ -689,7 +689,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
               value={val.value}
               key={val.value}
               // className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-white-700 mb-1"
             >
               {val.label}
             </Option>

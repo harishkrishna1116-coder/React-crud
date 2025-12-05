@@ -529,7 +529,7 @@ function Posts({ activeTab, ...gridProps }: Postsprops) {
     );
   if (error || fetchError)
     return (
-      <p className="text-center mt-10 text-red-500">Error fetching users</p>
+      <p className="text-center mt-10 text-red-500">Error fetching Posts</p>
     );
 
   return (
