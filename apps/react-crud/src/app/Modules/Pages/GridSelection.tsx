@@ -256,22 +256,24 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     headerName: 'Actions',
     field: 'button',
     width: 100,
+    filter:false,
+    floatingFilter:false,
     cellRenderer: ActionButtonRenderer,
   };
 
   const columnDefs: ColDef[] = [...baseColumns, actionColumn];
 
-  const rowSelection: RowSelectionOptions = {
+  const defaultColDef = useMemo(() => {
+      return {
+        filter: 'agTextColumnFilter',
+        floatingFilter: true,
+      };
+  }, []);
+
+   const rowSelection: RowSelectionOptions = {
     mode: 'multiRow',
     headerCheckbox: true,
   };
-
-  const defaultColDef = useMemo(() => {
-    return {
-      filter: 'agTextColumnFilter',
-      floatingFilter: true,
-    };
-  }, []);
 
   const handleInputChange = (
     rowIndex: number,
@@ -366,47 +368,6 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     const fields = ALLOWED_FIELDS[endpoint] ?? ['id'];
     return fields.map((key) => ({ key, value: '' }));
   };
-
-  // const generateNewRecord = (
-  //   lastRecord: any,
-  //   formRecord: any,
-  //   endpoint: string
-  // ) => {
-  //   const lastId = Number(lastRecord.id);
-  //   const newId = lastId + 1;
-  //   // const newPostId = Math.ceil(newId / 5);
-  //   // const newUserId = Math.ceil(newId / 10);
-
-  //   if (endpoint === 'users') {
-  //     return {
-  //       ...filterAllowed('users', formRecord),
-  //       id: newId.toString(),
-  //     };
-  //   }
-
-  //   if (endpoint === 'comments') {
-  //     const newPostId = Math.ceil(newId / 5);
-  //     return {
-  //       ...filterAllowed('comments', formRecord),
-  //       id: newId.toString(),
-  //       postId: newPostId,
-  //     };
-  //   }
-
-  //   if (endpoint === 'posts') {
-  //     const newUserId = Math.ceil(newId / 10);
-  //     return {
-  //       ...filterAllowed('posts', formRecord),
-  //       id: newId.toString(),
-  //       userId: newUserId,
-  //     };
-  //   }
-
-  //   return {
-  //     ...filterAllowed(endpoint, formRecord),
-  //     id: newId.toString(),
-  //   };
-  // };
 
   const generateNewRecord = (
     formRecord: any,
@@ -700,7 +661,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     );
   if (error || fetchError)
     return (
-      <p className="text-center mt-10 text-red-500">Error fetching users</p>
+      <p className="text-center mt-10 text-red-500">Error fetching {selectedValue}</p>
     );
 
   const handleSelectionChange: DropdownProps['onSelectionChange'] = (
@@ -715,7 +676,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
       {/* <h1 className="text-2xl font-bold mb-6">{pathName}</h1> */}
       <br></br>
       <FormField className="w-[266px]">
-        <FormFieldLabel className="block text-sm font-medium text-gray-700 mb-1">
+        <FormFieldLabel className="block text-sm font-medium text-rose-700 mb-1">
           Select Data
         </FormFieldLabel>
         <Dropdown
@@ -727,7 +688,8 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
             <Option
               value={val.value}
               key={val.value}
-              className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
+              // className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
+              className="block text-sm font-medium text-white-700 mb-1"
             >
               {val.label}
             </Option>
@@ -740,6 +702,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
             style={{
               display: 'flex',
               justifyContent: 'flex-end',
+              marginTop: '40px',
             }}
           >
             <Button

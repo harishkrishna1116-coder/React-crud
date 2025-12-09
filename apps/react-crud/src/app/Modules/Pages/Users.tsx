@@ -50,9 +50,6 @@ const Users: React.FC<UsersProps> = ({ activeTab, ...props }) => {
     { key: string; value: any }[]
   >([]);
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [submittedData, setSubmittedData] = useState<{ [key: string]: any }>(
-    {}
-  );
   const [toast, setToast] = useState<JSX.Element | null>(null);
   const unWantedKeys = ['address', 'company'];
   const data = selectedData

@@ -30,7 +30,7 @@ function Root() {
   return (
     <StrictMode>
       <ThemeContext.Provider value={{ dark, toggleTheme: () => setDark(!dark) }}>
-      <SaltProvider theme={dark ? 'dark' : 'light'}>
+      <SaltProvider mode={dark ? 'dark' : 'light'}>
         <Provider store={store}>
           <BrowserRouter>
             <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white">
