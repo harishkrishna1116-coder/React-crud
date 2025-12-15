@@ -42,7 +42,6 @@ import {
   ModuleRegistry,
 } from 'ag-grid-community';
 import React, {
-  ChangeEvent,
   ElementType,
   JSX,
   useEffect,
@@ -53,9 +52,8 @@ import React, {
 import { useNavigate } from 'react-router-dom';
 import { ToastMessage } from '../Components/Toast';
 import { useAgGridHelpers } from '../Hooks/AgGridStyle';
-import { ToastGroup, ComboBox } from '@salt-ds/lab';
+import { ToastGroup } from '@salt-ds/lab';
 import {
-  AgGridReact,
   AgGridReact as AgGridReactType,
   type AgGridReactProps,
 } from 'ag-grid-react';
@@ -71,13 +69,12 @@ import {
   Comment,
 } from '../Slices/gridSlice';
 import { columnConfig } from '../../Config/gridColumnConfig';
-import { useTheme } from '../../../themeContext';
 import AgGrid from '../Components/AgGrid';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 const GridSelection: React.FC = (props: AgGridReactProps) => {
-  const { dark } = useTheme();
   type Row = Post | Comment | User;
+  const navigate = useNavigate();
   const [selectedValue, setSelectedValue] = useState<ApiEndPoint[]>([]);
   const options = [
     { label: 'Comments', value: 'comments' },
@@ -93,7 +90,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     skip: !selectedValue[0],
   });
   const [addData] = useAddDataMutation();
-  const [updateData, { error: fetchError, isLoading: isUpdating, isSuccess }] =
+  const [updateData, { error: fetchError, isLoading: isUpdating }] =
     useUpdateDataMutation();
   const [deleteData] = useDeleteDataMutation();
 
@@ -117,18 +114,13 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
   const [isDelete, setIsDelete] = useState(false);
   const [confirmationDialogForEditDelete, setConfirmationDialogForEditDelete] =
     useState(false);
-  // const data = selectedData
-  //   ? Object.entries(selectedData).map(([key, value]) => ({ key, value }))
-  //   : multipleData
-  //   ? multipleData.flatMap((row) =>
-  //       Object.entries(row).map(([key, value]) => ({ key, value }))
-  //     )
-  //   : [];
-  const params = window.location.pathname.split('/');
-  const pathName = params[1]
-    .split(' ')
-    .map((val) => val.charAt(0).toUpperCase() + val.slice(1))
-    .join(' ');
+
+  // const params = window.location.pathname.split('/');
+  // const pathName = params[1]
+  //   .split(' ')
+  //   .map((val) => val.charAt(0).toUpperCase() + val.slice(1))
+  //   .join(' ');
+
   const [toast, setToast] = useState<JSX.Element | null>(null);
   const gridRef = useRef<AgGridReactType<Row>>(null);
   const origin = originalData.map((row) =>
@@ -162,8 +154,6 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
       : `Do you want to proceed with update from the selected ${
           selectedRows > 1 ? selectedValue[0] : selectedValue[0]?.slice(0, -1)
         } ?`;
-
-  const navigate = useNavigate();
 
   const hiddenFields: Record<ApiEndPoint, string[]> = {
     users: ['address', 'company'],
@@ -237,7 +227,7 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     );
   };
 
-  const getMultiRowData = (action: string) => {
+  const getMultiRowData = (action: string): boolean => {
     if (!gridRef.current) return false;
     const selected = gridRef.current.api.getSelectedRows();
     const order = selected.sort((a, b) => Number(a.id) - Number(b.id));
@@ -245,7 +235,9 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
       setDialogOpen(true);
       action === 'edit' ? setIsEdit(true) : setIsDelete(true);
       setMultipleData(order);
+      return true;
     }
+    return false;
   };
 
   const baseColumns = selectedValue[0]
@@ -256,21 +248,21 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     headerName: 'Actions',
     field: 'button',
     width: 100,
-    filter:false,
-    floatingFilter:false,
+    filter: false,
+    floatingFilter: false,
     cellRenderer: ActionButtonRenderer,
   };
 
   const columnDefs: ColDef[] = [...baseColumns, actionColumn];
 
   const defaultColDef = useMemo(() => {
-      return {
-        filter: 'agTextColumnFilter',
-        floatingFilter: true,
-      };
+    return {
+      filter: 'agTextColumnFilter',
+      floatingFilter: true,
+    };
   }, []);
 
-   const rowSelection: RowSelectionOptions = {
+  const rowSelection: RowSelectionOptions = {
     mode: 'multiRow',
     headerCheckbox: true,
   };
@@ -320,14 +312,12 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
 
   const createRecord = () => {
     const safeGridData = getGridData ?? [];
-    const lastRecord = safeGridData[safeGridData.length - 1];
-    const startId = Number(lastRecord?.id ?? 0);
+    safeGridData[safeGridData.length - 1];
     setIsAdd(true);
     setIsEdit(false);
     setIsDelete(false);
 
     const firstRow = rowTemplate(selectedValue[0]);
-    //  setAddNewData([formDataConfig[selectedValue[0] as ApiEndPoint]]);
     setAddNewData([firstRow]);
     setDialogOpen(true);
   };
@@ -553,11 +543,12 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     navigate('/gridselection');
   };
 
-  const validationStatus = (value: string) => {
+  const validationStatus = (value: string): 'error' | undefined=> {
     if (isEdit) {
       const isValid = !value;
       return !isValid ? undefined : 'error';
     }
+    return undefined
   };
 
   let isDisabled = false;
@@ -661,7 +652,9 @@ const GridSelection: React.FC = (props: AgGridReactProps) => {
     );
   if (error || fetchError)
     return (
-      <p className="text-center mt-10 text-red-500">Error fetching {selectedValue}</p>
+      <p className="text-center mt-10 text-red-500">
+        Error fetching {selectedValue}
+      </p>
     );
 
   const handleSelectionChange: DropdownProps['onSelectionChange'] = (
