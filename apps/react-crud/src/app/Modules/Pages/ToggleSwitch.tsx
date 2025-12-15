@@ -1,6 +1,5 @@
 import { StackLayout, Switch } from '@salt-ds/core';
-import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import Comments from './Comments';
 import Users from './Users';
 
